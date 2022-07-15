@@ -1,0 +1,11 @@
+{
+	"extends": "@oly_op/tsconfig/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "build",
+		"lib": ["ESNext"],
+		"declaration": true
+	},
+	"include": [
+		"src"
+	]
+}

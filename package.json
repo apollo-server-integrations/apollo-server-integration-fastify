@@ -1,0 +1,65 @@
+{
+	"type": "module",
+	"types": "build",
+	"license": "MIT",
+	"version": "0.1.0",
+	"main": "build/index.js",
+	"name": "@oly_op/apollo-server-fastify",
+	"description": "@oly_op/apollo-server-fastify",
+	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
+	"homepage": "https://github.com/olyop/apollo-server-fastify/blob/master/README.md",
+	"author": {
+		"name": "Oliver Plummer",
+		"email": "oliver.plummer@outlook.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/olyop/apollo-server-fastify.git"
+	},
+	"files": [
+		"build"
+	],
+	"engines": {
+		"npm": ">=8",
+		"node": ">=18"
+	},
+	"scripts": {
+		"build": "tsc",
+		"delete-build": "del-cli build",
+		"prepublishOnly": "clear && npm run delete-build && npm run build",
+		"postpublish": "npm run push",
+		"sync": "git checkout . && git remote update && git pull",
+		"push": "git add -A && git commit -m \"Update\" && git push"
+	},
+	"peerDependencies": {
+		"fastify": "4",
+		"@apollo/server": "https://pkg.csb.dev/apollographql/apollo-server/commit/655c7efc/@apollo/server"
+	},
+	"devDependencies": {
+		"@apollo/server": "https://pkg.csb.dev/apollographql/apollo-server/commit/655c7efc/@apollo/server",
+		"@apollo/server-integration-testsuite": "https://pkg.csb.dev/apollographql/apollo-server/commit/655c7efc/@apollo/server-integration-testsuite",
+		"@oly_op/eslint-config": "5.2.4",
+		"@oly_op/tsconfig": "1.0.13",
+		"@types/lodash-es": "4.17.6",
+		"@types/node": "18.0.3",
+		"@types/pg": "8.6.5",
+		"@typescript-eslint/eslint-plugin": "5.30.5",
+		"@typescript-eslint/parser": "5.30.5",
+		"copy-and-watch": "0.1.6",
+		"del-cli": "4.0.1",
+		"eslint": "8.19.0",
+		"eslint-config-airbnb": "19.0.4",
+		"eslint-config-airbnb-typescript": "17.0.0",
+		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-json": "3.1.0",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-prefer-arrow-functions": "3.1.4",
+		"eslint-plugin-promise": "6.0.0",
+		"fastify": "4.2.1",
+		"pg": "8.7.3",
+		"typescript": "4.7.4"
+	},
+	"dependencies": {
+		"fastify-plugin": "4.0.0"
+	}
+}
