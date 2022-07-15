@@ -4,8 +4,8 @@ import type {
 } from "fastify"
 
 import type {
-	ApolloServer,
 	BaseContext,
+	ApolloServer,
 	ContextFunction,
 } from "@apollo/server"
 
@@ -14,7 +14,12 @@ export interface FastifyContextFunctionArgument {
 	reply: FastifyReply,
 }
 
-export interface FastifyPluginOptions<Context extends BaseContext = BaseContext> {
+export interface FastifyHandlerOptions<Context extends BaseContext = BaseContext> {
 	apollo: ApolloServer<Context>,
 	context?: ContextFunction<[FastifyContextFunctionArgument], Context>,
+}
+
+export interface FastifyPluginOptions<Context extends BaseContext = BaseContext>
+	extends FastifyHandlerOptions<Context> {
+	path?: string,
 }

@@ -6,22 +6,21 @@ import type {
 	HTTPGraphQLRequest,
 } from "@apollo/server"
 
+import { RouteHandler } from "fastify"
 import fp, { PluginMetadata } from "fastify-plugin"
 
+import {
+	FastifyPluginOptions,
+	FastifyHandlerOptions,
+	FastifyContextFunctionArgument,
+} from "./types"
+
 import { httpHeadersToMap } from "./helpers"
-import { FastifyPluginOptions, FastifyContextFunctionArgument } from "./types"
 
-const pluginMetadata: PluginMetadata = {
-	fastify: "4.x",
-	name: "apollo-server-fastify",
-}
-
-const fastifyApollo =
-	fp<FastifyPluginOptions>(
-		async (fastify, options) => {
+const fastifyHandler =
+	<Context extends BaseContext = BaseContext>(options: FastifyHandlerOptions<Context>): RouteHandler =>
+		async (request, reply) => {
 			const { apollo } = options
-
-			apollo.assertStarted("fastifyApollo()")
 
 			const defaultContext: ContextFunction<
 				[FastifyContextFunctionArgument],
@@ -29,47 +28,57 @@ const fastifyApollo =
 				any
 			> = async () => ({})
 
-			const context: ContextFunction<[FastifyContextFunctionArgument], BaseContext> =
+			const context: ContextFunction<[FastifyContextFunctionArgument], Context> =
 				options?.context ?? defaultContext
 
-			console.log("apollo-server-fastify: handler()")
+			const httpGraphQLRequest: HTTPGraphQLRequest = {
+				body: request.body,
+				searchParams: request.query,
+				method: request.method.toUpperCase(),
+				headers: httpHeadersToMap(request.headers),
+			}
+
+			const httpGraphQLResponse =
+				await apollo.executeHTTPGraphQLRequest({
+					httpGraphQLRequest,
+					context: () => context({ request, reply }),
+				})
+
+			if (httpGraphQLResponse.completeBody === null) {
+				throw Error("Incremental delivery not implemented")
+			}
+
+			void reply.code(httpGraphQLResponse.statusCode || 200)
+
+			for (const [key, value] of httpGraphQLResponse.headers) {
+				void reply.header(key, value)
+			}
+
+			return httpGraphQLResponse.completeBody
+		}
+
+const pluginMetadata: PluginMetadata = {
+	fastify: "4.x",
+	name: "apollo-server-fastify",
+}
+
+const fastifyPlugin =
+	fp<FastifyPluginOptions>(
+		async (fastify, options) => {
+			const { path, ...handlerOptions } = options
 
 			fastify.route({
-				url: "/graphql",
 				method: ["GET", "POST"],
-				handler: async (request, reply) => {
-					console.log("apollo-server-fastify: route()")
-
-					const httpGraphQLRequest: HTTPGraphQLRequest = {
-						body: request.body,
-						searchParams: request.query,
-						method: request.method.toUpperCase(),
-						headers: httpHeadersToMap(request.headers),
-					}
-
-					const httpGraphQLResponse =
-						await apollo.executeHTTPGraphQLRequest({
-							httpGraphQLRequest,
-							context: () => context({ request, reply }),
-						})
-
-					if (httpGraphQLResponse.completeBody === null) {
-						throw Error("Incremental delivery not implemented")
-					}
-
-					void reply.code(httpGraphQLResponse.statusCode || 200)
-
-					for (const [key, value] of httpGraphQLResponse.headers) {
-						void reply.header(key, value)
-					}
-
-					return httpGraphQLResponse.completeBody
-				},
+				url: options?.path || "/graphql",
+				handler: fastifyHandler(handlerOptions),
 			})
 		},
 		pluginMetadata,
 	)
 
-export { FastifyPluginOptions, FastifyContextFunctionArgument }
-
-export default fastifyApollo
+export {
+	fastifyPlugin,
+	fastifyHandler,
+	FastifyPluginOptions,
+	FastifyContextFunctionArgument,
+}
