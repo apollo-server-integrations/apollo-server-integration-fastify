@@ -32,10 +32,14 @@ const fastifyApollo =
 			const context: ContextFunction<[FastifyContextFunctionArgument], BaseContext> =
 				options?.context ?? defaultContext
 
+			console.log("apollo-server-fastify: handler()")
+
 			fastify.route({
 				url: "/graphql",
 				method: ["GET", "POST"],
 				handler: async (request, reply) => {
+					console.log("apollo-server-fastify: route()")
+
 					const httpGraphQLRequest: HTTPGraphQLRequest = {
 						body: request.body,
 						searchParams: request.query,
