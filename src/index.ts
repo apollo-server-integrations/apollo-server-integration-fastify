@@ -33,7 +33,7 @@ const fastifyApollo =
 				options?.context ?? defaultContext
 
 			fastify.route({
-				url: "/",
+				url: "/graphql",
 				method: ["GET", "POST"],
 				handler: async (request, reply) => {
 					const httpGraphQLRequest: HTTPGraphQLRequest = {
