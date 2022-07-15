@@ -31,8 +31,12 @@ const fastifyHandler =
 			const context: ContextFunction<[FastifyContextFunctionArgument], Context> =
 				options?.context ?? defaultContext
 
+			const body =
+				request.method === "POST" ?
+					request.body : request.query
+
 			const httpGraphQLRequest: HTTPGraphQLRequest = {
-				body: request.body,
+				body,
 				searchParams: request.query,
 				method: request.method.toUpperCase(),
 				headers: httpHeadersToMap(request.headers),
