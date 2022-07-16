@@ -1,6 +1,6 @@
 import type { IncomingHttpHeaders } from "http"
 
-export const httpHeadersToMap =
+const httpHeadersToMap =
 	(headers: IncomingHttpHeaders) => {
 		const headersMap = new Map<string, string>()
 
@@ -15,3 +15,5 @@ export const httpHeadersToMap =
 
 		return headersMap
 	}
+
+export default httpHeadersToMap

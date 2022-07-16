@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/require-await */
-
-import type {
+import {
+	ApolloServer,
 	BaseContext,
 	ContextFunction,
 	HTTPGraphQLRequest,
@@ -10,79 +9,88 @@ import { RouteHandler } from "fastify"
 import fp, { PluginMetadata } from "fastify-plugin"
 
 import {
-	FastifyPluginOptions,
-	FastifyHandlerOptions,
-	FastifyContextFunctionArgument,
+	ApolloFastifyContext,
+	ApolloFastifyPluginOptions,
+	ApolloFastifyHandlerOptions,
 } from "./types"
 
-import { httpHeadersToMap } from "./helpers"
+import httpHeadersToMap from "./http-headers-to-map"
 
-const fastifyHandler =
-	<Context extends BaseContext = BaseContext>(options: FastifyHandlerOptions<Context>): RouteHandler =>
-		async (request, reply) => {
-			const { apollo } = options
+const apolloFastifyHandler = <Context extends BaseContext = BaseContext>(
+	apollo: ApolloServer<Context>,
+	options?: ApolloFastifyHandlerOptions<Context>,
+): RouteHandler =>
+	async (request, reply) => {
+		const defaultContext: ContextFunction<
+			[ApolloFastifyContext],
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			any
+		> = () => Promise.resolve({})
 
-			const defaultContext: ContextFunction<
-				[FastifyContextFunctionArgument],
-				// eslint-disable-next-line @typescript-eslint/no-explicit-any
-				any
-			> = async () => ({})
+		const context: ContextFunction<[ApolloFastifyContext], Context> =
+			options?.context ?? defaultContext
 
-			const context: ContextFunction<[FastifyContextFunctionArgument], Context> =
-				options?.context ?? defaultContext
+		const body =
+			request.method === "POST" ?
+				request.body : request.query
 
-			const body =
-				request.method === "POST" ?
-					request.body : request.query
-
-			const httpGraphQLRequest: HTTPGraphQLRequest = {
-				body,
-				searchParams: request.query,
-				method: request.method.toUpperCase(),
-				headers: httpHeadersToMap(request.headers),
-			}
-
-			const httpGraphQLResponse =
-				await apollo.executeHTTPGraphQLRequest({
-					httpGraphQLRequest,
-					context: () => context({ request, reply }),
-				})
-
-			if (httpGraphQLResponse.completeBody === null) {
-				throw Error("Incremental delivery not implemented")
-			}
-
-			void reply.code(httpGraphQLResponse.statusCode || 200)
-
-			for (const [key, value] of httpGraphQLResponse.headers) {
-				void reply.header(key, value)
-			}
-
-			return httpGraphQLResponse.completeBody
+		const httpGraphQLRequest: HTTPGraphQLRequest = {
+			body,
+			searchParams: request.query,
+			method: request.method.toUpperCase(),
+			headers: httpHeadersToMap(request.headers),
 		}
+
+		const httpGraphQLResponse =
+			await apollo.executeHTTPGraphQLRequest({
+				httpGraphQLRequest,
+				context: () => context({ request, reply }),
+			})
+
+		if (httpGraphQLResponse.completeBody === null) {
+			throw Error("Incremental delivery not implemented")
+		}
+
+		void reply.code(httpGraphQLResponse.statusCode || 200)
+
+		for (const [key, value] of httpGraphQLResponse.headers) {
+			void reply.header(key, value)
+		}
+
+		return httpGraphQLResponse.completeBody
+	}
 
 const pluginMetadata: PluginMetadata = {
 	fastify: "4.x",
 	name: "apollo-server-fastify",
 }
 
-const fastifyPlugin =
-	fp<FastifyPluginOptions>(
-		async (fastify, options) => {
-			const { path, ...handlerOptions } = options
+const apolloFastifyPlugin =
+	<Context extends BaseContext = BaseContext>(apollo: ApolloServer<Context>) =>
+		fp<ApolloFastifyPluginOptions<Context>>(
+			// eslint-disable-next-line @typescript-eslint/require-await
+			async (fastify, options) => {
+				const {
+					path = "/graphql",
+					prefixTrailingSlash,
+					method = ["GET", "POST"],
+					...handlerOptions
+				} = options
 
-			fastify.route({
-				method: ["GET", "POST"],
-				url: options?.path || "/graphql",
-				handler: fastifyHandler(handlerOptions),
-			})
-		},
-		pluginMetadata,
-	)
+				fastify.route({
+					method,
+					url: path,
+					prefixTrailingSlash,
+					handler: apolloFastifyHandler<Context>(apollo, handlerOptions),
+				})
+			},
+			pluginMetadata,
+		)
 
 export {
-	fastifyPlugin,
-	fastifyHandler,
-	FastifyPluginOptions,
-	FastifyContextFunctionArgument,
+	apolloFastifyPlugin,
+	apolloFastifyHandler,
+	ApolloFastifyContext,
+	ApolloFastifyPluginOptions,
+	ApolloFastifyHandlerOptions,
 }
