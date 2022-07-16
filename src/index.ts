@@ -34,6 +34,11 @@ const apolloFastifyHandler = <Context extends BaseContext = BaseContext>(
 			request.method === "POST" ?
 				request.body : request.query
 
+		console.log({
+			body,
+			request,
+		})
+
 		const httpGraphQLRequest: HTTPGraphQLRequest = {
 			body,
 			searchParams: request.query,
