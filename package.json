@@ -2,7 +2,7 @@
 	"type": "module",
 	"types": "build",
 	"license": "MIT",
-	"version": "0.2.7",
+	"version": "0.2.8",
 	"main": "build/index.js",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
@@ -22,6 +22,9 @@
 	"engines": {
 		"npm": ">=8",
 		"node": ">=18"
+	},
+	"exports": {
+		".": "./build/index.js"
 	},
 	"scripts": {
 		"build": "tsc",
