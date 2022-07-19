@@ -5,23 +5,23 @@ import type {
 	RouteShorthandOptions,
 } from "fastify"
 
-import type {
-	BaseContext,
-	ContextFunction,
-} from "@apollo/server"
+import type { ContextFunction } from "@apollo/server"
 
 type ValueOrArray<T> = T | T[]
 
-export interface ApolloFastifyContext {
+export type ApolloFastifyContextFunctionParams = [
 	request: FastifyRequest,
 	reply: FastifyReply,
+]
+
+export type ApolloFastifyContextFunction<Context> =
+	ContextFunction<ApolloFastifyContextFunctionParams, Context>
+
+export interface ApolloFastifyHandlerOptions<Context> {
+	context?: ApolloFastifyContextFunction<Context>,
 }
 
-export interface ApolloFastifyHandlerOptions<Context extends BaseContext = BaseContext> {
-	context?: ContextFunction<[ApolloFastifyContext], Context>,
-}
-
-export interface ApolloFastifyPluginOptions<Context extends BaseContext = BaseContext>
+export interface ApolloFastifyPluginOptions<Context>
 	extends
 	ApolloFastifyHandlerOptions<Context>,
 	Pick<RouteShorthandOptions, "prefixTrailingSlash"> {

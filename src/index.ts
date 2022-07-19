@@ -1,33 +1,26 @@
-import {
-	ApolloServer,
-	BaseContext,
-	ContextFunction,
-	HTTPGraphQLRequest,
-} from "@apollo/server"
-
-import { RouteHandler } from "fastify"
+import type { RouteHandlerMethod } from "fastify"
 import fp, { PluginMetadata } from "fastify-plugin"
+import type { ApolloServer, HTTPGraphQLRequest } from "@apollo/server"
 
 import {
-	ApolloFastifyContext,
 	ApolloFastifyPluginOptions,
 	ApolloFastifyHandlerOptions,
+	ApolloFastifyContextFunction,
+	ApolloFastifyContextFunctionParams,
 } from "./types"
 
 import httpHeadersToMap from "./http-headers-to-map"
+import mapToHttpHeaders from "./map-to-http-headers"
 
-const apolloFastifyHandler = <Context extends BaseContext = BaseContext>(
+const apolloFastifyHandler = <Context>(
 	apollo: ApolloServer<Context>,
 	options?: ApolloFastifyHandlerOptions<Context>,
-): RouteHandler =>
+): RouteHandlerMethod =>
 	async (request, reply) => {
-		const defaultContext: ContextFunction<
-			[ApolloFastifyContext],
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			any
-		> = () => Promise.resolve({})
+		const defaultContext: ApolloFastifyContextFunction<Context> =
+			() => Promise.resolve({} as Context)
 
-		const context: ContextFunction<[ApolloFastifyContext], Context> =
+		const context =
 			options?.context ?? defaultContext
 
 		const body =
@@ -44,7 +37,7 @@ const apolloFastifyHandler = <Context extends BaseContext = BaseContext>(
 		const httpGraphQLResponse =
 			await apollo.executeHTTPGraphQLRequest({
 				httpGraphQLRequest,
-				context: () => context({ request, reply }),
+				context: () => context(request, reply),
 			})
 
 		if (httpGraphQLResponse.completeBody === null) {
@@ -52,10 +45,7 @@ const apolloFastifyHandler = <Context extends BaseContext = BaseContext>(
 		}
 
 		void reply.code(httpGraphQLResponse.statusCode || 200)
-
-		for (const [key, value] of httpGraphQLResponse.headers) {
-			void reply.header(key, value)
-		}
+		void reply.headers(mapToHttpHeaders(httpGraphQLResponse.headers))
 
 		return httpGraphQLResponse.completeBody
 	}
@@ -66,7 +56,7 @@ const pluginMetadata: PluginMetadata = {
 }
 
 const apolloFastifyPlugin =
-	<Context extends BaseContext = BaseContext>(apollo: ApolloServer<Context>) =>
+	<Context = unknown>(apollo: ApolloServer<Context>) =>
 		fp<ApolloFastifyPluginOptions<Context>>(
 			// eslint-disable-next-line @typescript-eslint/require-await
 			async (fastify, options) => {
@@ -90,7 +80,8 @@ const apolloFastifyPlugin =
 export {
 	apolloFastifyPlugin,
 	apolloFastifyHandler,
-	ApolloFastifyContext,
 	ApolloFastifyPluginOptions,
 	ApolloFastifyHandlerOptions,
+	ApolloFastifyContextFunction,
+	ApolloFastifyContextFunctionParams,
 }
