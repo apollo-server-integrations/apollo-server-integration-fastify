@@ -1,0 +1,25 @@
+{
+	"language": "en",
+	"useGitignore": true,
+	"caseSensitive": false,
+	"allowCompoundWords": true,
+	"ignorePaths": [
+		"build",
+		"node_modules",
+		"cspell-dict.txt"
+	],
+	"import": [
+		"@cspell/dict-npm/cspell-ext.json",
+		"@cspell/dict-node/cspell-ext.json",
+		"@cspell/dict-filetypes/cspell-ext.json",
+		"@cspell/dict-typescript/cspell-ext.json",
+		"@cspell/dict-software-terms/cspell-ext.json"
+	],
+	"dictionaries": [
+		"custom-words"
+	],
+	"dictionaryDefinitions": [{
+		"name": "custom-words",
+		"path": "./cspell-dict.txt"
+	}]
+}

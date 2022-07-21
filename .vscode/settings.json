@@ -1,9 +1,12 @@
 {
-	"peacock.color": "#1e4bf2",
+	"files.exclude": {
+		"build": true
+	},
 	"workbench.colorCustomizations": {
-		"titleBar.activeBackground": "#1e4bf2",
-		"titleBar.activeForeground": "#e7e7e7",
-		"titleBar.inactiveBackground": "#1e4bf299",
-		"titleBar.inactiveForeground": "#e7e7e799"
-	}
+		"titleBar.activeBackground": "#de77de",
+		"titleBar.activeForeground": "#15202b",
+		"titleBar.inactiveBackground": "#de77de99",
+		"titleBar.inactiveForeground": "#15202b99"
+	},
+	"peacock.color": "#de77de"
 }

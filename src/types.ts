@@ -9,13 +9,13 @@ import type { ContextFunction } from "@apollo/server"
 
 type ValueOrArray<T> = T | T[]
 
-export type ApolloFastifyContextFunctionParams = [
+export type ApolloFastifyContextFunctionArgument = [
 	request: FastifyRequest,
 	reply: FastifyReply,
 ]
 
 export type ApolloFastifyContextFunction<Context> =
-	ContextFunction<ApolloFastifyContextFunctionParams, Context>
+	ContextFunction<ApolloFastifyContextFunctionArgument, Context>
 
 export interface ApolloFastifyHandlerOptions<Context> {
 	context?: ApolloFastifyContextFunction<Context>,
