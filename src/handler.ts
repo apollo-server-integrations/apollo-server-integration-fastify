@@ -1,13 +1,9 @@
 import type { RouteHandlerMethod } from "fastify"
 import type { ApolloServer, HTTPGraphQLRequest } from "@apollo/server"
 
-import {
-	ApolloFastifyHandlerOptions,
-	ApolloFastifyContextFunction,
-} from "./types"
-
-import { httpHeadersToMap } from "./helpers/http-headers-to-map"
 import { mapToHttpHeaders } from "./helpers/map-to-http-headers"
+import { httpHeadersToMap } from "./helpers/http-headers-to-map"
+import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types"
 
 export const apolloFastifyHandler = <Context>(
 	apollo: ApolloServer<Context>,

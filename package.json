@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.2.9",
+	"version": "0.2.10",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -21,7 +21,10 @@
 	"main": "build/index.js",
 	"module": "build/index.js",
 	"types": "build/index.d.ts",
-	"files": ["src", "build"],
+	"files": [
+		"src",
+		"build"
+	],
 	"exports": {
 		".": {
 			"types": "./build/esm/index.d.ts",
@@ -59,17 +62,17 @@
 		"@cspell/dict-npm": "3.0.1",
 		"@cspell/dict-software-terms": "2.1.12",
 		"@cspell/dict-typescript": "2.0.1",
-		"@oly_op/eslint-config": "5.3.1",
+		"@oly_op/eslint-config": "5.3.2",
 		"@oly_op/tsconfig": "1.0.13",
 		"@types/jest": "28.1.6",
 		"@types/lodash-es": "4.17.6",
 		"@types/node": "18.0.6",
 		"@types/pg": "8.6.5",
-		"@typescript-eslint/eslint-plugin": "5.30.6",
-		"@typescript-eslint/parser": "5.30.6",
+		"@typescript-eslint/eslint-plugin": "5.30.7",
+		"@typescript-eslint/parser": "5.30.7",
 		"copy-and-watch": "0.1.6",
 		"cspell": "6.4.0",
-		"del-cli": "4.0.1",
+		"del-cli": "5.0.0",
 		"eslint": "8.20.0",
 		"eslint-config-airbnb": "19.0.4",
 		"eslint-config-airbnb-typescript": "17.0.0",
