@@ -1,5 +1,4 @@
 {
-	"type": "module",
 	"license": "MIT",
 	"version": "0.2.9",
 	"name": "@oly_op/apollo-server-fastify",
@@ -18,13 +17,11 @@
 		"npm": ">=8",
 		"node": ">=18"
 	},
-	"files": [
-		"src",
-		"build"
-	],
+	"type": "module",
 	"main": "build/index.js",
 	"module": "build/index.js",
 	"types": "build/index.d.ts",
+	"files": ["src", "build"],
 	"exports": {
 		".": {
 			"types": "./build/esm/index.d.ts",
