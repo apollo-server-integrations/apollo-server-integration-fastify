@@ -1,7 +1,8 @@
-import type { IncomingHttpHeaders } from "http"
+import type { IncomingHttpHeaders } from "node:http"
+import type { HTTPGraphQLRequest } from "@apollo/server"
 
-const httpHeadersToMap =
-	(headers: IncomingHttpHeaders) => {
+export const httpHeadersToMap =
+	(headers: IncomingHttpHeaders): HTTPGraphQLRequest["headers"] => {
 		const headersMap = new Map<string, string>()
 
 		for (const [key, value] of Object.entries(headers)) {
@@ -15,5 +16,3 @@ const httpHeadersToMap =
 
 		return headersMap
 	}
-
-export default httpHeadersToMap

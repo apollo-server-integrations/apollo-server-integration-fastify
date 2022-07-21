@@ -1,11 +1,17 @@
 {
-	"extends": "@oly_op/tsconfig/tsconfig.json",
+	"extends": "@oly_op/tsconfig/tsconfig",
 	"compilerOptions": {
-		"outDir": "build",
 		"lib": ["ESNext"],
-		"declaration": true
+		"rootDir": "./src",
+		"outDir": "./build/esm",
+		"sourceMap": true,
+		"declaration": true,
+		"declarationMap": true
 	},
 	"include": [
 		"src"
+	],
+	"exclude": [
+		"src/__tests__"
 	]
 }
