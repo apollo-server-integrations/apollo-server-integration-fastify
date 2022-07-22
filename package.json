@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.2.10",
+	"version": "0.2.11",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -18,27 +18,26 @@
 		"node": ">=18"
 	},
 	"type": "module",
-	"main": "build/index.js",
-	"module": "build/index.js",
-	"types": "build/index.d.ts",
+	"main": "build/cjs/index.js",
+	"module": "build/esm/index.js",
+	"types": "build/esm/index.d.ts",
 	"files": [
-		"src",
 		"build"
 	],
 	"exports": {
 		".": {
-			"types": "./build/esm/index.d.ts",
 			"import": "./build/esm/index.js",
+			"types": "./build/esm/index.d.ts",
 			"require": "./build/cjs/index.js"
 		},
 		"./plugin": {
-			"types": "./build/esm/plugin.d.ts",
 			"import": "./build/esm/plugin.js",
+			"types": "./build/esm/plugin.d.ts",
 			"require": "./build/cjs/plugin.js"
 		},
 		"./handler": {
-			"types": "./build/esm/handler.d.ts",
 			"import": "./build/esm/handler.js",
+			"types": "./build/esm/handler.d.ts",
 			"require": "./build/cjs/handler.js"
 		}
 	},

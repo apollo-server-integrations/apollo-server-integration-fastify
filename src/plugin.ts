@@ -12,7 +12,8 @@ const pluginMetadata: PluginMetadata = {
 export const apolloFastifyPlugin =
 	<Context = unknown>(apollo: ApolloServer<Context>) =>
 		fp<ApolloFastifyPluginOptions<Context>>(
-			(fastify, options) => {
+			// eslint-disable-next-line @typescript-eslint/require-await
+			async (fastify, options) => {
 				const {
 					path = "/graphql",
 					prefixTrailingSlash,
@@ -20,7 +21,7 @@ export const apolloFastifyPlugin =
 					...handlerOptions
 				} = options
 
-				fastify.route({
+				return fastify.route({
 					method,
 					url: path,
 					prefixTrailingSlash,
