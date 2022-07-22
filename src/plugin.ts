@@ -1,7 +1,7 @@
 import fp, { PluginMetadata } from "fastify-plugin"
 import type { ApolloServer } from "@apollo/server"
 
-import { apolloFastifyHandler } from "./handler"
+import { fastifyApolloHandler } from "./handler"
 import { ApolloFastifyPluginOptions } from "./types"
 
 const pluginMetadata: PluginMetadata = {
@@ -9,7 +9,7 @@ const pluginMetadata: PluginMetadata = {
 	name: "apollo-server-fastify",
 }
 
-export const apolloFastifyPlugin =
+export const fastifyApollo =
 	<Context = unknown>(apollo: ApolloServer<Context>) =>
 		fp<ApolloFastifyPluginOptions<Context>>(
 			// eslint-disable-next-line @typescript-eslint/require-await
@@ -25,7 +25,7 @@ export const apolloFastifyPlugin =
 					method,
 					url: path,
 					prefixTrailingSlash,
-					handler: apolloFastifyHandler<Context>(apollo, handlerOptions),
+					handler: fastifyApolloHandler<Context>(apollo, handlerOptions),
 				})
 			},
 			pluginMetadata,

@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.2.11",
+	"version": "0.2.12",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -43,7 +43,9 @@
 	},
 	"scripts": {
 		"delete-build": "del-cli build",
-		"build": "tsc && tsc -p tsconfig-cjs.json",
+		"build-esm": "tsc",
+		"build-cjs": "tsc -p tsconfig-cjs.json",
+		"build": "npm run build-esm && npm run build-cjs",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"postpublish": "npm run push",
 		"sync": "git checkout . && git remote update && git pull",

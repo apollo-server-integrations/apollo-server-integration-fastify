@@ -5,7 +5,7 @@ import { mapToHttpHeaders } from "./helpers/map-to-http-headers"
 import { httpHeadersToMap } from "./helpers/http-headers-to-map"
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types"
 
-export const apolloFastifyHandler = <Context>(
+export const fastifyApolloHandler = <Context>(
 	apollo: ApolloServer<Context>,
 	options?: ApolloFastifyHandlerOptions<Context>,
 ): RouteHandlerMethod =>
