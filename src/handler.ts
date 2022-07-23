@@ -5,17 +5,7 @@ import { mapToHttpHeaders } from "./helpers/map-to-http-headers"
 import { fastifyRequestToGraphQL } from "./helpers/fastify-request-to-graphql"
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types"
 
-export function fastifyApolloHandler(
-	apollo: ApolloServer<BaseContext>,
-	options?: ApolloFastifyHandlerOptions<BaseContext>,
-): RouteHandlerMethod
-
-export function fastifyApolloHandler<Context extends BaseContext>(
-	apollo: ApolloServer<Context>,
-	options: Required<ApolloFastifyHandlerOptions<Context>>,
-): RouteHandlerMethod
-
-export function fastifyApolloHandler<Context extends BaseContext>(
+export function fastifyApolloHandler<Context extends BaseContext = BaseContext>(
 	apollo: ApolloServer<Context>,
 	options?: ApolloFastifyHandlerOptions<Context>,
 ): RouteHandlerMethod {

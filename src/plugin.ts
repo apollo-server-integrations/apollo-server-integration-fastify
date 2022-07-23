@@ -1,4 +1,3 @@
-import type { FastifyPluginAsync } from "fastify"
 import fp, { PluginMetadata } from "fastify-plugin"
 import type { ApolloServer, BaseContext } from "@apollo/server"
 
@@ -10,18 +9,10 @@ const pluginMetadata: PluginMetadata = {
 	name: "apollo-server-fastify",
 }
 
-export function fastifyApollo(
-	apollo: ApolloServer<BaseContext>,
-): FastifyPluginAsync<ApolloFastifyPluginOptions>
-
-export function fastifyApollo<Context extends BaseContext>(
-	apollo: ApolloServer<Context>,
-): FastifyPluginAsync<Required<ApolloFastifyPluginOptions<Context>>>
-
-export function fastifyApollo<Context extends BaseContext>(
+export function fastifyApollo<Context extends BaseContext = BaseContext>(
 	apollo: ApolloServer<Context>,
 ) {
-	return fp<Required<ApolloFastifyPluginOptions<Context>>>(
+	return fp<ApolloFastifyPluginOptions<Context>>(
 		// eslint-disable-next-line @typescript-eslint/require-await
 		async (fastify, options) => {
 			const {
