@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.2.14",
+	"version": "0.2.15",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
