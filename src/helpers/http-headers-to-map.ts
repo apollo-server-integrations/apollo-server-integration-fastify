@@ -9,7 +9,7 @@ export const httpHeadersToMap =
 			if (value) {
 				map.set(
 					key,
-					Array.isArray(value) ? value.join(", ") : value,
+					(Array.isArray(value) ? value.join(", ") : value).toLowerCase(),
 				)
 			}
 		}

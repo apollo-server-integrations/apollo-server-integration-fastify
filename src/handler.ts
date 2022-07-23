@@ -1,36 +1,36 @@
 import type { RouteHandlerMethod } from "fastify"
-import type { ApolloServer, HTTPGraphQLRequest } from "@apollo/server"
+import type { ApolloServer, BaseContext } from "@apollo/server"
 
 import { mapToHttpHeaders } from "./helpers/map-to-http-headers"
-import { httpHeadersToMap } from "./helpers/http-headers-to-map"
+import { fastifyRequestToGraphQL } from "./helpers/fastify-request-to-graphql"
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types"
 
-export const fastifyApolloHandler = <Context>(
+export function fastifyApolloHandler(
+	apollo: ApolloServer<BaseContext>,
+	options?: ApolloFastifyHandlerOptions<BaseContext>,
+): RouteHandlerMethod
+
+export function fastifyApolloHandler<Context extends BaseContext>(
+	apollo: ApolloServer<Context>,
+	options: Required<ApolloFastifyHandlerOptions<Context>>,
+): RouteHandlerMethod
+
+export function fastifyApolloHandler<Context extends BaseContext>(
 	apollo: ApolloServer<Context>,
 	options?: ApolloFastifyHandlerOptions<Context>,
-): RouteHandlerMethod =>
-	async (request, reply) => {
+): RouteHandlerMethod {
+	return async (request, reply) => {
 		const defaultContext: ApolloFastifyContextFunction<Context> =
-			() => Promise.resolve({} as Context)
+			// eslint-disable-next-line @typescript-eslint/require-await
+			async () => ({} as Context)
 
-		const context =
+		const contextFunction =
 			options?.context ?? defaultContext
-
-		const body =
-			request.method === "POST" ?
-				request.body : request.query
-
-		const httpGraphQLRequest: HTTPGraphQLRequest = {
-			body,
-			searchParams: request.query,
-			method: request.method.toUpperCase(),
-			headers: httpHeadersToMap(request.headers),
-		}
 
 		const httpGraphQLResponse =
 			await apollo.executeHTTPGraphQLRequest({
-				httpGraphQLRequest,
-				context: () => context(request, reply),
+				context: () => contextFunction(request, reply),
+				httpGraphQLRequest: fastifyRequestToGraphQL(request),
 			})
 
 		if (httpGraphQLResponse.completeBody === null) {
@@ -42,3 +42,4 @@ export const fastifyApolloHandler = <Context>(
 
 		return httpGraphQLResponse.completeBody
 	}
+}
