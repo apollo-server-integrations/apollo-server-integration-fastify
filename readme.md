@@ -61,9 +61,9 @@ fastify.post("/graphql", fastifyApolloHandler(apollo))
 fastify.get("/api", fastifyApolloHandler(apollo))
 
 fastify.route({
-	url: "/graphql",
-	method: ["GET", "POST"],
-	handler: fastifyApolloHandler(apollo),
+  url: "/graphql",
+  method: ["GET", "POST"],
+  handler: fastifyApolloHandler(apollo),
 })
 ```
 
@@ -79,15 +79,15 @@ import fastifyApollo, { ApolloFastifyContextFunction } from "apollo-server-fasti
 ...
 
 interface MyContext {
-	authorization: JWTPayload | false,
+  authorization: JWTPayload | false,
 }
 
 const myContextFunction: ApolloFastifyContextFunction<MyContext> = async request => ({
-	authorization: await isAuthorization(request.headers.authorization),
+  authorization: await isAuthorization(request.headers.authorization),
 })
 
 await fastify.register(fastifyApollo(apollo), {
-	context: myContextFunction,
+  context: myContextFunction,
 })
 ```
 
@@ -97,21 +97,21 @@ await fastify.register(fastifyApollo(apollo), {
 
 ```typescript
 function fastifyApollo<Context extends BaseContext = BaseContext>(
-	apollo: ApolloServer<Context>,
+  apollo: ApolloServer<Context>,
 ): FastifyPluginAsync<ApolloFastifyPluginOptions<Context>>;
 ```
 
 ### `ApolloFastifyPluginOptions` (all are optional):
 
 - `path`
-	- type: `string | undefined`
-	- default: `"/graphql"`
+  - type: `string | undefined`
+  - default: `"/graphql"`
 - `method`
-	- type: `ValueOrArray<"GET" | "POST">`
-	- default: `["GET", "POST"]`
+  - type: `ValueOrArray<"GET" | "POST">`
+  - default: `["GET", "POST"]`
 - `context`
-	- type: `ApolloFastifyContextFunction`
-	- default: `async () => ({})`
+  - type: `ApolloFastifyContextFunction`
+  - default: `async () => ({})`
 
 Type `HTTPMethod` is a type exported from Fastify.
 
@@ -119,16 +119,16 @@ Type `HTTPMethod` is a type exported from Fastify.
 
 ```typescript
 function fastifyApolloHandler<Context extends BaseContext = BaseContext>(
-	apollo: ApolloServer<Context>,
-	options?: ApolloFastifyHandlerOptions<Context>,
+  apollo: ApolloServer<Context>,
+  options?: ApolloFastifyHandlerOptions<Context>,
 ): RouteHandlerMethod;
 ```
 
 ### `ApolloFastifyHandlerOptions` (all are optional):
 
 - `context`
-	- type: `ApolloFastifyContextFunction`
-	- default: `async () => ({})`
+  - type: `ApolloFastifyContextFunction`
+  - default: `async () => ({})`
 
 ### `ApolloFastifyContextFunction`
 ```typescript
