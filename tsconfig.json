@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"lib": ["ESNext"],
 		"rootDir": "./src",
-		"outDir": "./build/esm",
+		"outDir": "./build",
 		"sourceMap": true,
 		"declaration": true,
 		"declarationMap": true

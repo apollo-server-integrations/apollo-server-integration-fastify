@@ -1,11 +1,5 @@
-import type {
-	HTTPMethods,
-	FastifyReply,
-	FastifyRequest,
-	RouteShorthandOptions,
-} from "fastify"
-
 import type { BaseContext, ContextFunction } from "@apollo/server"
+import type { HTTPMethods, FastifyReply, FastifyRequest } from "fastify"
 
 type ValueOrArray<T> = T | T[]
 
@@ -22,8 +16,7 @@ export interface ApolloFastifyHandlerOptions<Context extends BaseContext = BaseC
 }
 
 export interface ApolloFastifyPluginOptions<Context extends BaseContext = BaseContext> extends
-	ApolloFastifyHandlerOptions<Context>,
-	Pick<RouteShorthandOptions, "prefixTrailingSlash"> {
+	ApolloFastifyHandlerOptions<Context> {
 	path?: string,
 	method?: ValueOrArray<Extract<HTTPMethods, "GET" | "POST">>,
 }

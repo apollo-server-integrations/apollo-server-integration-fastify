@@ -9,26 +9,22 @@ const pluginMetadata: PluginMetadata = {
 	name: "apollo-server-fastify",
 }
 
-export function fastifyApollo<Context extends BaseContext = BaseContext>(
+export const fastifyApollo = <Context extends BaseContext = BaseContext>(
 	apollo: ApolloServer<Context>,
-) {
-	return fp<ApolloFastifyPluginOptions<Context>>(
-		// eslint-disable-next-line @typescript-eslint/require-await
-		async (fastify, options) => {
-			const {
-				path = "/graphql",
-				prefixTrailingSlash,
-				method = ["GET", "POST"],
-				...handlerOptions
-			} = options
+) => fp<ApolloFastifyPluginOptions<Context>>(
+	// eslint-disable-next-line @typescript-eslint/require-await
+	async (fastify, options) => {
+		const {
+			path = "/graphql",
+			method = ["GET", "POST"],
+			...handlerOptions
+		} = options
 
-			return fastify.route({
-				method,
-				url: path,
-				prefixTrailingSlash,
-				handler: fastifyApolloHandler<Context>(apollo, handlerOptions),
-			})
-		},
-		pluginMetadata,
-	)
-}
+		return fastify.route({
+			method,
+			url: path,
+			handler: fastifyApolloHandler<Context>(apollo, handlerOptions),
+		})
+	},
+	pluginMetadata,
+)
