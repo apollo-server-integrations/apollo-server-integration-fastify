@@ -35,14 +35,14 @@ Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollogra
 import Fastify from "fastify"
 import { ApolloServer } from "@apollo/server"
 import fastifyApollo from "apollo-server-fastify"
-...
+// ...
 
 const fastify = Fastify()
 const apollo = new ApolloServer({ typeDefs, resolvers })
 
 await apollo.start()
 
-...
+// ...
 
 await fastify.register(fastifyApollo(apollo))
 ```
@@ -55,7 +55,7 @@ Many examples shown below:
 ```typescript
 import { fastifyApolloHandler } from "apollo-server-fastify"
 
-...
+// ...
 
 fastify.post("/graphql", fastifyApolloHandler(apollo))
 
@@ -77,7 +77,7 @@ Setup context by defining you're own context function and pass it in to the `con
 
 ```typescript
 import fastifyApollo, { fastifyApolloHandler ApolloFastifyContextFunction } from "apollo-server-fastify"
-...
+// ...
 
 interface MyContext {
   authorization: JWTPayload | false,
