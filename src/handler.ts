@@ -1,18 +1,18 @@
-import type { RouteHandlerMethod } from "fastify"
 import type { ApolloServer, BaseContext } from "@apollo/server"
+import type { RawServerBase, RawServerDefault, RouteHandlerMethod } from "fastify"
 
 import { mapToHttpHeaders } from "./helpers/map-to-http-headers"
 import { fastifyRequestToGraphQL } from "./helpers/fastify-request-to-graphql"
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types"
 
-export function fastifyApolloHandler<Context extends BaseContext = BaseContext>(
+export function fastifyApolloHandler<Context extends BaseContext = BaseContext, RawServer extends RawServerBase = RawServerDefault>(
 	apollo: ApolloServer<Context>,
-	options?: ApolloFastifyHandlerOptions<Context>,
-): RouteHandlerMethod {
+	options?: ApolloFastifyHandlerOptions<Context, RawServer>,
+): RouteHandlerMethod<RawServer> {
 	return async (request, reply) => {
 		apollo.assertStarted("fastifyApolloHandler()")
 
-		const defaultContext: ApolloFastifyContextFunction<Context> =
+		const defaultContext: ApolloFastifyContextFunction<Context, RawServer> =
 			// eslint-disable-next-line @typescript-eslint/require-await
 			async () => ({} as Context)
 
@@ -22,7 +22,7 @@ export function fastifyApolloHandler<Context extends BaseContext = BaseContext>(
 		const httpGraphQLResponse =
 			await apollo.executeHTTPGraphQLRequest({
 				context: () => contextFunction(request, reply),
-				httpGraphQLRequest: fastifyRequestToGraphQL(request),
+				httpGraphQLRequest: fastifyRequestToGraphQL<RawServer>(request),
 			})
 
 		if (httpGraphQLResponse.completeBody === null) {

@@ -6,7 +6,8 @@
 		"outDir": "./build",
 		"sourceMap": true,
 		"declaration": true,
-		"declarationMap": true
+		"declarationMap": true,
+		"exactOptionalPropertyTypes": false
 	},
 	"include": [
 		"src"

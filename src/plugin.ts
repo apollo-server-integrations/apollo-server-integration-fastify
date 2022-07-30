@@ -1,17 +1,18 @@
-import fp, { PluginMetadata } from "fastify-plugin"
+// import fp, { PluginMetadata } from "fastify-plugin"
+import type { FastifyPluginAsync, RawServerBase, RawServerDefault } from "fastify"
 import type { ApolloServer, BaseContext } from "@apollo/server"
 
 import { fastifyApolloHandler } from "./handler"
 import { ApolloFastifyPluginOptions } from "./types"
 
-const pluginMetadata: PluginMetadata = {
-	fastify: "4.x",
-	name: "apollo-server-fastify",
-}
+// const pluginMetadata: PluginMetadata = {
+// 	fastify: "4.x",
+// 	name: "apollo-server-fastify",
+// }
 
-export const fastifyApollo = <Context extends BaseContext = BaseContext>(
+export const fastifyApollo = <Context extends BaseContext = BaseContext, RawServer extends RawServerBase = RawServerDefault>(
 	apollo: ApolloServer<Context>,
-) => fp<ApolloFastifyPluginOptions<Context>>(
+): FastifyPluginAsync<ApolloFastifyPluginOptions<Context, RawServer>, RawServer> =>
 	// eslint-disable-next-line @typescript-eslint/require-await
 	async (fastify, options) => {
 		const {
@@ -20,11 +21,9 @@ export const fastifyApollo = <Context extends BaseContext = BaseContext>(
 			...handlerOptions
 		} = options
 
-		return fastify.route({
+		fastify.route({
 			method,
 			url: path,
-			handler: fastifyApolloHandler<Context>(apollo, handlerOptions),
+			handler: fastifyApolloHandler<Context, RawServer>(apollo, handlerOptions),
 		})
-	},
-	pluginMetadata,
-)
+	}

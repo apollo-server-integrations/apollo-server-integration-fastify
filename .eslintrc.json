@@ -8,6 +8,7 @@
 		"project": "./tsconfig.json"
 	},
 	"rules": {
+		"max-len": "off",
 		"no-restricted-exports": "off",
 		"prefer-arrow/prefer-arrow-functions": "off"
 	}
