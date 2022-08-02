@@ -8,6 +8,6 @@ export const fastifyRequestToGraphQL =
 	<RawServer extends RawServerBase = RawServerDefault>(request: FastifyRequest<RouteGenericInterface, RawServer>): HTTPGraphQLRequest => ({
 		body: request.body,
 		method: request.method.toUpperCase(),
+		search: request.params as string ?? "",
 		headers: httpHeadersToMap(request.headers),
-		search: new URL(request.url).search ?? "",
 	})
