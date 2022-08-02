@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.3.6",
+	"version": "0.3.7",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -18,9 +18,9 @@
 		"node": ">=18"
 	},
 	"type": "module",
-	"main": "build/index.js",
-	"module": "build/index.js",
-	"types": "build/index.d.ts",
+	"main": "build/cjs/index.js",
+	"module": "build/esm/index.js",
+	"types": "build/esm/index.d.ts",
 	"files": [
 		"build"
 	],
