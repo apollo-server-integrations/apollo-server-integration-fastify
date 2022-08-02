@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.3.7",
+	"version": "0.3.8",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -24,6 +24,13 @@
 	"files": [
 		"build"
 	],
+	"exports": {
+		".": {
+      "types": "./build/esm/index.d.ts",
+      "import": "./build/esm/index.js",
+      "require": "./build/cjs/index.js"
+    }
+	},
 	"volta": {
 		"node": "18.7.0",
 		"npm": "8.15.1"
