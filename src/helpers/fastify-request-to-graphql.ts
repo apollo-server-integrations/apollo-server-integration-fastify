@@ -10,7 +10,7 @@ export const fastifyRequestToGraphQL =
 			"request.url": request.url,
 			"request.query": request.query,
 			"request.params": request.params,
-			"new URL(request.url).search": new URL(request.url).search,
+			"new-URL(request.url)-search": new URL(request.url).search,
 		})
 		return ({
 			body: request.body,
