@@ -9,9 +9,9 @@
 
 ## Introduction
 
-**This is a community maintained package used to connect Fastify to Apollo GraphQL server.**
+**A community maintained package used to connect Fastify to Apollo GraphQL server.**
 
-In an essence, this is a simple package that easily allows you to connect you're own Fastify server implementation to an Apollo Server instance.
+This is a simple package that easily allows you to connect you're own Fastify server implementation to an Apollo Server instance.
 
 ## Requirements
 
@@ -47,15 +47,15 @@ await apollo.start()
 await fastify.register(fastifyApollo(apollo))
 ```
 
-Alternate usage is to use the exported function `fastifyApolloHandler` which can be used in any [Fastify route handler](https://www.fastify.io/docs/latest/Reference/Routes/).
-This allows you explicitly set all routing options including the URL path and accepted methods.
+Alternatively you can use the exported function `fastifyApolloHandler` which can be passed into any [Fastify route handler](https://www.fastify.io/docs/latest/Reference/Routes/).
+This allows you explicitly set all routing options for instance the URL path and accepted methods.
 
 Many examples shown below:
 
 ```typescript
 import { fastifyApolloHandler } from "apollo-server-fastify"
 
-// ...
+// ... setup Fastify & Apollo
 
 fastify.post("/graphql", fastifyApolloHandler(apollo))
 
@@ -84,7 +84,7 @@ interface MyContext {
 }
 
 const myContextFunction: ApolloFastifyContextFunction<MyContext> = async request => ({
-  authorization: await isAuthorization(request.headers.authorization),
+  authorization: await isAuthorized(request.headers.authorization),
 })
 
 await fastify.register(fastifyApollo(apollo), {
@@ -143,6 +143,10 @@ export type ApolloFastifyContextFunction<Context> = (request: FastifyRequest, re
 - `context`
   - type: [ApolloFastifyContextFunction](#ApolloFastifyContextFunction)
   - default: `async () => ({})`
+
+### HTTPS/HTTP2
+
+All functions and types optionally allow you to pass in a Server type to Fastify (the default is `http.Server`).
 
 
 ## Contributors

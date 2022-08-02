@@ -13,7 +13,6 @@ export function fastifyApolloHandler<Context extends BaseContext = BaseContext, 
 		apollo.assertStarted("fastifyApolloHandler()")
 
 		const defaultContext: ApolloFastifyContextFunction<Context, RawServer> =
-			// eslint-disable-next-line @typescript-eslint/require-await
 			async () => ({} as Context)
 
 		const contextFunction =

@@ -3,16 +3,12 @@
 	"compilerOptions": {
 		"lib": ["ESNext"],
 		"rootDir": "./src",
-		"outDir": "./build",
-		"sourceMap": true,
 		"declaration": true,
 		"declarationMap": true,
+		"outDir": "./build/esm",
 		"exactOptionalPropertyTypes": false
 	},
 	"include": [
 		"src"
-	],
-	"exclude": [
-		"src/__tests__"
 	]
 }

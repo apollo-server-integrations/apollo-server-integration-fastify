@@ -10,6 +10,7 @@
 	"rules": {
 		"max-len": "off",
 		"no-restricted-exports": "off",
+		"@typescript-eslint/require-await": "off",
 		"prefer-arrow/prefer-arrow-functions": "off"
 	}
 }
