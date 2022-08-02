@@ -9,5 +9,5 @@ export const fastifyRequestToGraphQL =
 		body: request.body,
 		method: request.method.toUpperCase(),
 		headers: httpHeadersToMap(request.headers),
-		search: new URL(request.url).searchParams.get("search") ?? "",
+		search: new URL(request.url).searchParams.toString() ?? "",
 	})
