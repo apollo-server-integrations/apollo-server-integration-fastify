@@ -1,4 +1,3 @@
-import url from "node:url"
 import type { HTTPGraphQLRequest } from "@apollo/server"
 import type { RouteGenericInterface } from "fastify/types/route"
 import type { FastifyRequest, RawServerBase, RawServerDefault } from "fastify"
@@ -10,5 +9,5 @@ export const fastifyRequestToGraphQL =
 		body: request.body,
 		method: request.method.toUpperCase(),
 		headers: httpHeadersToMap(request.headers),
-		search: url.parse(request.url).search ?? "",
+		search: new URL(request.url).searchParams.get("search") ?? "",
 	})
