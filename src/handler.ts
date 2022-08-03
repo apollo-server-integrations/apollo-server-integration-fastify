@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable max-len */
+/* eslint-disable prefer-arrow/prefer-arrow-functions */
+import type { WithRequired } from "@apollo/utils.withrequired"
 import type { ApolloServer, BaseContext } from "@apollo/server"
 import type { RawServerBase, RawServerDefault, RouteHandlerMethod } from "fastify"
 
@@ -5,9 +9,18 @@ import { mapToHttpHeaders } from "./helpers/map-to-http-headers"
 import { fastifyRequestToGraphQL } from "./helpers/fastify-request-to-graphql"
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types"
 
-export function fastifyApolloHandler<Context extends BaseContext = BaseContext, RawServer extends RawServerBase = RawServerDefault>(
+export function fastifyApolloHandler<RawServer extends RawServerBase = RawServerDefault>(
+	apollo: ApolloServer<BaseContext>,
+): RouteHandlerMethod<RawServer>
+
+export function fastifyApolloHandler<Context extends BaseContext, RawServer extends RawServerBase = RawServerDefault>(
 	apollo: ApolloServer<Context>,
-	options?: ApolloFastifyHandlerOptions<Context, RawServer>,
+	options: WithRequired<ApolloFastifyHandlerOptions<Context, RawServer>, "context">,
+): RouteHandlerMethod<RawServer>
+
+export function fastifyApolloHandler<Context extends BaseContext, RawServer extends RawServerBase = RawServerDefault>(
+	apollo: ApolloServer<Context>,
+	options?: WithRequired<ApolloFastifyHandlerOptions<Context, RawServer>, "context">,
 ): RouteHandlerMethod<RawServer> {
 	return async (request, reply) => {
 		apollo.assertStarted("fastifyApolloHandler()")
