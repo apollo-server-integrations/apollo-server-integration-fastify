@@ -6,12 +6,7 @@ import { httpHeadersToMap } from "./http-headers-to-map"
 
 export const fastifyRequestToGraphQL =
 	<RawServer extends RawServerBase = RawServerDefault>(request: FastifyRequest<RouteGenericInterface, RawServer>): HTTPGraphQLRequest => {
-		console.log({
-			"request.url": request.url,
-			"request.query": request.query,
-			"request.params": request.params,
-			"new-URL(request.url)-search": new URL(request.url).search,
-		})
+		console.log(request)
 		return ({
 			body: request.body,
 			method: request.method.toUpperCase(),

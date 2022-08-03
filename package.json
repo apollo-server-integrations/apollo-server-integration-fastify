@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.3.15",
+	"version": "0.3.16",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -44,17 +44,17 @@
 		"push": "git add -A && git commit -m \"Update\" && git push"
 	},
 	"peerDependencies": {
-		"@apollo/server": "4.0.0-alpha.1",
+		"@apollo/server": "4.0.0-alpha.2",
 		"fastify": ">=4"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.0.0-alpha.1",
+		"@apollo/server": "4.0.0-alpha.2",
 		"@apollo/server-integration-testsuite": "https://pkg.csb.dev/apollographql/apollo-server/commit/655c7efc/@apollo/server-integration-testsuite",
 		"@apollo/utils.withrequired": "1.0.0",
 		"@cspell/dict-filetypes": "2.1.1",
 		"@cspell/dict-node": "3.0.1",
-		"@cspell/dict-npm": "3.1.0",
-		"@cspell/dict-software-terms": "2.2.1",
+		"@cspell/dict-npm": "3.1.1",
+		"@cspell/dict-software-terms": "2.2.2",
 		"@cspell/dict-typescript": "2.0.1",
 		"@oly_op/eslint-config": "5.3.4",
 		"@oly_op/tsconfig": "1.0.24",
