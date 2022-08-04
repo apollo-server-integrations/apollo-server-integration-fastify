@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
-/* eslint-disable prefer-arrow/prefer-arrow-functions */
-/* eslint-disable max-len */
 import fpBase, { PluginMetadata } from "fastify-plugin"
 import type { WithRequired } from "@apollo/utils.withrequired"
 import type { ApolloServer, BaseContext } from "@apollo/server"

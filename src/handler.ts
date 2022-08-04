@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
-/* eslint-disable max-len */
-/* eslint-disable prefer-arrow/prefer-arrow-functions */
 import type { WithRequired } from "@apollo/utils.withrequired"
 import type { ApolloServer, BaseContext } from "@apollo/server"
 import type { RawServerBase, RawServerDefault, RouteHandlerMethod } from "fastify"
@@ -11,6 +8,7 @@ import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./typ
 
 export function fastifyApolloHandler<RawServer extends RawServerBase = RawServerDefault>(
 	apollo: ApolloServer<BaseContext>,
+	options?: never,
 ): RouteHandlerMethod<RawServer>
 
 export function fastifyApolloHandler<Context extends BaseContext, RawServer extends RawServerBase = RawServerDefault>(

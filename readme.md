@@ -13,7 +13,7 @@
 
 This is a simple package that easily allows you to connect you're own Fastify server implementation to an Apollo Server instance.
 
-## Requirements
+## **Requirements**
 
 - **[Node.js v14](https://nodejs.org/)** or later 
 - **[Fastify v4](https://www.fastify.io/)** or later
@@ -21,24 +21,25 @@ This is a simple package that easily allows you to connect you're own Fastify se
 - **[Apollo Server v4](https://www.apollographql.com/docs/apollo-server/)** or later
 
 
-## Installation
+## **Installation**
 
 ```bash
 npm install apollo-server-fastify
 ```
 
-## Usage
+## **Usage**
 
 Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollographql.com/docs/apollo-server/) like you usually would and then connect the two by using the `fastifyApollo` plugin: 
 
 ```typescript
 import Fastify from "fastify"
-import { ApolloServer } from "@apollo/server"
 import fastifyApollo from "apollo-server-fastify"
+import { ApolloServer, BaseContext } from "@apollo/server"
 // ...
 
 const fastify = Fastify()
-const apollo = new ApolloServer({ typeDefs, resolvers })
+
+const apollo = new ApolloServer<BaseContext>({ typeDefs, resolvers })
 
 await apollo.start()
 
@@ -46,6 +47,8 @@ await apollo.start()
 
 await fastify.register(fastifyApollo(apollo))
 ```
+
+**Note: You have to pass in `BaseContext` to the `ApolloServer` constructor if you're app doesn't use a custom context.**
 
 Alternatively you can use the exported function `fastifyApolloHandler` which can be passed into any [Fastify route handler](https://www.fastify.io/docs/latest/Reference/Routes/).
 This allows you explicitly set all routing options for instance the URL path and accepted methods.
@@ -68,7 +71,7 @@ fastify.route({
 })
 ```
 
-## Context
+## **Context**
 
 Apollo Server 4 (AS4) has moved context setup outside of the `ApolloServer` constructor.
 
@@ -76,12 +79,15 @@ Apollo Server 4 (AS4) has moved context setup outside of the `ApolloServer` cons
 Setup context by defining you're own context function and pass it in to the `context` option. For example:
 
 ```typescript
+import { ApolloServer } from "@apollo/server"
 import fastifyApollo, { fastifyApolloHandler ApolloFastifyContextFunction } from "apollo-server-fastify"
 // ...
 
 interface MyContext {
   authorization: JWTPayload | false,
 }
+
+const apollo = new ApolloServer<MyContext>({ resolvers, typedefs })
 
 const myContextFunction: ApolloFastifyContextFunction<MyContext> = async request => ({
   authorization: await isAuthorized(request.headers.authorization),
@@ -98,7 +104,7 @@ await fastify.post("/graphql", fastifyApolloHandler(apollo, {
 }))
 ```
 
-## API
+## **API**
 
 All options and generics are optional other than passing in the `ApolloServer` instance.
 
@@ -149,6 +155,7 @@ export type ApolloFastifyContextFunction<Context> = (request: FastifyRequest, re
 All functions and types optionally allow you to pass in a Server type to Fastify (the default is `http.Server`).
 
 
-## Contributors
+## **Contributors**
 
 - Oliver Plummer ([olyop](https://github.com/olyop))
+- Trevor Scheer ([trevor-scheer](https://github.com/trevor-scheer))
