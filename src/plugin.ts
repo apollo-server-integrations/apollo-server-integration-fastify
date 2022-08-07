@@ -11,11 +11,12 @@ const pluginMetadata: PluginMetadata = {
 	name: "apollo-server-fastify",
 }
 
-// Fix Fastify type error, RawServer type can't be passed in to a Plugin
+// Internal: Utility to fix Fastify type error - RawServer type can't be passed in to a Plugin.
+// https://github.com/fastify/fastify-plugin/issues/191
 const fp =
-	<Options, RawServer extends RawServerBase = RawServerDefault>(handler: FastifyPluginAsync<Options, RawServer>, metadata: PluginMetadata): FastifyPluginAsync<Options, RawServer> =>
+	<Options, RawServer extends RawServerBase = RawServerDefault>(plugin: FastifyPluginAsync<Options, RawServer>, metadata: PluginMetadata) =>
 		// @ts-ignore
-		fpBase<Options>(handler, metadata)
+		fpBase<Options>(plugin, metadata) as FastifyPluginAsync<Options, RawServer>
 
 export function fastifyApollo<RawServer extends RawServerBase = RawServerDefault>(
 	apollo: ApolloServer<BaseContext>,
