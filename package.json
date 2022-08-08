@@ -53,7 +53,7 @@
 		"@apollo/utils.withrequired": "1.0.0",
 		"@cspell/dict-filetypes": "2.1.1",
 		"@cspell/dict-node": "3.0.1",
-		"@cspell/dict-npm": "3.1.1",
+		"@cspell/dict-npm": "3.1.2",
 		"@cspell/dict-software-terms": "2.2.2",
 		"@cspell/dict-typescript": "2.0.1",
 		"@oly_op/eslint-config": "5.3.4",
