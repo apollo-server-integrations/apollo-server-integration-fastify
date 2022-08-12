@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.3.23",
+	"version": "0.3.24",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -44,23 +44,23 @@
 		"push": "git add -A && git commit -m \"Update\" && git push"
 	},
 	"peerDependencies": {
-		"@apollo/server": "4.0.0-alpha.3",
-		"fastify": ">=4"
+		"@apollo/server": "4.0.0-alpha.x",
+		"fastify": ">=4.4"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.0.0-alpha.3",
+		"@apollo/server": "4.0.0-alpha.4",
 		"@apollo/server-integration-testsuite": "https://pkg.csb.dev/apollographql/apollo-server/commit/655c7efc/@apollo/server-integration-testsuite",
 		"@apollo/utils.withrequired": "1.0.0",
-		"@oly_op/cspell-dict": "1.0.3",
+		"@oly_op/cspell-dict": "1.0.4",
 		"@oly_op/eslint-config": "5.3.4",
 		"@oly_op/tsconfig": "1.0.24",
 		"@types/jest": "28.1.6",
 		"@types/lodash-es": "4.17.6",
-		"@types/node": "18.6.5",
+		"@types/node": "18.7.1",
 		"@types/pg": "8.6.5",
 		"@typescript-eslint/eslint-plugin": "5.33.0",
 		"copy-and-watch": "0.1.6",
-		"cspell": "6.6.0",
+		"cspell": "6.6.1",
 		"del-cli": "5.0.0",
 		"eslint": "8.21.0",
 		"eslint-config-airbnb": "19.0.4",
