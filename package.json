@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.3.24",
+	"version": "0.3.25",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -44,7 +44,7 @@
 		"push": "git add -A && git commit -m \"Update\" && git push"
 	},
 	"peerDependencies": {
-		"@apollo/server": "4.0.0-alpha.x",
+		"@apollo/server": ">=4.0.0-alpha",
 		"fastify": ">=4.4"
 	},
 	"devDependencies": {
