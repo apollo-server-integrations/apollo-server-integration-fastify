@@ -2,7 +2,6 @@
 	"extends": ".",
 	"compilerOptions": {
 		"module": "CommonJS",
-		"outDir": "./build/cjs",
-    "declarationMap": false
+		"outDir": "./build/cjs"
 	}
 }

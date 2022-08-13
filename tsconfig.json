@@ -5,9 +5,7 @@
 		"lib": ["ESNext"],
 		"rootDir": "./src",
 		"declaration": true,
-		"declarationMap": true,
-		"outDir": "./build/esm",
-		"exactOptionalPropertyTypes": false
+		"outDir": "./build/esm"
 	},
 	"include": [
 		"src"
