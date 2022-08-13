@@ -39,7 +39,7 @@ export function fastifyApolloHandler<Context extends BaseContext, RawServer exte
 			throw Error("Incremental delivery not implemented")
 		}
 
-		void reply.code(httpGraphQLResponse.statusCode || 200)
+		void reply.code(httpGraphQLResponse.status || 200)
 		void reply.headers(mapToHttpHeaders(httpGraphQLResponse.headers))
 
 		return httpGraphQLResponse.completeBody

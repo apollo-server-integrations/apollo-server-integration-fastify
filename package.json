@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.3.25",
+	"version": "0.3.26",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -48,7 +48,7 @@
 		"fastify": ">=4.4"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.0.0-alpha.4",
+		"@apollo/server": "4.0.0-alpha.5",
 		"@apollo/server-integration-testsuite": "https://pkg.csb.dev/apollographql/apollo-server/commit/655c7efc/@apollo/server-integration-testsuite",
 		"@apollo/utils.withrequired": "1.0.0",
 		"@oly_op/cspell-dict": "1.0.4",
@@ -56,7 +56,7 @@
 		"@oly_op/tsconfig": "1.0.24",
 		"@types/jest": "28.1.6",
 		"@types/lodash-es": "4.17.6",
-		"@types/node": "18.7.1",
+		"@types/node": "18.7.2",
 		"@types/pg": "8.6.5",
 		"@typescript-eslint/eslint-plugin": "5.33.0",
 		"copy-and-watch": "0.1.6",
