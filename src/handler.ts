@@ -1,22 +1,35 @@
+import type {
+	RawServerBase,
+	RawServerDefault,
+	RouteHandlerMethod,
+} from "fastify"
+
 import type { WithRequired } from "@apollo/utils.withrequired"
 import type { ApolloServer, BaseContext } from "@apollo/server"
-import type { RawServerBase, RawServerDefault, RouteHandlerMethod } from "fastify"
 
 import { mapToHttpHeaders } from "./helpers/map-to-http-headers"
 import { fastifyRequestToGraphQL } from "./helpers/fastify-request-to-graphql"
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types"
 
-export function fastifyApolloHandler<RawServer extends RawServerBase = RawServerDefault>(
+export function fastifyApolloHandler<
+	RawServer extends RawServerBase = RawServerDefault,
+>(
 	apollo: ApolloServer<BaseContext>,
 	options?: never,
 ): RouteHandlerMethod<RawServer>
 
-export function fastifyApolloHandler<Context extends BaseContext, RawServer extends RawServerBase = RawServerDefault>(
+export function fastifyApolloHandler<
+	Context extends BaseContext,
+	RawServer extends RawServerBase = RawServerDefault,
+>(
 	apollo: ApolloServer<Context>,
 	options: WithRequired<ApolloFastifyHandlerOptions<Context, RawServer>, "context">,
 ): RouteHandlerMethod<RawServer>
 
-export function fastifyApolloHandler<Context extends BaseContext, RawServer extends RawServerBase = RawServerDefault>(
+export function fastifyApolloHandler<
+	Context extends BaseContext,
+	RawServer extends RawServerBase = RawServerDefault,
+>(
 	apollo: ApolloServer<Context>,
 	options?: WithRequired<ApolloFastifyHandlerOptions<Context, RawServer>, "context">,
 ): RouteHandlerMethod<RawServer> {

@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.3.27",
+	"version": "0.4.0",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -37,7 +37,7 @@
 	},
 	"scripts": {
 		"delete-build": "del-cli build",
-		"build": "tsc && tsc -p tsconfig.cjs.json",
+		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"postpublish": "npm run push",
 		"sync": "git checkout . && git remote update && git pull",
@@ -56,13 +56,13 @@
 		"@oly_op/tsconfig": "1.0.24",
 		"@types/jest": "28.1.6",
 		"@types/lodash-es": "4.17.6",
-		"@types/node": "18.7.2",
+		"@types/node": "18.7.3",
 		"@types/pg": "8.6.5",
 		"@typescript-eslint/eslint-plugin": "5.33.0",
 		"copy-and-watch": "0.1.6",
 		"cspell": "6.6.1",
 		"del-cli": "5.0.0",
-		"eslint": "8.21.0",
+		"eslint": "8.22.0",
 		"eslint-config-airbnb": "19.0.4",
 		"eslint-config-airbnb-typescript": "17.0.0",
 		"eslint-plugin-import": "2.26.0",
@@ -79,6 +79,6 @@
 		"typescript": "4.7.4"
 	},
 	"dependencies": {
-		"fastify-plugin": "4.1.0"
+		"fastify-plugin": "4.2.0"
 	}
 }

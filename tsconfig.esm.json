@@ -1,8 +1,8 @@
 {
 	"extends": ".",
 	"compilerOptions": {
-		"module": "CommonJS",
-		"outDir": "./build/cjs"
+		"module": "ESNext",
+		"outDir": "./build/esm"
 	},
 	"include": [
 		"src"

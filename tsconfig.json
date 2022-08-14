@@ -1,11 +1,9 @@
 {
 	"extends": "@oly_op/tsconfig/tsconfig",
-  "references": [],
 	"compilerOptions": {
 		"lib": ["ESNext"],
 		"rootDir": "./src",
-		"declaration": true,
-		"outDir": "./build/esm"
+		"declaration": true
 	},
 	"include": [
 		"src"
