@@ -2,6 +2,8 @@ import type {
 	RawServerBase,
 	RawServerDefault,
 	FastifyPluginAsync,
+	FastifyTypeProvider,
+	FastifyTypeProviderDefault,
 } from "fastify"
 
 import fp, { PluginMetadata } from "fastify-plugin"
@@ -18,23 +20,26 @@ const pluginMetadata: PluginMetadata = {
 
 export function fastifyApollo<
 	RawServer extends RawServerBase = RawServerDefault,
+	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<BaseContext>,
-): FastifyPluginAsync<Omit<ApolloFastifyPluginOptions<BaseContext, RawServer>, "context">, RawServer>
+): FastifyPluginAsync<Omit<ApolloFastifyPluginOptions<BaseContext, RawServer>, "context">, RawServer, TypeProvider>
 
 export function fastifyApollo<
 	Context extends BaseContext = BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
+	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<Context>,
-): FastifyPluginAsync<WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">, RawServer>
+): FastifyPluginAsync<WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">, RawServer, TypeProvider>
 
 export function fastifyApollo<
 	Context extends BaseContext = BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
+	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<Context>,
-): FastifyPluginAsync<WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">, RawServer> {
+): FastifyPluginAsync<WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">, RawServer, TypeProvider> {
 	return fp(
 		async (fastify, options) => {
 			const {

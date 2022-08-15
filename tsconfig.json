@@ -2,10 +2,10 @@
 	"extends": "@oly_op/tsconfig/tsconfig",
 	"compilerOptions": {
 		"lib": ["ESNext"],
-		"rootDir": "./src",
 		"declaration": true
 	},
 	"include": [
-		"src"
+		"src",
+		"tests"
 	]
 }
