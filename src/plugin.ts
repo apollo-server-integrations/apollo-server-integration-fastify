@@ -40,6 +40,8 @@ export function fastifyApollo<
 >(
 	apollo: ApolloServer<Context>,
 ): FastifyPluginAsync<WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">, RawServer, TypeProvider> {
+	apollo.assertStarted("fastifyApolloHandler()")
+
 	return fp(
 		async (fastify, options) => {
 			const {

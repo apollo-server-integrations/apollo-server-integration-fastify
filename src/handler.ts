@@ -33,8 +33,9 @@ export function fastifyApolloHandler<
 	apollo: ApolloServer<Context>,
 	options?: WithRequired<ApolloFastifyHandlerOptions<Context, RawServer>, "context">,
 ): RouteHandlerMethod<RawServer> {
+	apollo.assertStarted("fastifyApolloHandler()")
+	
 	return async (request, reply) => {
-		apollo.assertStarted("fastifyApolloHandler()")
 
 		const defaultContext: ApolloFastifyContextFunction<Context, RawServer> =
 			async () => ({} as Context)
