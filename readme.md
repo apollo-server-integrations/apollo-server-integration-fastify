@@ -66,7 +66,7 @@ fastify.get("/api", fastifyApolloHandler(apollo))
 
 fastify.route({
   url: "/graphql",
-  method: ["GET", "POST"],
+  method: ["GET", "POST", "OPTIONS"],
   handler: fastifyApolloHandler(apollo),
 })
 ```
@@ -137,7 +137,7 @@ export type ApolloFastifyContextFunction<Context> = (request: FastifyRequest, re
   - default: `"/graphql"`
 - `method`
   - type: `HTTPMethod | HTTPMethod[]`
-  - default: `["GET", "POST"]`
+  - default: `["GET", "POST", "OPTIONS"]`
 - `context`
   - type: [ApolloFastifyContextFunction](#ApolloFastifyContextFunction)
   - default: `async () => ({})`
