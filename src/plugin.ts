@@ -46,7 +46,7 @@ export function fastifyApollo<
 		async (fastify, options) => {
 			const {
 				path = "/graphql",
-				method = ["GET", "POST"],
+				method = ["GET", "POST", "OPTIONS"],
 				...handlerOptions
 			} = options
 
