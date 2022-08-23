@@ -1,17 +1,16 @@
 <a href='https://www.apollographql.com/'><img src='https://avatars.githubusercontent.com/u/17189275?s=200' style="border-radius: 6px; margin-right: 6px" height='100' alt='Apollo Server'></a>
-<a href='https://www.apollographql.com/'><img src='https://avatars.githubusercontent.com/u/24939410?s=200' style="border-radius: 6px" height='100' alt='Apollo Server'></a>
+<a href='https://www.fastify.io/'><img src='https://avatars.githubusercontent.com/u/24939410?s=200' style="border-radius: 6px" height='100' alt='Fastify'></a>
 
-[![NPM version](https://badge.fury.io/js/apollo-server-fastify.svg)](https://www.npmjs.com/package/apollo-server-fastify)
-[![NPM unpacked-size](https://badge.fury.io/js/apollo-server-fastify.svg)](https://www.npmjs.com/package/apollo-server-fastify)
-[![NPM downloads](https://img.shields.io/npm/dm/apollo-server-fastify.svg?style=flat)](https://www.npmjs.com/package/apollo-server-fastify)
+[![NPM version](https://badge.fury.io/js/@oly_op%2Fapollo-server-fastify.svg)](https://www.npmjs.com/package/@oly_op/apollo-server-fastify)
+[![NPM downloads](https://img.shields.io/npm/dm/@oly_op/apollo-server-fastify.svg?style=flat)](https://www.npmjs.com/package/@oly_op/apollo-server-fastify)
 
 # Apollo Server Fastify
 
 ## Introduction
 
-**A community maintained package used to connect Fastify to Apollo GraphQL server.**
+**A community-maintained package for connecting Fastify to Apollo GraphQL server.**
 
-This is a simple package that easily allows you to connect you're own Fastify server implementation to an Apollo Server instance.
+This is a simple package that easily allows you to connect your own Fastify server implementation to an Apollo Server instance.
 
 ## **Requirements**
 
@@ -24,7 +23,7 @@ This is a simple package that easily allows you to connect you're own Fastify se
 ## **Installation**
 
 ```bash
-npm install apollo-server-fastify
+npm install @oly_op/apollo-server-fastify @apollo/server graphql fastify
 ```
 
 ## **Usage**
@@ -33,7 +32,7 @@ Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollogra
 
 ```typescript
 import Fastify from "fastify"
-import fastifyApollo from "apollo-server-fastify"
+import fastifyApollo from "@oly_op/apollo-server-fastify"
 import { ApolloServer, BaseContext } from "@apollo/server"
 // ...
 
@@ -48,15 +47,13 @@ await apollo.start()
 await fastify.register(fastifyApollo(apollo))
 ```
 
-**Note: You have to pass in `BaseContext` to the `ApolloServer` constructor if you're app doesn't use a custom context.**
-
 Alternatively you can use the exported function `fastifyApolloHandler` which can be passed into any [Fastify route handler](https://www.fastify.io/docs/latest/Reference/Routes/).
-This allows you explicitly set all routing options for instance the URL path and accepted methods.
+This allows you to explicitly set all routing options, for instance the URL path and accepted methods.
 
-Many examples shown below:
+Examples shown below:
 
 ```typescript
-import { fastifyApolloHandler } from "apollo-server-fastify"
+import { fastifyApolloHandler } from "@oly_op/apollo-server-fastify"
 
 // ... setup Fastify & Apollo
 
@@ -76,18 +73,18 @@ fastify.route({
 Apollo Server 4 (AS4) has moved context setup outside of the `ApolloServer` constructor.
 
 
-Setup context by defining you're own context function and pass it in to the `context` option. For example:
+Setup context by defining your own context function and pass it in to the `context` option. For example:
 
 ```typescript
 import { ApolloServer } from "@apollo/server"
-import fastifyApollo, { fastifyApolloHandler ApolloFastifyContextFunction } from "apollo-server-fastify"
+import fastifyApollo, { fastifyApolloHandler, ApolloFastifyContextFunction } from "@oly_op/apollo-server-fastify"
 // ...
 
 interface MyContext {
-  authorization: JWTPayload | false,
+  authorization: JWTPayload | false;
 }
 
-const apollo = new ApolloServer<MyContext>({ resolvers, typedefs })
+const apollo = new ApolloServer<MyContext>({ resolvers, typeDefs })
 
 const myContextFunction: ApolloFastifyContextFunction<MyContext> = async request => ({
   authorization: await isAuthorized(request.headers.authorization),
