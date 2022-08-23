@@ -9,10 +9,15 @@ export type ApolloFastifyContextFunctionArgument<RawServer extends RawServerBase
 	reply: FastifyReply<RawServer>,
 ]
 
-export type ApolloFastifyContextFunction<Context, RawServer extends RawServerBase = RawServerDefault> =
-	ContextFunction<ApolloFastifyContextFunctionArgument<RawServer>, Context>
+export type ApolloFastifyContextFunction<
+	Context,
+	RawServer extends RawServerBase = RawServerDefault,
+> =	ContextFunction<ApolloFastifyContextFunctionArgument<RawServer>, Context>
 
-export interface ApolloFastifyHandlerOptions<Context extends BaseContext = BaseContext, RawServer extends RawServerBase = RawServerDefault> {
+export interface ApolloFastifyHandlerOptions<
+	Context extends BaseContext = BaseContext,
+	RawServer extends RawServerBase = RawServerDefault,
+> {
 	context?: ApolloFastifyContextFunction<Context, RawServer>,
 }
 
