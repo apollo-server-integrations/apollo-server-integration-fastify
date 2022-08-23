@@ -17,9 +17,9 @@ export interface ApolloFastifyHandlerOptions<Context extends BaseContext = BaseC
 }
 
 export interface ApolloFastifyPluginOptions<
-  Context extends BaseContext = BaseContext,
-  RawServer extends RawServerBase = RawServerDefault
+	Context extends BaseContext = BaseContext,
+	RawServer extends RawServerBase = RawServerDefault,
 > extends ApolloFastifyHandlerOptions<Context, RawServer> {
-  path?: string;
-  method?: ValueOrArray<Extract<HTTPMethods, "GET" | "POST" | "OPTIONS">>;
+	path?: string,
+	method?: ValueOrArray<Extract<HTTPMethods, "GET" | "POST" | "OPTIONS">>,
 }
