@@ -10,7 +10,7 @@ export type ApolloFastifyContextFunctionArgument<RawServer extends RawServerBase
 ]
 
 export type ApolloFastifyContextFunction<
-	Context,
+	Context extends BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
 > =	ContextFunction<ApolloFastifyContextFunctionArgument<RawServer>, Context>
 
