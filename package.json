@@ -57,7 +57,7 @@
 		"@oly_op/cspell-dict": "1.0.19",
 		"@oly_op/eslint-config": "5.3.4",
 		"@oly_op/tsconfig": "1.0.24",
-		"@types/jest": "28.1.7",
+		"@types/jest": "28.1.8",
 		"@types/lodash-es": "4.17.6",
 		"@types/node": "18.7.11",
 		"@types/pg": "8.6.5",
