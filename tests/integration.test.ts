@@ -2,6 +2,7 @@ import url from "url"
 import Fastify from "fastify"
 import { Server } from "http"
 import { AddressInfo } from "net"
+import type { WithRequired } from "@apollo/utils.withrequired"
 import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server"
 import { defineIntegrationTestSuite } from "@apollo/server-integration-testsuite"
 import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHttpServer"
@@ -36,7 +37,7 @@ defineIntegrationTestSuite(async (
 	testsOptionsNoGeneric?: ApolloFastifyPluginOptions<BaseContext>,
 ) => {
 	const serverOptions = serverOptionsNoGeneric as ApolloServerOptions<MyContext>
-	const testsOptions = testsOptionsNoGeneric as ApolloFastifyPluginOptions<MyContext>
+	const testsOptions = testsOptionsNoGeneric as WithRequired<ApolloFastifyPluginOptions<MyContext>, "context">
 
 	const fastify = Fastify()
 
@@ -52,11 +53,7 @@ defineIntegrationTestSuite(async (
 
 	await apollo.start()
 
-	if (testsOptions?.context) {
-		await fastify.register(fastifyApollo(apollo), { context: testsOptions.context })
-	} else {
-		await fastify.register(fastifyApollo(apollo))
-	}
+	await fastify.register(fastifyApollo(apollo), testsOptions)
 
 	await fastify.listen()
 

@@ -1,5 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", "apollo-open-source"],
-  "dependencyDashboard": false
+  "dependencyDashboard": false,
+  "packageRules": [{
+    "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+    "automerge": true
+  }]
 }
