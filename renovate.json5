@@ -3,7 +3,8 @@
   "extends": ["config:base"],
   "dependencyDashboard": false,
   "packageRules": [{
-    "updateTypes": ["minor", "patch", "pin", "digest"],
-    "automerge": true
+    "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+    "automerge": true,
+    "automergeType": "branch"
   }]
 }
