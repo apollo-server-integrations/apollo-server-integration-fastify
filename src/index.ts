@@ -1,5 +1,4 @@
-import { fastifyApollo } from "./plugin"
-
 export * from "./types"
+export { fastifyApollo as default } from "./plugin"
 export * from "./handler"
-export default fastifyApollo
+export { fastifyDrainPlugin } from "./drainPlugin"
