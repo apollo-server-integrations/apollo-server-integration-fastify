@@ -37,6 +37,7 @@
 	"scripts": {
 		"delete-build": "del-cli build",
 		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+		"watch": "npm run build -- --watch",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"postpublish": "npm run push",
 		"sync": "git checkout . && git remote update && git pull",
