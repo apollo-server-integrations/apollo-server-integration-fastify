@@ -31,7 +31,7 @@ export function fastifyApolloHandler<
 	RawServer extends RawServerBase = RawServerDefault,
 >(
 	apollo: ApolloServer<Context>,
-	options?: WithRequired<ApolloFastifyHandlerOptions<Context, RawServer>, "context">,
+	options?: ApolloFastifyHandlerOptions<Context, RawServer>,
 ): RouteHandlerMethod<RawServer> {
 	apollo.assertStarted("fastifyApolloHandler()")
 	return async (request, reply) => {
