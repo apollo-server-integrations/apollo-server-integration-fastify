@@ -32,7 +32,7 @@
 	},
 	"volta": {
 		"node": "18.7.0",
-		"npm": "8.18.0"
+		"npm": "8.19.1"
 	},
 	"scripts": {
 		"delete-build": "del-cli build",
