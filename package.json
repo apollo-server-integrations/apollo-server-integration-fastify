@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.5.1",
+	"version": "0.6.0",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -31,7 +31,7 @@
 		}
 	},
 	"volta": {
-		"node": "18.7.0",
+		"node": "18.9.0",
 		"npm": "8.19.2"
 	},
 	"scripts": {
@@ -55,12 +55,12 @@
 		"@apollo/server-integration-testsuite": "4.0.0-alpha.11",
 		"@apollo/utils.withrequired": "1.0.0",
 		"@jest/types": "29.0.3",
-		"@oly_op/cspell-dict": "1.0.100",
+		"@oly_op/cspell-dict": "1.0.102",
 		"@oly_op/eslint-config": "5.3.4",
 		"@oly_op/tsconfig": "1.0.24",
 		"@types/jest": "29.0.3",
 		"@types/lodash-es": "4.17.6",
-		"@types/node": "18.7.13",
+		"@types/node": "18.7.18",
 		"@types/pg": "8.6.5",
 		"@typescript-eslint/eslint-plugin": "5.37.0",
 		"copy-and-watch": "0.1.6",
@@ -72,6 +72,7 @@
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-json": "3.1.0",
 		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-prefer-arrow": "1.2.3",
 		"eslint-plugin-prefer-arrow-functions": "3.1.4",
 		"eslint-plugin-promise": "6.0.1",
 		"fastify": "4.6.0",

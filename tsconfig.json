@@ -1,8 +1,7 @@
 {
 	"extends": "@oly_op/tsconfig/tsconfig",
 	"compilerOptions": {
-		"lib": ["ESNext"],
-		"declaration": true
+		"lib": ["ESNext"]
 	},
 	"include": [
 		"src",

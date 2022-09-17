@@ -1,6 +1,13 @@
 import type {
+	ContextConfigDefault,
+	FastifySchema,
+	FastifyTypeProvider,
+	FastifyTypeProviderDefault,
+	RawReplyDefaultExpression,
+	RawRequestDefaultExpression,
 	RawServerBase,
 	RawServerDefault,
+	RouteGenericInterface,
 	RouteHandlerMethod,
 } from "fastify"
 
@@ -13,26 +20,53 @@ import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./typ
 
 export function fastifyApolloHandler<
 	RawServer extends RawServerBase = RawServerDefault,
+	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<BaseContext>,
 	options?: never,
-): RouteHandlerMethod<RawServer>
+): RouteHandlerMethod<
+	RawServer,
+	RawRequestDefaultExpression<RawServer>,
+	RawReplyDefaultExpression<RawServer>,
+	RouteGenericInterface,
+	ContextConfigDefault,
+	FastifySchema,
+	TypeProvider
+>
 
 export function fastifyApolloHandler<
 	Context extends BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
+	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<Context>,
 	options: WithRequired<ApolloFastifyHandlerOptions<Context, RawServer>, "context">,
-): RouteHandlerMethod<RawServer>
+): RouteHandlerMethod<
+	RawServer,
+	RawRequestDefaultExpression<RawServer>,
+	RawReplyDefaultExpression<RawServer>,
+	RouteGenericInterface,
+	ContextConfigDefault,
+	FastifySchema,
+	TypeProvider
+>
 
 export function fastifyApolloHandler<
 	Context extends BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
+	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<Context>,
 	options?: ApolloFastifyHandlerOptions<Context, RawServer>,
-): RouteHandlerMethod<RawServer> {
+): RouteHandlerMethod<
+	RawServer,
+	RawRequestDefaultExpression<RawServer>,
+	RawReplyDefaultExpression<RawServer>,
+	RouteGenericInterface,
+	ContextConfigDefault,
+	FastifySchema,
+	TypeProvider
+> {
 	apollo.assertStarted("fastifyApolloHandler()")
 	return async (request, reply) => {
 

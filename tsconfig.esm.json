@@ -2,6 +2,7 @@
 	"extends": ".",
 	"compilerOptions": {
 		"module": "ESNext",
+		"declaration": true,
 		"outDir": "./build/esm"
 	},
 	"include": [

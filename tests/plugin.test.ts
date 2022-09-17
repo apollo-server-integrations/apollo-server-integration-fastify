@@ -1,6 +1,7 @@
 import Fastify from "fastify"
 import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server"
 import { CreateServerForIntegrationTestsOptions, defineIntegrationTestSuite } from "@apollo/server-integration-testsuite"
+
 import fastifyApollo, { fastifyDrainPlugin } from "../src"
 
 defineIntegrationTestSuite(async (
@@ -19,28 +20,30 @@ defineIntegrationTestSuite(async (
 
 	await apollo.start()
 
-  const testOpts = testOptions?.context
-    ? { context: testOptions?.context }
-    : undefined
+	const options =
+		testOptions?.context ?
+			{ context: testOptions?.context } :
+			undefined
 
-  await fastify.register(fastifyApollo(apollo), {
-    ...testOpts,
-    path: "/",
-    method: [
-      "GET",
-      "POST",
-      // @ts-expect-error Note: we register for HEAD mostly because the
-      // integration test suite ensures that our middleware appropriate rejects
-      // such requests. In your app, you would only want to register for GET and
-      // POST.
-      "HEAD"
-    ],
-  })
+	await fastify.register(fastifyApollo(apollo), {
+		...options,
+		path: "/",
+		method: [
+			"GET",
+			"POST",
+			// @ts-expect-error Note: we register for HEAD mostly because the
+			// integration test suite ensures that our middleware appropriate rejects
+			// such requests. In your app, you would only want to register for GET and
+			// POST.
+			"HEAD",
+		],
+	})
 
-  const url = await fastify.listen({ port: 0 })
+	const url =
+		await fastify.listen({ port: 0 })
 
-  return {
-    server: apollo,
-    url,
-  }
+	return {
+		server: apollo,
+		url,
+	}
 })
