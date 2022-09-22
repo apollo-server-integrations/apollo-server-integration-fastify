@@ -9,9 +9,9 @@ import type { ApolloServerPlugin, BaseContext } from "@apollo/server"
 // call `fastify({forceCloseConnections: true})` to make all connections immediately
 // close without grace.)
 
-export function fastifyApolloDrainPlugin<TContext extends BaseContext>(
+export function fastifyApolloDrainPlugin<Context extends BaseContext>(
 	fastify: FastifyInstance,
-): ApolloServerPlugin<TContext> {
+): ApolloServerPlugin<Context> {
 	return {
 		async serverWillStart() {
 			return {
@@ -19,7 +19,7 @@ export function fastifyApolloDrainPlugin<TContext extends BaseContext>(
 					if ("closeAllConnections" in fastify.server) {
 						const timeout = setTimeout(() => {
 							// eslint-disable-next-line
-              (fastify.server as any).closeAllConnections()
+							(fastify.server as any).closeAllConnections()
 						}, 10_000)
 						await fastify.close()
 						clearTimeout(timeout)

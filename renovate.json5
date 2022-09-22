@@ -8,10 +8,10 @@
 			"updateTypes": ["minor", "patch", "pin", "digest"],
 			"automerge": true
 		},
-	   {
-      matchPackageNames: ["@types/node"],
-      matchBaseBranches: ["version-4"],
-      allowedVersions: "14.x"
-    },
+		{
+			"matchPackageNames": ["@types/node"],
+			"matchBaseBranches": ["version-4"],
+			"allowedVersions": "14.x"
+		},
 	]
 }
