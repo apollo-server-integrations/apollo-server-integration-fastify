@@ -1,0 +1,59 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.0
+
+commands:
+  install-volta:
+    description: Install volta to manage Node/npm versions
+    steps:
+      - run:
+          name: Install volta
+          # Teach the volta installer to update Circle's special env
+          # file instead of the default.
+          command: |
+            curl https://get.volta.sh | PROFILE="$BASH_ENV" bash
+
+  setup-node:
+    parameters:
+      node-version:
+        type: string
+        default: ''
+    steps:
+      - install-volta
+      - checkout
+      - when:
+          condition: << parameters.node-version >>
+          steps:
+          - run: volta pin node@<< parameters.node-version >>
+      - run: node --version
+      - run: npm --version
+      - node/install-packages
+
+jobs:
+  NodeJS:
+    parameters:
+      node-version:
+        type: string
+    docker:
+    - image: cimg/base:stable
+    steps:
+      - setup-node:
+          node-version: <<parameters.node-version>>
+      - run: npm run test:ci
+      - run: npm run coverage:upload
+      - store_test_results:
+          path: junit.xml
+
+workflows:
+  version: 2
+  Build:
+    jobs:
+      - NodeJS:
+          name: NodeJS << matrix.node-version >>
+          matrix:
+            parameters:
+              node-version:
+                - "14"
+                - "16"
+                - "18"
