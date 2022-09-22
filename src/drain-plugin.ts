@@ -17,10 +17,10 @@ export function fastifyApolloDrainPlugin<TContext extends BaseContext>(
 			return {
 				async drainServer() {
 					if ("closeAllConnections" in fastify.server) {
-						const timeout = setTimeout(
-							() => fastify.server.closeAllConnections(),
-							10_000,
-						)
+						const timeout = setTimeout(() => {
+							// eslint-disable-next-line
+              (fastify.server as any).closeAllConnections()
+						}, 10_000)
 						await fastify.close()
 						clearTimeout(timeout)
 					}

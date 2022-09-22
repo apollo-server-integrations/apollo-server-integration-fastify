@@ -8,6 +8,7 @@ const config: Config.InitialOptions = {
 	globals: {
 		"ts-jest": {
 			tsconfig: "<rootDir>/tsconfig.json",
+			diagnostics: true,
 		},
 	},
 }
