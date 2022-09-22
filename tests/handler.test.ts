@@ -2,7 +2,7 @@ import Fastify from "fastify"
 import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server"
 import { CreateServerForIntegrationTestsOptions, defineIntegrationTestSuite } from "@apollo/server-integration-testsuite"
 
-import { fastifyDrainPlugin } from "../src"
+import { fastifyApolloDrainPlugin } from "../src"
 import { fastifyApolloHandler } from "../src/handler"
 
 defineIntegrationTestSuite(async (
@@ -15,7 +15,7 @@ defineIntegrationTestSuite(async (
 		...serverOptions,
 		plugins: [
 			...(serverOptions.plugins ?? []),
-			fastifyDrainPlugin(fastify),
+			fastifyApolloDrainPlugin(fastify),
 		],
 	})
 
