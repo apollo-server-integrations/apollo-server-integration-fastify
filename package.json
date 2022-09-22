@@ -43,7 +43,9 @@
 		"sync": "git checkout . && git remote update && git pull",
 		"push": "git add -A && git commit -m \"Update\" && git push",
 		"test": "jest --verbose",
-		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit"
+		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
+		"lint": "eslint src --ext .ts",
+		"lint-fix": "npm run lint -- --fix"
 	},
 	"peerDependencies": {
 		"@apollo/server": "^4.0.0-alpha",

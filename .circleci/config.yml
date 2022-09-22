@@ -43,6 +43,12 @@ jobs:
       - run: npm run test:ci
       - store_test_results:
           path: junit.xml
+  Lint:
+    docker:
+    - image: cimg/base:stable
+    steps:
+      - setup-node
+      - run: npm run lint
 
 workflows:
   version: 2
@@ -56,3 +62,4 @@ workflows:
                 - "14"
                 - "16"
                 - "18"
+      - Lint
