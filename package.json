@@ -14,7 +14,7 @@
 		"url": "https://github.com/olyop/apollo-server-fastify.git"
 	},
 	"engines": {
-		"node": ">=16.7"
+		"node": ">=14"
 	},
 	"type": "module",
 	"main": "build/cjs/index.js",
@@ -62,7 +62,7 @@
 		"@oly_op/tsconfig": "1.0.24",
 		"@types/jest": "28.1.8",
 		"@types/lodash-es": "4.17.6",
-		"@types/node": "18.7.18",
+		"@types/node": "14.18.29",
 		"@types/pg": "8.6.5",
 		"@typescript-eslint/eslint-plugin": "5.38.0",
 		"copy-and-watch": "0.1.6",
