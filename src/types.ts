@@ -18,7 +18,12 @@ export interface ApolloFastifyHandlerOptions<
 	Context extends BaseContext = BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
 > {
-	context?: ApolloFastifyContextFunction<Context, RawServer>,
+	context?: (
+		Context |
+		ApolloFastifyContextFunction<Context, RawServer> |
+		(() => ApolloFastifyContextFunction<Context, RawServer>) |
+		Promise<ApolloFastifyContextFunction<Context, RawServer>>
+	),
 }
 
 export interface ApolloFastifyPluginOptions<

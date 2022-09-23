@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.7.0",
+	"version": "0.8.0",
 	"name": "@oly_op/apollo-server-fastify",
 	"description": "@oly_op/apollo-server-fastify",
 	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
@@ -57,7 +57,7 @@
 		"@apollo/server-integration-testsuite": "4.0.0-alpha.11",
 		"@apollo/utils.withrequired": "1.0.0",
 		"@jest/types": "28.1.3",
-		"@oly_op/cspell-dict": "1.0.111",
+		"@oly_op/cspell-dict": "1.0.112",
 		"@oly_op/eslint-config": "5.3.4",
 		"@oly_op/prettier-config": "1.0.5",
 		"@oly_op/tsconfig": "1.0.24",
