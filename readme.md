@@ -48,7 +48,7 @@ await fastify.register(fastifyApollo(apollo))
 ```
 
 Alternatively you can use the exported function `fastifyApolloHandler` which can be passed into any [Fastify route handler](https://www.fastify.io/docs/latest/Reference/Routes/).
-This allows you to explicitly set all routing options, for instance the URL path and accepted methods.
+This allows you to explicitly set all routing options, for example the URL path and accepted methods.
 
 Examples shown below:
 
@@ -72,8 +72,7 @@ fastify.route({
 
 Apollo Server 4 (AS4) has moved context setup outside of the `ApolloServer` constructor.
 
-
-Setup context by defining your own context function and pass it in to the `context` option. For example:
+Define you're own context function and pass it in to the `context` option. For example:
 
 ```typescript
 import { ApolloServer } from "@apollo/server"
@@ -124,7 +123,8 @@ export function fastifyApolloHandler<Context extends BaseContext = BaseContext>(
 
 ### `ApolloFastifyContextFunction`
 ```typescript
-export type ApolloFastifyContextFunction<Context> = (request: FastifyRequest, reply: FastifyReply) => Promise<Context>;
+export type ApolloFastifyContextFunction<Context> =
+  (request: FastifyRequest, reply: FastifyReply) => Promise<Context>;
 ```
 
 ### `ApolloFastifyPluginOptions`:
