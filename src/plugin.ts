@@ -39,23 +39,20 @@ export function fastifyApollo<
 	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<Context>,
-): FastifyPluginAsync<WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">, RawServer, TypeProvider> {
+): FastifyPluginAsync<
+	WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">,
+	RawServer,
+	TypeProvider
+> {
 	apollo.assertStarted("fastifyApollo()")
 
-	return fp(
-		async (fastify, options) => {
-			const {
-				path = "/graphql",
-				method = ["GET", "POST", "OPTIONS"],
-				...handlerOptions
-			} = options
+	return fp(async (fastify, options) => {
+		const { path = "/graphql", method = ["GET", "POST", "OPTIONS"], ...handlerOptions } = options
 
-			fastify.route({
-				method,
-				url: path,
-				handler: fastifyApolloHandler<Context, RawServer>(apollo, handlerOptions),
-			})
-		},
-		pluginMetadata,
-	)
+		fastify.route({
+			method,
+			url: path,
+			handler: fastifyApolloHandler<Context, RawServer>(apollo, handlerOptions),
+		})
+	}, pluginMetadata)
 }

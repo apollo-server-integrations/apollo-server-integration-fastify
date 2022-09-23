@@ -1,1 +1,18 @@
-"@oly_op/prettier-config"
+{
+	"$schema": "https://json.schemastore.org/prettierrc.json",
+	"arrowParens": "avoid",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"endOfLine": "lf",
+	"htmlWhitespaceSensitivity": "ignore",
+	"jsxSingleQuote": false,
+	"printWidth": 120,
+	"proseWrap": "preserve",
+	"quoteProps": "preserve",
+	"semi": false,
+	"singleAttributePerLine": false,
+	"singleQuote": false,
+	"tabWidth": 1,
+	"trailingComma": "all",
+	"useTabs": true,
+}

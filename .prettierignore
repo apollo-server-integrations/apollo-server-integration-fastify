@@ -1,0 +1,7 @@
+# Compiled files
+build
+
+# Config files
+*.json
+*.json5
+*.yml

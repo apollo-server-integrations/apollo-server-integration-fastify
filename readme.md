@@ -14,11 +14,10 @@ This is a simple package that easily allows you to connect your own Fastify serv
 
 ## **Requirements**
 
-- **[Node.js v14](https://nodejs.org/)** or later 
+- **[Node.js v14](https://nodejs.org/)** or later
 - **[Fastify v4](https://www.fastify.io/)** or later
 - **[GraphQL.js v16](https://graphql.org/graphql-js/)** or later
 - **[Apollo Server v4](https://www.apollographql.com/docs/apollo-server/)** or later
-
 
 ## **Installation**
 
@@ -28,7 +27,7 @@ npm install @oly_op/apollo-server-fastify @apollo/server graphql fastify
 
 ## **Usage**
 
-Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollographql.com/docs/apollo-server/) like you usually would and then connect the two by using the `fastifyApollo` plugin: 
+Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollographql.com/docs/apollo-server/) like you usually would and then connect the two by using the `fastifyApollo` plugin:
 
 ```typescript
 import Fastify from "fastify"
@@ -62,9 +61,9 @@ fastify.post("/graphql", fastifyApolloHandler(apollo))
 fastify.get("/api", fastifyApolloHandler(apollo))
 
 fastify.route({
-  url: "/graphql",
-  method: ["GET", "POST", "OPTIONS"],
-  handler: fastifyApolloHandler(apollo),
+	url: "/graphql",
+	method: ["GET", "POST", "OPTIONS"],
+	handler: fastifyApolloHandler(apollo),
 })
 ```
 
@@ -80,24 +79,27 @@ import fastifyApollo, { fastifyApolloHandler, ApolloFastifyContextFunction } fro
 // ...
 
 interface MyContext {
-  authorization: JWTPayload | false;
+	authorization: JWTPayload | false
 }
 
 const apollo = new ApolloServer<MyContext>({ resolvers, typeDefs })
 
 const myContextFunction: ApolloFastifyContextFunction<MyContext> = async request => ({
-  authorization: await isAuthorized(request.headers.authorization),
+	authorization: await isAuthorized(request.headers.authorization),
 })
 
 await fastify.register(fastifyApollo(apollo), {
-  context: myContextFunction,
+	context: myContextFunction,
 })
 
 // OR
 
-await fastify.post("/graphql", fastifyApolloHandler(apollo, {
-  context: myContextFunction,
-}))
+await fastify.post(
+	"/graphql",
+	fastifyApolloHandler(apollo, {
+		context: myContextFunction,
+	}),
+)
 ```
 
 ## **API**
@@ -108,23 +110,23 @@ All options and generics are optional other than passing in the `ApolloServer` i
 
 ```typescript
 export default function fastifyApollo<Context extends BaseContext = BaseContext>(
-  apollo: ApolloServer<Context>,
-): FastifyPluginAsync<ApolloFastifyPluginOptions<Context>>;
+	apollo: ApolloServer<Context>,
+): FastifyPluginAsync<ApolloFastifyPluginOptions<Context>>
 ```
 
 ### `fastifyApolloHandler`
 
 ```typescript
 export function fastifyApolloHandler<Context extends BaseContext = BaseContext>(
-  apollo: ApolloServer<Context>,
-  options?: ApolloFastifyHandlerOptions<Context>,
-): RouteHandlerMethod;
+	apollo: ApolloServer<Context>,
+	options?: ApolloFastifyHandlerOptions<Context>,
+): RouteHandlerMethod
 ```
 
 ### `ApolloFastifyContextFunction`
+
 ```typescript
-export type ApolloFastifyContextFunction<Context> =
-  (request: FastifyRequest, reply: FastifyReply) => Promise<Context>;
+export type ApolloFastifyContextFunction<Context> = (request: FastifyRequest, reply: FastifyReply) => Promise<Context>
 ```
 
 ### `ApolloFastifyPluginOptions`:
@@ -150,7 +152,6 @@ export type ApolloFastifyContextFunction<Context> =
 ### HTTPS/HTTP2
 
 All functions and types optionally allow you to pass in a Server type to Fastify (the default is `http.Server`).
-
 
 ## **Contributors**
 

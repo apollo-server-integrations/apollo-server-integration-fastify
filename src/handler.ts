@@ -68,26 +68,20 @@ export function fastifyApolloHandler<
 > {
 	apollo.assertStarted("fastifyApolloHandler()")
 	return async (request, reply) => {
+		const defaultContext: ApolloFastifyContextFunction<Context, RawServer> = async () => ({} as Context)
 
-		const defaultContext: ApolloFastifyContextFunction<Context, RawServer> =
-			async () => ({} as Context)
+		const context = options?.context
+			? isPromise(options.context)
+				? await options.context
+				: isFunction(options.context)
+				? options.context()
+				: options.context
+			: defaultContext
 
-		const context =
-			options?.context ?
-				(isPromise(options.context) ?
-					await options.context :
-					(isFunction(options.context) ?
-						options.context() :
-						options.context)) :
-				defaultContext
-
-		const httpGraphQLResponse =
-			await apollo.executeHTTPGraphQLRequest({
-				httpGraphQLRequest: fastifyRequestToGraphQL<RawServer>(request),
-				context: isContextFunction(context) ? (
-					() => context(request, reply)
-				) : async () => context,
-			})
+		const httpGraphQLResponse = await apollo.executeHTTPGraphQLRequest({
+			httpGraphQLRequest: fastifyRequestToGraphQL<RawServer>(request),
+			context: isContextFunction(context) ? () => context(request, reply) : async () => context,
+		})
 
 		if (httpGraphQLResponse.completeBody === null) {
 			throw Error("Incremental delivery not implemented")

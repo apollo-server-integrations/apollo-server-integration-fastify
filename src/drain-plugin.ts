@@ -19,7 +19,7 @@ export function fastifyApolloDrainPlugin<Context extends BaseContext>(
 					if ("closeAllConnections" in fastify.server) {
 						const timeout = setTimeout(() => {
 							// eslint-disable-next-line
-							(fastify.server as any).closeAllConnections()
+							;(fastify.server as any).closeAllConnections()
 						}, 10_000)
 						await fastify.close()
 						clearTimeout(timeout)

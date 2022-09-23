@@ -1,5 +1,6 @@
 {
-	"extends": "@oly_op",
+	"extends": ["@oly_op", "plugin:prettier/recommended"],
+	"plugins": ["prettier"],
 	"env": {
 		"node": true,
 		"jest": true

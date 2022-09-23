@@ -45,7 +45,9 @@
 		"test": "jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
 		"lint": "eslint src --ext .ts",
-		"lint-fix": "npm run lint -- --fix"
+		"lint-fix": "npm run lint -- --fix",
+		"prettier": "prettier --write .",
+		"prettier-check": "prettier --check ."
 	},
 	"peerDependencies": {
 		"@apollo/server": "^4.0.0-alpha",
@@ -72,11 +74,13 @@
 		"eslint": "8.23.1",
 		"eslint-config-airbnb": "19.0.4",
 		"eslint-config-airbnb-typescript": "17.0.0",
+		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-json": "3.1.0",
 		"eslint-plugin-node": "11.1.0",
 		"eslint-plugin-prefer-arrow": "1.2.3",
 		"eslint-plugin-prefer-arrow-functions": "3.1.4",
+		"eslint-plugin-prettier": "4.2.1",
 		"eslint-plugin-promise": "6.0.1",
 		"fastify": "4.6.0",
 		"graphql": "16.6.0",
