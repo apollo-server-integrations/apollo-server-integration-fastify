@@ -9,6 +9,22 @@
 	},
 	"rules": {
 		"max-len": "off",
+		"@typescript-eslint/semi": ["error", "always"],
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"multiline": {
+					"requireLast": true,
+					"delimiter": "semi"
+				},
+				"singleline": {
+					"delimiter": "semi",
+					"requireLast": true
+				}
+			}
+		],
+		"eol-last": ["error", "always"],
+		"@typescript-eslint/indent": "off",
 		"no-restricted-exports": "off",
 		"@typescript-eslint/require-await": "off",
 		"prefer-arrow/prefer-arrow-functions": "off"

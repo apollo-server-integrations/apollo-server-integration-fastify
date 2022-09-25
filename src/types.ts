@@ -1,35 +1,39 @@
-import type { RouteGenericInterface } from "fastify/types/route"
-import type { BaseContext, ContextFunction } from "@apollo/server"
-import type { HTTPMethods, FastifyReply, FastifyRequest, RawServerBase, RawServerDefault } from "fastify"
+import type { BaseContext, ContextFunction } from "@apollo/server";
+import type {
+	HTTPMethods,
+	FastifyReply,
+	FastifyRequest,
+	RawServerBase,
+	RawServerDefault,
+	RouteGenericInterface,
+} from "fastify";
 
-type ValueOrArray<T> = T | T[]
+type ValueOrArray<T> = T | T[];
 
-export type ApolloFastifyContextFunctionArgument<RawServer extends RawServerBase = RawServerDefault> = [
-	request: FastifyRequest<RouteGenericInterface, RawServer>,
-	reply: FastifyReply<RawServer>,
-]
+export type ApolloFastifyContextFunctionArgument<
+	RawServer extends RawServerBase = RawServerDefault,
+	RouteGeneric extends RouteGenericInterface = RouteGenericInterface,
+> = [request: FastifyRequest<RouteGeneric, RawServer>, reply: FastifyReply<RawServer>];
 
 export type ApolloFastifyContextFunction<
 	Context extends BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
-> =	ContextFunction<ApolloFastifyContextFunctionArgument<RawServer>, Context>
+	RouteGeneric extends RouteGenericInterface = RouteGenericInterface,
+> = ContextFunction<ApolloFastifyContextFunctionArgument<RawServer, RouteGeneric>, Context>;
 
 export interface ApolloFastifyHandlerOptions<
 	Context extends BaseContext = BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
+	RouteGeneric extends RouteGenericInterface = RouteGenericInterface,
 > {
-	context?: (
-		Context |
-		ApolloFastifyContextFunction<Context, RawServer> |
-		(() => ApolloFastifyContextFunction<Context, RawServer>) |
-		Promise<ApolloFastifyContextFunction<Context, RawServer>>
-	),
+	context?: ApolloFastifyContextFunction<Context, RawServer, RouteGeneric>;
 }
 
 export interface ApolloFastifyPluginOptions<
 	Context extends BaseContext = BaseContext,
 	RawServer extends RawServerBase = RawServerDefault,
-> extends ApolloFastifyHandlerOptions<Context, RawServer> {
-	path?: string,
-	method?: ValueOrArray<Extract<HTTPMethods, "GET" | "POST" | "OPTIONS">>,
+	RouteGeneric extends RouteGenericInterface = RouteGenericInterface,
+> extends ApolloFastifyHandlerOptions<Context, RawServer, RouteGeneric> {
+	path?: string;
+	method?: ValueOrArray<Extract<HTTPMethods, "GET" | "POST" | "OPTIONS">>;
 }

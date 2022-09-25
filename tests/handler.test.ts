@@ -1,43 +1,49 @@
-import Fastify from "fastify"
-import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server"
-import { CreateServerForIntegrationTestsOptions, defineIntegrationTestSuite } from "@apollo/server-integration-testsuite"
+import Fastify from "fastify";
+import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server";
+import {
+	CreateServerForIntegrationTestsOptions,
+	defineIntegrationTestSuite,
+} from "@apollo/server-integration-testsuite";
 
-import { fastifyApolloDrainPlugin } from "../src"
-import { fastifyApolloHandler } from "../src/handler"
+import { FASTIFY_LISTEN_OPTIONS, METHODS, serializerLikeBodyParser } from "./options";
+import {
+	fastifyApolloHandler,
+	fastifyApolloDrainPlugin,
+	ApolloFastifyContextFunction,
+} from "../src";
 
-defineIntegrationTestSuite(async (
-	serverOptions: ApolloServerOptions<BaseContext>,
-	testOptions?: CreateServerForIntegrationTestsOptions,
-) => {
-	const fastify = Fastify()
+defineIntegrationTestSuite(
+	async (
+		serverOptions: ApolloServerOptions<BaseContext>,
+		testOptions?: CreateServerForIntegrationTestsOptions,
+	) => {
+		const fastify = Fastify();
 
-	const apollo = new ApolloServer({
-		...serverOptions,
-		plugins: [
-			...(serverOptions.plugins ?? []),
-			fastifyApolloDrainPlugin(fastify),
-		],
-	})
+		fastify.setSerializerCompiler(serializerLikeBodyParser);
 
-	await apollo.start()
+		const apollo = new ApolloServer({
+			...serverOptions,
+			plugins: [...(serverOptions.plugins ?? []), fastifyApolloDrainPlugin(fastify)],
+		});
 
-	fastify.route({
-		// Note: we register for HEAD mostly because the integration test suite
-		// ensures that our middleware appropriate rejects such requests. In your
-		// app, you would only want to register for GET and POST.
-		method: ["GET", "POST", "HEAD"],
-		url: "/",
-		// @ts-ignore TODO: something up with the context typings
-		handler: fastifyApolloHandler(
-			apollo,
-			{ context: testOptions?.context },
-		),
-	})
+		await apollo.start();
 
-	const url = await fastify.listen({ port: 0 })
+		fastify.route({
+			url: "/",
+			method: METHODS,
+			handler: fastifyApolloHandler(apollo, {
+				context: testOptions?.context as ApolloFastifyContextFunction<BaseContext>,
+			}),
+		});
 
-	return {
-		server: apollo,
-		url,
-	}
-})
+		const url = await fastify.listen(FASTIFY_LISTEN_OPTIONS);
+
+		return {
+			server: apollo,
+			url,
+		};
+	},
+	{
+		noIncrementalDelivery: true,
+	},
+);

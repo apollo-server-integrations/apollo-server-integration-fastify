@@ -32,13 +32,19 @@ Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollogra
 
 ```typescript
 import Fastify from "fastify"
-import fastifyApollo from "@oly_op/apollo-server-fastify"
 import { ApolloServer, BaseContext } from "@apollo/server"
+import fastifyApollo, { fastifyApolloDrainPlugin } from "@oly_op/apollo-server-fastify"
 // ...
 
 const fastify = Fastify()
 
-const apollo = new ApolloServer<BaseContext>({ typeDefs, resolvers })
+const apollo = new ApolloServer<BaseContext>({
+  typeDefs,
+  resolvers,
+  plugins: [
+    fastifyApolloDrainPlugin(fastify),
+  ],
+})
 
 await apollo.start()
 
@@ -67,6 +73,8 @@ fastify.route({
   handler: fastifyApolloHandler(apollo),
 })
 ```
+
+Please see the [example](https://github.com/olyopop/apollo-server-fastify/tree/main/example).
 
 ## **Context**
 
@@ -151,6 +159,9 @@ export type ApolloFastifyContextFunction<Context> =
 
 All functions and types optionally allow you to pass in a Server type to Fastify (the default is `http.Server`).
 
+## **Node.JS v14**
+
+Please pass in `forceConnections: true` to Fastify to correctly shutdown you're server on close and not hang incoming requests.
 
 ## **Contributors**
 

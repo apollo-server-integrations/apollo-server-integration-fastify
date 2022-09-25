@@ -1,49 +1,45 @@
-import Fastify from "fastify"
-import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server"
-import { CreateServerForIntegrationTestsOptions, defineIntegrationTestSuite } from "@apollo/server-integration-testsuite"
+import Fastify from "fastify";
+import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server";
+import {
+	CreateServerForIntegrationTestsOptions,
+	defineIntegrationTestSuite,
+} from "@apollo/server-integration-testsuite";
 
-import fastifyApollo, { fastifyApolloDrainPlugin } from "../src"
+import fastifyApollo, { fastifyApolloDrainPlugin } from "../src";
+import { FASTIFY_LISTEN_OPTIONS, METHODS, serializerLikeBodyParser } from "./options";
 
-defineIntegrationTestSuite(async (
-	serverOptions: ApolloServerOptions<BaseContext>,
-	testOptions?: CreateServerForIntegrationTestsOptions,
-) => {
-	const fastify = Fastify()
+defineIntegrationTestSuite(
+	async (
+		serverOptions: ApolloServerOptions<BaseContext>,
+		testOptions?: CreateServerForIntegrationTestsOptions,
+	) => {
+		const fastify = Fastify();
 
-	const apollo = new ApolloServer({
-		...serverOptions,
-		plugins: [
-			...(serverOptions.plugins ?? []),
-			fastifyApolloDrainPlugin(fastify),
-		],
-	})
+		fastify.setSerializerCompiler(serializerLikeBodyParser);
 
-	await apollo.start()
+		const apollo = new ApolloServer({
+			...serverOptions,
+			plugins: [...(serverOptions.plugins ?? []), fastifyApolloDrainPlugin(fastify)],
+		});
 
-	const options =
-		testOptions?.context ?
-			{ context: testOptions?.context } :
-			undefined
+		await apollo.start();
 
-	await fastify.register(fastifyApollo(apollo), {
-		...options,
-		path: "/",
-		method: [
-			"GET",
-			"POST",
-			// @ts-expect-error Note: we register for HEAD mostly because the
-			// integration test suite ensures that our middleware appropriate rejects
-			// such requests. In your app, you would only want to register for GET and
-			// POST.
-			"HEAD",
-		],
-	})
+		const options = testOptions?.context ? { context: testOptions?.context } : {};
 
-	const url =
-		await fastify.listen({ port: 0 })
+		await fastify.register(fastifyApollo(apollo), {
+			...options,
+			path: "/",
+			method: METHODS,
+		});
 
-	return {
-		server: apollo,
-		url,
-	}
-})
+		const url = await fastify.listen(FASTIFY_LISTEN_OPTIONS);
+
+		return {
+			server: apollo,
+			url,
+		};
+	},
+	{
+		noIncrementalDelivery: true,
+	},
+);
