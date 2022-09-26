@@ -1,17 +1,17 @@
 {
-	"license": "MIT",
+	"name": "@as-integrations/fastify",
 	"version": "0.9.0",
-	"name": "@oly_op/apollo-server-fastify",
-	"description": "@oly_op/apollo-server-fastify",
-	"bugs": "https://github.com/olyop/apollo-server-fastify/issues",
-	"homepage": "https://github.com/olyop/apollo-server-fastify/blob/master/README.md",
+	"description": "An Apollo Server integration for use with Fastify",
+	"license": "MIT",
+	"bugs": "https://github.com/apollo-server-integrations/apollo-server-integration-fastify/issues",
+	"homepage": "https://github.com/apollo-server-integrations/apollo-server-integration-fastify/blob/master/README.md",
 	"author": {
 		"name": "Oliver Plummer",
 		"email": "oliver.plummer@outlook.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/olyop/apollo-server-fastify.git"
+		"url": "https://github.com/apollo-server-integrations/apollo-server-integration-fastify.git"
 	},
 	"engines": {
 		"node": ">=14"

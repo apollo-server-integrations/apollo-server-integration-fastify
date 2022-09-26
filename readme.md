@@ -1,8 +1,8 @@
 <a href='https://www.apollographql.com/'><img src='https://avatars.githubusercontent.com/u/17189275?s=200' style="border-radius: 6px; margin-right: 6px" height='100' alt='Apollo Server'></a>
 <a href='https://www.fastify.io/'><img src='https://avatars.githubusercontent.com/u/24939410?s=200' style="border-radius: 6px" height='100' alt='Fastify'></a>
 
-[![NPM version](https://badge.fury.io/js/@oly_op%2Fapollo-server-fastify.svg)](https://www.npmjs.com/package/@oly_op/apollo-server-fastify)
-[![NPM downloads](https://img.shields.io/npm/dm/@oly_op/apollo-server-fastify.svg?style=flat)](https://www.npmjs.com/package/@oly_op/apollo-server-fastify)
+[![NPM version](https://badge.fury.io/js/@as-integrations%2Ffastify.svg)](https://www.npmjs.com/package/@as-integrations/fastify)
+[![NPM downloads](https://img.shields.io/npm/dm/@as-integrations/fastify.svg?style=flat)](https://www.npmjs.com/package/@as-integrations/fastify)
 
 # Apollo Server Fastify
 
@@ -23,7 +23,7 @@ This is a simple package that easily allows you to connect your own Fastify serv
 ## **Installation**
 
 ```bash
-npm install @oly_op/apollo-server-fastify @apollo/server graphql fastify
+npm install @as-integrations/fastify @apollo/server graphql fastify
 ```
 
 ## **Usage**
@@ -33,7 +33,7 @@ Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollogra
 ```typescript
 import Fastify from "fastify"
 import { ApolloServer, BaseContext } from "@apollo/server"
-import fastifyApollo, { fastifyApolloDrainPlugin } from "@oly_op/apollo-server-fastify"
+import fastifyApollo, { fastifyApolloDrainPlugin } from "@as-integrations/fastify"
 // ...
 
 const fastify = Fastify()
@@ -59,7 +59,7 @@ This allows you to explicitly set all routing options, for example the URL path 
 Examples shown below:
 
 ```typescript
-import { fastifyApolloHandler } from "@oly_op/apollo-server-fastify"
+import { fastifyApolloHandler } from "@as-integrations/fastify"
 
 // ... setup Fastify & Apollo
 
@@ -74,7 +74,7 @@ fastify.route({
 })
 ```
 
-Please see the [example](https://github.com/olyopop/apollo-server-fastify/tree/main/example).
+Please see the [example](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/tree/main/example).
 
 ## **Context**
 
@@ -84,7 +84,7 @@ Define you're own context function and pass it in to the `context` option. For e
 
 ```typescript
 import { ApolloServer } from "@apollo/server"
-import fastifyApollo, { fastifyApolloHandler, ApolloFastifyContextFunction } from "@oly_op/apollo-server-fastify"
+import fastifyApollo, { fastifyApolloHandler, ApolloFastifyContextFunction } from "@as-integrations/fastify"
 // ...
 
 interface MyContext {
