@@ -36,7 +36,7 @@
 	},
 	"scripts": {
 		"delete-build": "del-cli build",
-		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && npm run prettier-build",
 		"watch": "npm run build -- --watch",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"postpublish": "npm run push",
@@ -45,7 +45,10 @@
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
 		"lint": "eslint src --ext .ts",
-		"lint-fix": "npm run lint -- --fix"
+		"lint-fix": "npm run lint -- --fix",
+		"prettier": "prettier --write .",
+		"prettier-build": "prettier --write build",
+		"prettier-check": "prettier --check ."
 	},
 	"peerDependencies": {
 		"@apollo/server": "^4.0.0-alpha",

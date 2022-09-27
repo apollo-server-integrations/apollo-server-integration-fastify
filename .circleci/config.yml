@@ -18,14 +18,14 @@ commands:
     parameters:
       node-version:
         type: string
-        default: ''
+        default: ""
     steps:
       - install-volta
       - checkout
       - when:
           condition: << parameters.node-version >>
           steps:
-          - run: volta pin node@<< parameters.node-version >>
+            - run: volta pin node@<< parameters.node-version >>
       - run: node --version
       - run: npm --version
       - node/install-packages
@@ -36,7 +36,7 @@ jobs:
       node-version:
         type: string
     docker:
-    - image: cimg/base:stable
+      - image: cimg/base:stable
     steps:
       - setup-node:
           node-version: <<parameters.node-version>>
@@ -45,10 +45,16 @@ jobs:
           path: junit.xml
   Lint:
     docker:
-    - image: cimg/base:stable
+      - image: cimg/base:stable
     steps:
       - setup-node
       - run: npm run lint
+  Prettier:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - setup-node
+      - run: npm run prettier-check
 
 workflows:
   version: 2
@@ -62,4 +68,5 @@ workflows:
                 - "14"
                 - "16"
                 - "18"
-      - Lint
+                - Lint
+                - Prettier
