@@ -8,7 +8,7 @@ import type {
 
 import fp, { PluginMetadata } from "fastify-plugin";
 import type { WithRequired } from "@apollo/utils.withrequired";
-import type { ApolloServer, BaseContext } from "@apollo/server";
+import { ApolloServer, BaseContext } from "@apollo/server";
 
 import { fastifyApolloHandler } from "./handler";
 import { ApolloFastifyPluginOptions } from "./types";
@@ -52,6 +52,10 @@ export function fastifyApollo<
 	RawServer,
 	TypeProvider
 > {
+	if (apollo === undefined || apollo === null || !((apollo as unknown) instanceof ApolloServer)) {
+		throw new TypeError("You must pass in an instance of `ApolloServer`.");
+	}
+
 	apollo.assertStarted("fastifyApollo()");
 
 	return fp(async (fastify, options) => {

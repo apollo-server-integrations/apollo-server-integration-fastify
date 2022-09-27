@@ -5,7 +5,7 @@ import {
 	defineIntegrationTestSuite,
 } from "@apollo/server-integration-testsuite";
 
-import { FASTIFY_LISTEN_OPTIONS, METHODS, serializerLikeBodyParser } from "./options";
+import { FASTIFY_LISTEN_OPTIONS, METHODS } from "./options";
 import {
 	fastifyApolloHandler,
 	fastifyApolloDrainPlugin,
@@ -18,8 +18,6 @@ defineIntegrationTestSuite(
 		testOptions?: CreateServerForIntegrationTestsOptions,
 	) => {
 		const fastify = Fastify();
-
-		fastify.setSerializerCompiler(serializerLikeBodyParser);
 
 		const apollo = new ApolloServer({
 			...serverOptions,

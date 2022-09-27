@@ -1,14 +1,6 @@
 import { FastifyListenOptions } from "fastify";
-import { FastifySerializerCompiler } from "fastify/types/schema";
 
 import { ApolloFastifyPluginOptions } from "../src";
-
-// Something's wrong with serializing to JSON in the tests.
-// I've tried this and few others including using fast-json-stringify but
-// it didn't change it.
-export const serializerLikeBodyParser: FastifySerializerCompiler<unknown> =
-	() => (payload: unknown) =>
-		JSON.stringify(payload);
 
 export const METHODS = [
 	"GET",
@@ -25,5 +17,5 @@ export const FASTIFY_LISTEN_OPTIONS: FastifyListenOptions = {
 	// fastify defaults to listening on "localhost"
 	// This should apparently allow testing both ipv4 and ipv6 on any OS.
 	// https://nodejs.org/api/net.html#serverlistenport-host-backlog-callback
-	// host: "::",
+	host: "::",
 };

@@ -12,8 +12,8 @@ import type {
 	RouteHandlerMethod,
 } from "fastify";
 
+import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
-import type { ApolloServer, BaseContext } from "@apollo/server";
 
 import { fastifyRequestToGraphQL, mapToHttpHeaders } from "./helpers";
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types";
@@ -88,6 +88,10 @@ export function fastifyApolloHandler<
 	TypeProvider,
 	Logger
 > {
+	if (apollo === undefined || apollo === null || !((apollo as unknown) instanceof ApolloServer)) {
+		throw new TypeError("You must pass in an instance of `ApolloServer`.");
+	}
+
 	apollo.assertStarted("fastifyApolloHandler()");
 
 	const defaultContext: ApolloFastifyContextFunction<Context, RawServer> = () =>
