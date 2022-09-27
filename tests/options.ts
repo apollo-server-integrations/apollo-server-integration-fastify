@@ -17,5 +17,5 @@ export const FASTIFY_LISTEN_OPTIONS: FastifyListenOptions = {
 	// fastify defaults to listening on "localhost"
 	// This should apparently allow testing both ipv4 and ipv6 on any OS.
 	// https://nodejs.org/api/net.html#serverlistenport-host-backlog-callback
-	host: "::",
+	// host: "::",
 };
