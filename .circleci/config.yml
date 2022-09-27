@@ -68,5 +68,5 @@ workflows:
                 - "14"
                 - "16"
                 - "18"
-                - Lint
-                - Prettier
+      - Lint
+      - Prettier
