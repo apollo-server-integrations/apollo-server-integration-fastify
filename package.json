@@ -62,7 +62,7 @@
 		"@jest/types": "29.0.3",
 		"@oly_op/cspell-dict": "1.0.114",
 		"@oly_op/eslint-config": "5.3.4",
-		"@oly_op/prettier-config": "1.0.11",
+		"@oly_op/prettier-config": "1.0.13",
 		"@oly_op/tsconfig": "1.0.24",
 		"@types/jest": "29.0.3",
 		"@types/node": "14.18.31",
