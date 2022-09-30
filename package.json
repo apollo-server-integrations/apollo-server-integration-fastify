@@ -69,7 +69,7 @@
 		"@types/pg": "8.6.5",
 		"@typescript-eslint/eslint-plugin": "5.38.1",
 		"copy-and-watch": "0.1.6",
-		"cspell": "6.10.1",
+		"cspell": "6.11.1",
 		"del-cli": "5.0.0",
 		"eslint": "8.24.0",
 		"eslint-config-airbnb": "19.0.4",
