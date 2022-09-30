@@ -1,6 +1,6 @@
 {
 	"name": "@as-integrations/fastify",
-	"version": "0.9.0",
+	"version": "0.10.0",
 	"description": "An Apollo Server integration for use with Fastify",
 	"license": "MIT",
 	"bugs": "https://github.com/apollo-server-integrations/apollo-server-integration-fastify/issues",
@@ -40,8 +40,6 @@
 		"watch": "npm run build -- --watch",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"postpublish": "npm run push",
-		"sync": "git checkout . && git remote update && git pull",
-		"push": "git add -A && git commit -m \"Update\" && git push",
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
 		"lint": "eslint src --ext .ts",
