@@ -54,7 +54,7 @@
 		"graphql": "^16.5.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.0.0-rc.14",
+		"@apollo/server": "4.0.0-rc.15",
 		"@apollo/server-integration-testsuite": "4.0.0-alpha.13",
 		"@apollo/utils.withrequired": "1.0.0",
 		"@jest/types": "29.1.2",
