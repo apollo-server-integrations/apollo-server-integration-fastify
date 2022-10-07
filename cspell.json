@@ -1,4 +1,10 @@
 {
 	"import": ["@oly_op/cspell-dict/cspell-ext.json"],
-	"words": ["Scheer", "Trevor"]
+	"dictionaries": ["@as-integrations/fastify/custom-words"],
+	"dictionaryDefinitions": [
+		{
+			"name": "@as-integrations/fastify/custom-words",
+			"path": "./custom-words.txt"
+		}
+	]
 }

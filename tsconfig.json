@@ -3,5 +3,9 @@
 	"compilerOptions": {
 		"lib": ["ESNext"]
 	},
-	"include": ["src", "tests", "jest.config.ts"]
+	"ts-node": {
+		"esm": true,
+		"swc": true
+	},
+	"include": ["src", "scripts", "tests", "jest.config.ts"]
 }

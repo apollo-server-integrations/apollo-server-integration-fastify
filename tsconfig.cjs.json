@@ -1,6 +1,7 @@
 {
 	"extends": ".",
 	"compilerOptions": {
+		"target": "ES2015",
 		"declaration": true,
 		"module": "CommonJS",
 		"outDir": "./build/cjs"
