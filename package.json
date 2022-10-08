@@ -57,7 +57,7 @@
 		"@apollo/server-integration-testsuite": "4.0.0-alpha.13",
 		"@apollo/utils.withrequired": "1.0.0",
 		"@jest/types": "29.1.2",
-		"@oly_op/cspell-dict": "1.0.114",
+		"@oly_op/cspell-dict": "1.0.115",
 		"@oly_op/eslint-config": "5.3.4",
 		"@oly_op/prettier-config": "1.0.13",
 		"@oly_op/tsconfig": "1.0.24",
