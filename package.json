@@ -48,12 +48,12 @@
 		"prettier-check": "prettier --check ."
 	},
 	"peerDependencies": {
-		"@apollo/server": "^4.0.0-alpha",
+		"@apollo/server": "4.0.0-rc.18",
 		"fastify": "^4.4.0",
 		"graphql": "^16.5.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.0.0-rc.15",
+		"@apollo/server": "4.0.0-rc.18",
 		"@apollo/server-integration-testsuite": "4.0.0-alpha.13",
 		"@apollo/utils.withrequired": "1.0.0",
 		"@jest/types": "29.1.2",

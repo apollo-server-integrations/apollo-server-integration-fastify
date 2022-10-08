@@ -52,7 +52,7 @@ export function fastifyApollo<
 	RawServer,
 	TypeProvider
 > {
-	if (apollo === undefined || apollo === null || !((apollo as unknown) instanceof ApolloServer)) {
+	if (apollo === undefined || apollo === null || !(apollo instanceof ApolloServer<Context>)) {
 		throw new TypeError("You must pass in an instance of `ApolloServer`.");
 	}
 
