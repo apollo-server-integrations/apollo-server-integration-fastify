@@ -15,7 +15,7 @@ import type {
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
 
-import { fastifyRequestToGraphQL, mapToHttpHeaders } from "./helpers";
+import { fastifyRequestToGraphQL } from "./helpers";
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types";
 
 interface RouteInterface extends RouteGenericInterface {
@@ -88,7 +88,7 @@ export function fastifyApolloHandler<
 	TypeProvider,
 	Logger
 > {
-	if (apollo === undefined || apollo === null || !((apollo as unknown) instanceof ApolloServer)) {
+	if (apollo === undefined || apollo === null || !(apollo instanceof ApolloServer<Context>)) {
 		throw new TypeError("You must pass in an instance of `ApolloServer`.");
 	}
 
@@ -105,11 +105,22 @@ export function fastifyApolloHandler<
 			context: () => contextFunction(request, reply),
 		});
 
-		void reply.headers(mapToHttpHeaders(httpGraphQLResponse.headers));
-		void reply.code(httpGraphQLResponse.status || 200);
+		const { headers, body, status } = httpGraphQLResponse;
 
-		if (httpGraphQLResponse.body.kind === "complete") {
-			return httpGraphQLResponse.body.string;
+		for (const header of headers) {
+			void reply.header(header[0], header[1]);
+		}
+
+		// Fastify by default adds "no-store"
+		// Fixes test: integration tests > httpServerTests.ts > graphqlHTTP > cache-control not set without any hints
+		if (reply.getHeader("cache-control") === "no-store") {
+			void reply.removeHeader("cache-control");
+		}
+
+		void reply.code(status || 200);
+
+		if (body.kind === "complete") {
+			return body.string;
 		} else {
 			throw new Error("Incremental delivery not implemented yet.");
 		}
