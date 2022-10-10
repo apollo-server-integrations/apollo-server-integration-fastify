@@ -7,8 +7,8 @@
 
 // This script expects to be run from the project root (as `npm run` does).
 
-import path from "path";
-import fs from "fs";
+import path from "node:path";
+import fs from "node:fs";
 import rimraf from "rimraf";
 
 // Tell Node what kinds of files the ".js" files in these subdirectories are.
