@@ -111,12 +111,6 @@ export function fastifyApolloHandler<
 			void reply.header(header[0], header[1]);
 		}
 
-		// Fastify by default adds "no-store"
-		// Fixes test: integration tests > httpServerTests.ts > graphqlHTTP > cache-control not set without any hints
-		if (reply.getHeader("cache-control") === "no-store") {
-			void reply.removeHeader("cache-control");
-		}
-
 		void reply.code(status || 200);
 
 		if (body.kind === "complete") {
