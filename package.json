@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "0.10.1",
+	"version": "1.0.0",
 	"name": "@as-integrations/fastify",
 	"description": "An Apollo Server integration for use with Fastify",
 	"type": "module",
@@ -39,7 +39,6 @@
 		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
 		"postbuild": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm scripts/postcompile.ts",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
-		"postpublish": "npm run push",
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
 		"lint": "eslint src --ext .ts",
