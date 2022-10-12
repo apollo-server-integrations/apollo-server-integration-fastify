@@ -41,7 +41,7 @@
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
-		"lint": "eslint src --ext .ts",
+		"lint": "eslint src scripts --ext .ts",
 		"lint-fix": "npm run lint -- --fix",
 		"prettier": "prettier --write .",
 		"prettier-check": "prettier --check ."
