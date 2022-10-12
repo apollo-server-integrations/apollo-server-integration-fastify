@@ -167,9 +167,12 @@ All functions and types optionally allow you to pass in a Server type to Fastify
 
 ## **Node.JS v14**
 
-Please pass in `forceCloseConnections: true` to Fastify to correctly shutdown you're server on close and not hang incoming requests.
+Please pass in `forceCloseConnections: true` to Fastify in combintation with `fastifyApolloDrainPlugin` to correctly shutdown you're server on close and not hang incoming requests.
+
+```typescript
 
 ## **Contributors**
 
 - Oliver Plummer ([olyop](https://github.com/olyop))
 - Trevor Scheer ([trevor-scheer](https://github.com/trevor-scheer))
+```
