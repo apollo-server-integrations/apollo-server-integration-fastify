@@ -4,7 +4,7 @@
 [![NPM version](https://badge.fury.io/js/@as-integrations%2Ffastify.svg)](https://www.npmjs.com/package/@as-integrations/fastify)
 [![NPM downloads](https://img.shields.io/npm/dm/@as-integrations/fastify.svg?style=flat)](https://www.npmjs.com/package/@as-integrations/fastify)
 
-# Apollo Server Fastify Integration
+# Apollo Server Integration for Fastify
 
 ## **Introduction**
 
