@@ -1,15 +1,12 @@
 import type { IncomingHttpHeaders } from "node:http";
-import type { HTTPGraphQLRequest } from "@apollo/server";
+import { HeaderMap, HTTPGraphQLRequest } from "@apollo/server";
 
 export const httpHeadersToMap = (headers: IncomingHttpHeaders): HTTPGraphQLRequest["headers"] => {
-	const map = new Map<string, string>();
+	const map = new HeaderMap();
 
 	for (const [key, value] of Object.entries(headers)) {
 		if (value) {
-			map.set(
-				key,
-				Array.isArray(value) ? value.map(x => x.toLowerCase()).join(", ") : value.toLowerCase(),
-			);
+			map.set(key, Array.isArray(value) ? value.join(", ") : value);
 		}
 	}
 
