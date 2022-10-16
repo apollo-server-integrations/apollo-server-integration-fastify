@@ -85,7 +85,11 @@ For example:
 
 ```typescript
 import { ApolloServer } from "@apollo/server";
-import fastifyApollo, { fastifyApolloHandler, ApolloFastifyContextFunction } from "@as-integrations/fastify";
+
+import fastifyApollo, {
+  fastifyApolloHandler,
+  ApolloFastifyContextFunction,
+} from "@as-integrations/fastify";
 // ...
 
 interface MyContext {
