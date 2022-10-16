@@ -15,7 +15,7 @@ import type {
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
 
-import { fastifyRequestToGraphQL } from "./helpers";
+import { fastifyRequestToGraphQLRequest } from "./fastify-request-to-graphql-request";
 import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types";
 
 interface RouteInterface extends RouteGenericInterface {
@@ -101,7 +101,7 @@ export function fastifyApolloHandler<
 
 	return async (request, reply) => {
 		const httpGraphQLResponse = await apollo.executeHTTPGraphQLRequest({
-			httpGraphQLRequest: fastifyRequestToGraphQL<RawServer>(request),
+			httpGraphQLRequest: fastifyRequestToGraphQLRequest<RawServer>(request),
 			context: () => contextFunction(request, reply),
 		});
 
