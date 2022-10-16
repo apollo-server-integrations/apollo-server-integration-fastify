@@ -1,4 +1,4 @@
-import { ApolloFastifyContextFunction } from "../src";
+import { ApolloFastifyContextFunction } from "@as-integrations/fastify";
 
 export interface MyContext {
 	greeting: string;

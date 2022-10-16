@@ -5,10 +5,14 @@ import compress from "@fastify/compress";
 import rateLimit from "@fastify/rate-limit";
 import { ApolloServer } from "@apollo/server";
 
+import fastifyApollo, {
+	fastifyApolloHandler,
+	fastifyApolloDrainPlugin,
+} from "@as-integrations/fastify";
+
 import typeDefs from "./type-defs";
 import resolvers from "./resolvers";
 import { myContextFunction, MyContext } from "./context";
-import fastifyApollo, { fastifyApolloHandler, fastifyApolloDrainPlugin } from "../src";
 
 const fastify = await Fastify();
 

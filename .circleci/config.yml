@@ -60,6 +60,8 @@ workflows:
   version: 2
   Build:
     jobs:
+      - Lint
+      - Prettier
       - NodeJS:
           name: NodeJS << matrix.node-version >>
           matrix:
@@ -68,5 +70,3 @@ workflows:
                 - "14"
                 - "16"
                 - "18"
-      - Lint
-      - Prettier
