@@ -14,8 +14,8 @@ import { fastifyApolloHandler } from "./handler";
 import { ApolloFastifyPluginOptions } from "./types";
 
 const pluginMetadata: PluginMetadata = {
-	fastify: "4.x",
-	name: "apollo-server-fastify",
+	fastify: "^4.4.0",
+	name: "@as-integrations/fastify",
 };
 
 export function fastifyApollo<
