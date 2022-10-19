@@ -73,7 +73,7 @@
 		"eslint-plugin-json": "3.1.0",
 		"eslint-plugin-node": "11.1.0",
 		"eslint-plugin-prefer-arrow": "1.2.3",
-		"eslint-plugin-promise": "6.1.0",
+		"eslint-plugin-promise": "6.1.1",
 		"eslint-plugin-unicorn": "44.0.2",
 		"fastify": "4.9.2",
 		"graphql": "16.6.0",
