@@ -10,7 +10,6 @@
 		},
 		{
 			"matchPackageNames": ["@types/node"],
-			"matchBaseBranches": ["version-4"],
 			"allowedVersions": "14.x",
 		},
 	],
