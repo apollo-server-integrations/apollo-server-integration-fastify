@@ -32,7 +32,7 @@
 	},
 	"volta": {
 		"node": "18.12.1",
-		"npm": "8.19.3"
+		"npm": "9.1.1"
 	},
 	"scripts": {
 		"delete-build": "rimraf build",
