@@ -8,6 +8,8 @@
 		"project": "./tsconfig.json"
 	},
 	"rules": {
+		"import/no-unresolved": "off",
+		"no-restricted-exports": "off",
 		"@typescript-eslint/require-await": "off",
 		"prefer-arrow/prefer-arrow-functions": "off"
 	}

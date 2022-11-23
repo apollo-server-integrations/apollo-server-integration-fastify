@@ -1,17 +1,17 @@
 import type {
-	RawServerBase,
-	RawServerDefault,
 	FastifyPluginAsync,
 	FastifyTypeProvider,
 	FastifyTypeProviderDefault,
+	RawServerBase,
+	RawServerDefault,
 } from "fastify";
 
-import fp, { PluginMetadata } from "fastify-plugin";
-import type { WithRequired } from "@apollo/utils.withrequired";
 import { ApolloServer, BaseContext } from "@apollo/server";
+import type { WithRequired } from "@apollo/utils.withrequired";
+import fp, { PluginMetadata } from "fastify-plugin";
 
-import { fastifyApolloHandler } from "./handler";
-import { ApolloFastifyPluginOptions } from "./types";
+import { fastifyApolloHandler } from "./handler.js";
+import { ApolloFastifyPluginOptions } from "./types.js";
 
 const pluginMetadata: PluginMetadata = {
 	fastify: "^4.4.0",

@@ -15,8 +15,8 @@ import type {
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
 
-import { fastifyRequestToGraphQLRequest } from "./fastify-request-to-graphql-request";
-import { ApolloFastifyHandlerOptions, ApolloFastifyContextFunction } from "./types";
+import { fastifyRequestToGraphQLRequest } from "./fastify-request-to-graphql-request.js";
+import { ApolloFastifyContextFunction, ApolloFastifyHandlerOptions } from "./types.js";
 
 interface RouteInterface extends RouteGenericInterface {
 	Reply: string;
@@ -107,8 +107,8 @@ export function fastifyApolloHandler<
 
 		const { headers, body, status } = httpGraphQLResponse;
 
-		for (const header of headers) {
-			void reply.header(header[0], header[1]);
+		for (const [headerKey, headerValue] of headers) {
+			void reply.header(headerKey, headerValue);
 		}
 
 		void reply.code(status || 200);

@@ -1,8 +1,8 @@
 import type { BaseContext, ContextFunction } from "@apollo/server";
 import type {
-	HTTPMethods,
 	FastifyReply,
 	FastifyRequest,
+	HTTPMethods,
 	RawServerBase,
 	RawServerDefault,
 	RouteGenericInterface,

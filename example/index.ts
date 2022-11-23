@@ -1,18 +1,15 @@
-import Fastify from "fastify";
+import { ApolloServer } from "@apollo/server";
+import compress from "@fastify/compress";
 import cors from "@fastify/cors";
 import helmet from "@fastify/helmet";
-import compress from "@fastify/compress";
 import rateLimit from "@fastify/rate-limit";
-import { ApolloServer } from "@apollo/server";
+import Fastify from "fastify";
 
-import fastifyApollo, {
-	fastifyApolloHandler,
-	fastifyApolloDrainPlugin,
-} from "@as-integrations/fastify";
+import fastifyApollo, { fastifyApolloDrainPlugin } from "@as-integrations/fastify";
 
-import typeDefs from "./type-defs";
+import { MyContext, myContextFunction } from "./context";
 import resolvers from "./resolvers";
-import { myContextFunction, MyContext } from "./context";
+import typeDefs from "./type-defs";
 
 const fastify = await Fastify();
 
