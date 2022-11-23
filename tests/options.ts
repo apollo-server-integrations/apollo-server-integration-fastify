@@ -1,6 +1,6 @@
 import { FastifyListenOptions } from "fastify";
 
-import { ApolloFastifyPluginOptions } from "../src";
+import { ApolloFastifyPluginOptions } from "../src/index.js";
 
 export const METHODS = [
 	"GET",

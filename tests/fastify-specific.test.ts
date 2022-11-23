@@ -1,6 +1,6 @@
 import { ApolloServer } from "@apollo/server";
 
-import fastifyApollo, { fastifyApolloHandler } from "../src";
+import fastifyApollo, { fastifyApolloHandler } from "../src/index.js";
 
 describe("fastify specific tests", () => {
 	it("not passing in a correct instance throws", async () => {
