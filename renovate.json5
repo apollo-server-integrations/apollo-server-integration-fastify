@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:base"],
+	"extends": ["config:base", "config:js-lib"],
 	"automergeType": "branch",
 	"dependencyDashboard": false,
 	"packageRules": [
@@ -8,6 +8,15 @@
 			"updateTypes": ["minor", "patch", "pin", "digest"],
 			"automerge": true,
 		},
+		// Bunch up all non-major dependencies into a single PR.  In the common case
+    // where the upgrades apply cleanly, this causes less noise and is resolved faster
+    // than starting a bunch of upgrades in parallel for what may turn out to be
+    // a suite of related packages all released at once.
+    {
+      "groupName": "all non-major dependencies",
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupSlug": "all-minor-patch",
+    },
 		{
 			"matchPackageNames": ["@types/node"],
 			"allowedVersions": "14.x",
