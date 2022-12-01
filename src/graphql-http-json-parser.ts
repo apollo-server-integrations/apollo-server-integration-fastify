@@ -1,4 +1,4 @@
-import { FastifyInstance,FastifyReply,FastifyRequest } from "fastify";
+import { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import { ContentTypeParserDoneFunction } from "fastify/types/content-type-parser";
 
 export function getGraphQLHTTPJsonParser<T extends FastifyInstance>(fastify: T) {

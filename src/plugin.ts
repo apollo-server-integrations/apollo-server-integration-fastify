@@ -1,14 +1,14 @@
 import type {
-FastifyPluginAsync,
-FastifyTypeProvider,
-FastifyTypeProviderDefault,
-RawServerBase,
-RawServerDefault,
+	FastifyPluginAsync,
+	FastifyTypeProvider,
+	FastifyTypeProviderDefault,
+	RawServerBase,
+	RawServerDefault,
 } from "fastify";
 
-import { ApolloServer,BaseContext } from "@apollo/server";
+import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
-import fp,{ PluginMetadata } from "fastify-plugin";
+import fp, { PluginMetadata } from "fastify-plugin";
 
 import { getGraphQLHTTPJsonParser } from "./graphql-http-json-parser.js";
 import { fastifyApolloHandler } from "./handler.js";
