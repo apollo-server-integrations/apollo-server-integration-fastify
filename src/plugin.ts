@@ -1,15 +1,16 @@
 import type {
-	FastifyPluginAsync,
-	FastifyTypeProvider,
-	FastifyTypeProviderDefault,
-	RawServerBase,
-	RawServerDefault,
+FastifyPluginAsync,
+FastifyTypeProvider,
+FastifyTypeProviderDefault,
+RawServerBase,
+RawServerDefault,
 } from "fastify";
 
-import { ApolloServer, BaseContext } from "@apollo/server";
+import { ApolloServer,BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
-import fp, { PluginMetadata } from "fastify-plugin";
+import fp,{ PluginMetadata } from "fastify-plugin";
 
+import { getGraphQLHTTPJsonParser } from "./graphql-http-json-parser.js";
 import { fastifyApolloHandler } from "./handler.js";
 import { ApolloFastifyPluginOptions } from "./types.js";
 
@@ -60,6 +61,19 @@ export function fastifyApollo<
 
 	return fp(async (fastify, options) => {
 		const { path = "/graphql", method = ["GET", "POST", "OPTIONS"], ...handlerOptions } = options;
+
+		// Fastify has a default JSON parser that throws a specific error when the body is empty.
+		// A GraphQL server which is spec compliant (per the graphql-over-http spec) should respond
+		// with a JSON object with an `errors` key when the body is empty.
+		fastify.removeContentTypeParser(["application/json"]);
+		// @ts-ignore
+		// TODO: Something with all the Fastify generics is messing up the types with the `fastify` object
+		fastify.addContentTypeParser(
+			"application/json",
+			{ parseAs: "string" },
+			// @ts-ignore
+			getGraphQLHTTPJsonParser(fastify),
+		);
 
 		fastify.route({
 			method,

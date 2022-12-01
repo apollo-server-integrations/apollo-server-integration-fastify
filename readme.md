@@ -163,6 +163,32 @@ interface ApolloFastifyPluginOptions<Context extends BaseContext = BaseContext>
 
 [`HTTPMethod`](https://www.fastify.io/docs/latest/Reference/TypeScript/#fastifyhttpmethods) is exported from Fastify.
 
+## GraphQL over HTTP spec compliance (optional)
+
+If you'd like your server to be compliant with the [GraphQL over HTTP spec](TODO), the JSON body parser must be overridden in order to allow spec-compliant handling of empty POST requests. The default Fastify JSON body parser will throw an error if the request body is empty, which is not compliant with the spec.
+
+If you are using the plugin, this is done automatically for you.
+
+If you are using the `fastifyHandler` function, you can disable the default JSON body parser and use ours like so:
+
+```typescript
+import Fastify from "fastify";
+import { ApolloServer, BaseContext } from "@apollo/server";
+import fastifyApollo, { getGraphQLHTTPJsonParser } from "@as-integrations/fastify";
+// ...
+
+const fastify = Fastify();
+
+fastify.removeContentTypeParser("application/json");
+fastify.addContentTypeParser(
+  "application/json",
+  { parseAs: "string" },
+  getGraphQLHTTPJsonParser(fastify),
+);
+
+// ...
+```
+
 ## **HTTPS/HTTP2**
 
 All functions and types optionally allow you to pass in or infer a `Server` type from Fastify.
