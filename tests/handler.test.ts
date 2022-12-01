@@ -9,7 +9,6 @@ import {
 	ApolloFastifyContextFunction,
 	fastifyApolloDrainPlugin,
 	fastifyApolloHandler,
-	getGraphQLHTTPJsonParser,
 } from "../src/index.js";
 import { FASTIFY_LISTEN_OPTIONS, METHODS } from "./options.js";
 
@@ -19,16 +18,6 @@ defineIntegrationTestSuite(
 		testOptions?: CreateServerForIntegrationTestsOptions,
 	) => {
 		const fastify = Fastify();
-
-		// Fastify has a default JSON parser that throws a specific error when the body is empty.
-		// A GraphQL server which is spec compliant (per the graphql-over-http spec) should respond
-		// with a JSON object with an `errors` key when the body is empty.
-		fastify.removeContentTypeParser(["application/json"]);
-		fastify.addContentTypeParser(
-			"application/json",
-			{ parseAs: "string" },
-			getGraphQLHTTPJsonParser(fastify),
-		);
 
 		const apollo = new ApolloServer({
 			...serverOptions,
