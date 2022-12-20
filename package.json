@@ -51,8 +51,8 @@
 		"fastify": "^4.4.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.2.0",
-		"@apollo/server-integration-testsuite": "4.2.0",
+		"@apollo/server": "4.3.0",
+		"@apollo/server-integration-testsuite": "4.3.0",
 		"@apollo/utils.withrequired": "1.0.1",
 		"@jest/types": "29.3.1",
 		"@oly_op/cspell-dict": "1.0.115",
