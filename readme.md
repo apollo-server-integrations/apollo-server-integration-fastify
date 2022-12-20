@@ -50,7 +50,7 @@ await apollo.start();
 await fastify.register(fastifyApollo(apollo));
 ```
 
-Note: **You must call and await `apollo.start()` before using the intergration.**
+Note: **You must call and await `apollo.start()` before using the integration.**
 
 Alternatively you can use the exported function `fastifyApolloHandler` which can be passed into any [Fastify route handler](https://www.fastify.io/docs/latest/Reference/Routes/).
 This allows you to explicitly set all routing options like the URL path and accepted methods.
