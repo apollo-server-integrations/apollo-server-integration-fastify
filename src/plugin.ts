@@ -1,3 +1,5 @@
+import { ApolloServer, BaseContext } from "@apollo/server";
+import type { WithRequired } from "@apollo/utils.withrequired";
 import type {
 	FastifyPluginAsync,
 	FastifyTypeProvider,
@@ -5,9 +7,6 @@ import type {
 	RawServerBase,
 	RawServerDefault,
 } from "fastify";
-
-import { ApolloServer, BaseContext } from "@apollo/server";
-import type { WithRequired } from "@apollo/utils.withrequired";
 import fp, { PluginMetadata } from "fastify-plugin";
 
 import { fastifyApolloHandler } from "./handler.js";

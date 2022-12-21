@@ -1,3 +1,4 @@
+import type { ApolloServerPlugin, BaseContext } from "@apollo/server";
 import type {
 	FastifyBaseLogger,
 	FastifyInstance,
@@ -8,8 +9,6 @@ import type {
 	RawServerBase,
 	RawServerDefault,
 } from "fastify";
-
-import type { ApolloServerPlugin, BaseContext } from "@apollo/server";
 
 // Add this plugin to your ApolloServer to drain the server during shutdown.
 // This works best with Node 18.2.0 or newer with that version, Fastify will

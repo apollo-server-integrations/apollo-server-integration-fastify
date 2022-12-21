@@ -1,11 +1,10 @@
 import { ApolloServer } from "@apollo/server";
+import fastifyApollo, { fastifyApolloDrainPlugin } from "@as-integrations/fastify";
 import compress from "@fastify/compress";
 import cors from "@fastify/cors";
 import helmet from "@fastify/helmet";
 import rateLimit from "@fastify/rate-limit";
 import Fastify from "fastify";
-
-import fastifyApollo, { fastifyApolloDrainPlugin } from "@as-integrations/fastify";
 
 import { MyContext, myContextFunction } from "./context";
 import resolvers from "./resolvers";
