@@ -1,0 +1,2184 @@
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"query ($x:String) {hello(x:$x)}","variables":{"x":2}}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}"}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"query ($x:String) {hello(x:$x)}","variables":{"x":2}}
+####################################################
+{"query":"query ($x:[String!]!) {hello(x:$x)}","variables":{"x":[null]}}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}"}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}"}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"query ($x:[String!]!) {hello(x:$x)}","variables":{"x":[null]}}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"{ 🦠"}
+####################################################
+{"query":"{ missingFieldWhichWillNotValidate }"}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"{ 🦠"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{ missingFieldWhichWillNotValidate }"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"query AnOperationName {justAField}"}
+####################################################
+{"query":"query notQ {justAField}","operationName":"q"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"{nonExistentField"}
+####################################################
+{"query":"{nonExistentField}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"{ aliasedField: justAField }"}
+####################################################
+{"query":"query AnOperationName {justAField}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"e0f4f5aaf4a80852019bd573f73f12770f88df2774d567db1ec799a35c5a4eb3"}}}
+####################################################
+{"query":"query notQ {justAField}","operationName":"q"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{nonExistentField"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{nonExistentField}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{ aliasedField: justAField }"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"cdd6250c105c54d52b32aacb47acc7ffb4bc13257820350b5b83358a918f8744"}}}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}}}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+undefined
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}}}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+undefined
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{ error }"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString3}"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{x}"}
+####################################################
+"{\"query\":\"{x}\"}"
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+"  "
+####################################################
+{"query":"{ something }"}
+####################################################
+"{\"query\":\"query test{ testString }\"}"
+####################################################
+{}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":""}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ hello }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"query BadName { testString }","operationName":"NotBadName"}
+####################################################
+undefined
+####################################################
+{"query":"{ testString }"}
+####################################################
+{"query":"{ testString }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"\n            query One { testString }\n            query Two { testString }\n          "}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ error }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString3}"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{ testArgument(echo: \"🧡💘💚\") }"}
+####################################################
+undefined
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+undefined
+####################################################
+[{"query":"{ten}"},{"query":"{twenty}"}]
+####################################################
+undefined
+####################################################
+[{"query":"{twenty}"},{"query":"{ten}"}]
+####################################################
+[{"query":"{uncached}"},{"query":"{ten}"}]
+####################################################
+[{"query":"{ten}"},{"query":"{uncached}"}]
+####################################################
+undefined
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+undefined
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+undefined
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"{x}"}
+####################################################
+{"query":"query test{ testPersonWithCacheControl { firstName } }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+"{\"query\":\"{x}\"}"
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+undefined
+####################################################
+{"query":"query test($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+undefined
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","variables":"{ \"echo\": \"world\" }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","extensions":"{ \"echo\": \"world\" }"}
+####################################################
+undefined
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+{"query":"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  "}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+"  "
+####################################################
+"{\"query\":\"query test{ testString }\"}"
+####################################################
+{"query":{"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"test"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"testString"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":83}}}
+####################################################
+{}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+{"query":""}
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}]
+####################################################
+{"query":"{"}
+####################################################
+[]
+####################################################
+{"query":"{ hello }"}
+####################################################
+[{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}}]
+####################################################
+{"query":"query BadName { testString }","operationName":"NotBadName"}
+####################################################
+undefined
+####################################################
+{"query":"{ testString }"}
+####################################################
+{"query":"{ testString }"}
+####################################################
+{"query":"\n            query One { testString }\n            query Two { testString }\n          "}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{ testArgument(echo: \"🧡💘💚\") }"}
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+[{"query":"{ten}"},{"query":"{twenty}"}]
+####################################################
+{"query":"query test{ testContext }"}
+####################################################
+[{"query":"{twenty}"},{"query":"{ten}"}]
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+[{"query":"{uncached}"},{"query":"{ten}"}]
+####################################################
+[{"query":"{ten}"},{"query":"{uncached}"}]
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+{"query":"mutation test{ testRootValue }"}
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"query test{ testPersonWithCacheControl { firstName } }"}
+####################################################
+{"query":"query test{ testGraphQLError }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"query test{ testGraphQLErrorWithHTTP1 testGraphQLErrorWithHTTP2 testGraphQLErrorWithHTTP3 }"}
+####################################################
+undefined
+####################################################
+{"query":"}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+undefined
+####################################################
+{"query":"{thrower}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+{"query":"{thrower}"}
+####################################################
+{"query":"query test($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","variables":"{ \"echo\": \"world\" }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","extensions":"{ \"echo\": \"world\" }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"query":"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  "}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+undefined
+####################################################
+{"query":{"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"test"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"testString"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":83}}}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}]
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+[]
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}}}]
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}},"query":"{ testString }"}]
+####################################################
+[{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}}]
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+undefined
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+{"query":0}
+####################################################
+{"query":false}
+####################################################
+{"query":["array"]}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+{"query":0}
+####################################################
+{"query":false}
+####################################################
+{"query":["array"]}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"query test{ testContext }"}
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":"mutation test{ testRootValue }"}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"query test{ testGraphQLError }"}
+####################################################
+{"query":"query test{ testGraphQLErrorWithHTTP1 testGraphQLErrorWithHTTP2 testGraphQLErrorWithHTTP3 }"}
+####################################################
+{"query":"}"}
+####################################################
+{"query":"{thrower}"}
+####################################################
+{"query":"{thrower}"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}}}]
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}},"query":"{ testString }"}]
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+undefined
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+{"query":0}
+####################################################
+{"query":false}
+####################################################
+{"query":["array"]}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+{"query":0}
+####################################################
+{"query":false}
+####################################################
+{"query":["array"]}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"query ($x:String) {hello(x:$x)}","variables":{"x":2}}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"query ($x:String) {hello(x:$x)}","variables":{"x":2}}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}"}
+####################################################
+{"query":"query ($x:[String!]!) {hello(x:$x)}","variables":{"x":[null]}}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}"}
+####################################################
+{"query":"query ($x:String!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"query ($x:[String]!) {hello(x:$x)}","variables":{"x":null}}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"query ($x:[String!]!) {hello(x:$x)}","variables":{"x":[null]}}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"query ($x:CustomScalar) {hello(x:$x)}","variables":{"x":"foo"}}
+####################################################
+{"query":"{ 🦠"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{ missingFieldWhichWillNotValidate }"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"{ justAField }"}
+####################################################
+{"query":"{ 🦠"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"{ missingFieldWhichWillNotValidate }"}
+####################################################
+{"query":"\n  {\n    __schema {\n      directives {\n        name\n      }\n    }\n  }\n"}
+####################################################
+{"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"query AnOperationName {justAField}"}
+####################################################
+{"query":"query notQ {justAField}","operationName":"q"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{nonExistentField"}
+####################################################
+{"query":"{nonExistentField}"}
+####################################################
+{"query":"query AnOperationName {justAField}"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"query notQ {justAField}","operationName":"q"}
+####################################################
+{"query":"{ aliasedField: justAField }"}
+####################################################
+{"query":"{nonExistentField"}
+####################################################
+{"query":"{nonExistentField}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"013aedd8952e1cc8354374cdaa268fdb3a5dbaff22ae2268816f58825c825ca8"}}}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{justAField}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{ aliasedField: justAField }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"982c09eddedcf832d6d8da959d116637eec1f364d12600e6db27882f3695dbc9"}}}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{hello}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"query":"{fieldWhichWillError}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+undefined
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d5f33c81088ca80b8cfaefeac9d6af1400b8e994232471346658f5f4d2ab878f"}}}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"\n  {\n    testString\n  }\n"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}}}
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+undefined
+####################################################
+{"variables":{},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"f67850cc6cffe46e43538139f7473cce5990e08ba1c4892f22fcab4bf0aba1ec"}},"query":"{\n  testString\n}"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{ error }"}
+####################################################
+{"query":"{ something }"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"{testString3}"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ error }"}
+####################################################
+undefined
+####################################################
+{"query":"{testString1}"}
+####################################################
+undefined
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+undefined
+####################################################
+{"query":"{testString1}"}
+####################################################
+undefined
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{testString1}"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{testString}"}
+####################################################
+undefined
+####################################################
+{"query":"{testString1}"}
+####################################################
+{"query":"{testString2}"}
+####################################################
+{"query":"{x}"}
+####################################################
+{"query":"{testString3}"}
+####################################################
+"{\"query\":\"{x}\"}"
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+"  "
+####################################################
+undefined
+####################################################
+"{\"query\":\"query test{ testString }\"}"
+####################################################
+{}
+####################################################
+undefined
+####################################################
+{"query":""}
+####################################################
+{"query":"{x}"}
+####################################################
+{"query":"{"}
+####################################################
+"{\"query\":\"{x}\"}"
+####################################################
+undefined
+####################################################
+{"query":"{ hello }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"query BadName { testString }","operationName":"NotBadName"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ testString }"}
+####################################################
+undefined
+####################################################
+{"query":"{ testString }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"\n            query One { testString }\n            query Two { testString }\n          "}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+"  "
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+"{\"query\":\"query test{ testString }\"}"
+####################################################
+{}
+####################################################
+undefined
+####################################################
+{"query":""}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ hello }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query BadName { testString }","operationName":"NotBadName"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"\n            query One { testString }\n            query Two { testString }\n          "}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+undefined
+####################################################
+{"query":"{ testArgument(echo: \"🧡💘💚\") }"}
+####################################################
+undefined
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+undefined
+####################################################
+[{"query":"{ten}"},{"query":"{twenty}"}]
+####################################################
+undefined
+####################################################
+[{"query":"{twenty}"},{"query":"{ten}"}]
+####################################################
+[{"query":"{uncached}"},{"query":"{ten}"}]
+####################################################
+undefined
+####################################################
+[{"query":"{ten}"},{"query":"{uncached}"}]
+####################################################
+undefined
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testPersonWithCacheControl { firstName } }"}
+####################################################
+{"query":"{ testArgument(echo: \"🧡💘💚\") }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+undefined
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+undefined
+####################################################
+[{"query":"{ten}"},{"query":"{twenty}"}]
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+[{"query":"{twenty}"},{"query":"{ten}"}]
+####################################################
+[{"query":"{uncached}"},{"query":"{ten}"}]
+####################################################
+{"query":"query test($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+[{"query":"{ten}"},{"query":"{uncached}"}]
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","variables":"{ \"echo\": \"world\" }"}
+####################################################
+{"query":"{ cooks { title author } }"}
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","extensions":"{ \"echo\": \"world\" }"}
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+{"query":"{ books { title author } }"}
+####################################################
+{"query":"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  "}
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+{"query":"{ pooks { title books { title author } } }"}
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":{"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"test"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"testString"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":83}}}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+{"query":"query test{ testPersonWithCacheControl { firstName } }"}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}]
+####################################################
+{"query":"query test{ testPerson { firstName } }"}
+####################################################
+[]
+####################################################
+undefined
+####################################################
+[{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}}]
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+undefined
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}}
+####################################################
+{"query":"query test($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","variables":"{ \"echo\": \"world\" }"}
+####################################################
+{"query":"query test($echo: String!){ testArgument(echo: $echo) }","extensions":"{ \"echo\": \"world\" }"}
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+{"query":"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  "}
+####################################################
+{"query":{"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"test"},"variableDefinitions":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"testString"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":83}}}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"}]
+####################################################
+[]
+####################################################
+[{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}},{"query":"query test($delay: Int!) { testStringWithDelay(delay: $delay) }","operationName":"test","variables":{"delay":40}}]
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"query test{ testContext }"}
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+{"query":"mutation test{ testRootValue }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+[{"query":"\n                      query test($echo: String){ testArgument(echo: $echo) }\n                      query test2{ testString }","variables":{"echo":"world"},"operationName":"test2"},{"query":"\n                      query testX($echo: String){ testArgument(echo: $echo) }","variables":{"echo":"yellow"},"operationName":"testX"}]
+####################################################
+{"query":"query test{ testGraphQLError }"}
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+{"query":"query test{ testGraphQLErrorWithHTTP1 testGraphQLErrorWithHTTP2 testGraphQLErrorWithHTTP3 }"}
+####################################################
+[{"query":"query test{ testContext }"},{"query":"query test{ testContext }"}]
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"}"}
+####################################################
+{"query":"mutation test($echo: String){ testMutation(echo: $echo) }","variables":{"echo":"world"}}
+####################################################
+{"query":"{thrower}"}
+####################################################
+{"query":"query test{ testContext }"}
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+{"query":"{thrower}"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test{ testRootValue }"}
+####################################################
+{"query":"mutation test{ testRootValue }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testGraphQLError }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"query":"query test{ testGraphQLErrorWithHTTP1 testGraphQLErrorWithHTTP2 testGraphQLErrorWithHTTP3 }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"query":"}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"query":"{thrower}"}
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}}}]
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}},"query":"{ testString }"}]
+####################################################
+{"query":"{thrower}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"query":"query test{ testError }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"{testString}"}
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+undefined
+####################################################
+{"query":"query test{ testString }"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}}}]
+####################################################
+{"query":0}
+####################################################
+[{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"},{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"371d5cecfaed0ddb63ff2a7cab08cba36fd31d356b302261a5279291086c8734"}},"query":"{ testString }"}]
+####################################################
+{"query":false}
+####################################################
+{"query":["array"]}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+{"query":0}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"query":false}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"query":["array"]}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}}}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},"query":"{testString}"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"extensions":{"persistedQuery":{"version":1,"sha256Hash":"c9249f0e3e3d70411aa80001fdeae3ee8f59057bb59ca0df53a8cdf9fb82ca2b"}},"query":"{testString}"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+undefined
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"query":"{testString}"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+undefined
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"notquery":"{ __typename }"}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":0}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":false}
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"query":["array"]}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":{"obj":"ect"}}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":0}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":false}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"query":["array"]}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"query":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"operationName":{"obj":"ect"},"query":"{ __typename }"}
+####################################################
+{"operationName":0,"query":"{ __typename }"}
+####################################################
+{"operationName":false,"query":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"operationName":["array"],"query":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"operationName":"Query","query":"query Query { __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ __typename }","variables":null}
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ __typename }","operationName":null}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+{"query":"{ __typename }","extensions":null}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"{ __typename }","variables":"string"}
+####################################################
+{"query":"{ __typename }","variables":0}
+####################################################
+{"query":"{ __typename }","variables":false}
+####################################################
+{"query":"{ __typename }","variables":["array"]}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+{"query":"query Type($name: String!) { __type(name: $name) { name } }","variables":{"name":"sometype"}}
+####################################################
+undefined
+####################################################
+undefined
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":"{ __typename }","extensions":"string"}
+####################################################
+{"query":"{ __typename }","extensions":0}
+####################################################
+{"query":"{ __typename }","extensions":false}
+####################################################
+{"query":"{ __typename }","extensions":["array"]}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"query":"{ __typename }","extensions":{"some":"value"}}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"qeury":"{ __typename }"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
+{"query":"{ 8f31403dfe404bccbb0e835f2629c6a7 }"}
+####################################################
