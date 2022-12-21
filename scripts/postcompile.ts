@@ -4,11 +4,10 @@
 // since we only need one copy (and package.json points at the esm one). (It
 // doesn't revert the packageVersion.ts update from precompile.ts; that gets
 // done directly in the compile script, whether or not tsc succeeds.)
-
 // This script expects to be run from the project root (as `npm run` does).
-
 import fs from "node:fs";
 import path from "node:path";
+
 import rimraf from "rimraf";
 
 // Tell Node what kinds of files the ".js" files in these subdirectories are.

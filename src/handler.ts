@@ -1,3 +1,5 @@
+import { ApolloServer, BaseContext } from "@apollo/server";
+import type { WithRequired } from "@apollo/utils.withrequired";
 import type {
 	ContextConfigDefault,
 	FastifyBaseLogger,
@@ -11,9 +13,6 @@ import type {
 	RouteGenericInterface,
 	RouteHandlerMethod,
 } from "fastify";
-
-import { ApolloServer, BaseContext } from "@apollo/server";
-import type { WithRequired } from "@apollo/utils.withrequired";
 
 import { fastifyRequestToGraphQLRequest } from "./fastify-request-to-graphql-request.js";
 import { ApolloFastifyContextFunction, ApolloFastifyHandlerOptions } from "./types.js";
