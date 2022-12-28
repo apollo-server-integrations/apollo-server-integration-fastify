@@ -4,6 +4,9 @@ export interface MyContext {
 	greeting: string;
 }
 
-export const myContextFunction: ApolloFastifyContextFunction<MyContext> = async () => ({
+export const myContextFunction: ApolloFastifyContextFunction<MyContext> = async (
+	request,
+	reply,
+) => ({
 	greeting: "Hello World!!",
 });
