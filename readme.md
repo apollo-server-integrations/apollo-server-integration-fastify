@@ -79,7 +79,7 @@ Please see the [example](https://github.com/apollo-server-integrations/apollo-se
 
 Apollo Server v4 has moved context setup outside of the `ApolloServer` constructor.
 
-Define you're own context function and pass it in to the `context` option.
+Define you're own context function and pass it in to the `context` option. The function accepts two arguments - request and reply. They are of type `FastifyRequest` and `FastifyReply` respectivley. Whatever is returned from the function will be passed to the `context` argument in your resolvers.
 
 For example:
 
@@ -98,7 +98,7 @@ interface MyContext {
 
 const apollo = new ApolloServer<MyContext>(...);
 
-const myContextFunction: ApolloFastifyContextFunction<MyContext> = async request => ({
+const myContextFunction: ApolloFastifyContextFunction<MyContext> = async (request, reply) => ({
   authorization: await isAuthorized(request.headers.authorization),
 });
 
@@ -111,6 +111,21 @@ await fastify.register(fastifyApollo(apollo), {
 await fastify.post("/graphql", fastifyApolloHandler(apollo, {
   context: myContextFunction,
 }));
+```
+
+```ts
+// Access the context in your resolvers
+export const resolvers = {
+  Query: {
+    helloWorld: (parent, args, context, info) => {
+      if (!context.authorization) {
+        throw new Error("Not authorized");
+      }
+      
+      return "Hello world :)";
+    },
+  },
+};
 ```
 
 ## **API**
@@ -143,7 +158,7 @@ type ApolloFastifyContextFunction<Context> = (
 ) => Promise<Context>;
 ```
 
-### `ApolloFastifyHandlerOptions`:
+### `ApolloFastifyHandlerOptions`
 
 ```typescript
 interface ApolloFastifyHandlerOptions<Context extends BaseContext = BaseContext> {
@@ -151,7 +166,7 @@ interface ApolloFastifyHandlerOptions<Context extends BaseContext = BaseContext>
 }
 ```
 
-### `ApolloFastifyPluginOptions`:
+### `ApolloFastifyPluginOptions`
 
 ```typescript
 interface ApolloFastifyPluginOptions<Context extends BaseContext = BaseContext>
