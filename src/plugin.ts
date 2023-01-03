@@ -7,7 +7,7 @@ import type {
 	RawServerBase,
 	RawServerDefault,
 } from "fastify";
-import fp, { PluginMetadata } from "fastify-plugin";
+import { PluginMetadata, fastifyPlugin } from "fastify-plugin";
 
 import { fastifyApolloHandler } from "./handler.js";
 import { ApolloFastifyPluginOptions } from "./types.js";
@@ -57,7 +57,7 @@ export function fastifyApollo<
 
 	apollo.assertStarted("fastifyApollo()");
 
-	return fp(async (fastify, options) => {
+	return fastifyPlugin(async (fastify, options) => {
 		const { path = "/graphql", method = ["GET", "POST", "OPTIONS"], ...handlerOptions } = options;
 
 		fastify.route({

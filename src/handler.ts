@@ -110,7 +110,7 @@ export function fastifyApolloHandler<
 			void reply.header(headerKey, headerValue);
 		}
 
-		void reply.code(status || 200);
+		void reply.code(status === undefined ? 200 : status);
 
 		if (body.kind === "complete") {
 			return body.string;
