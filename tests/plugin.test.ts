@@ -3,7 +3,7 @@ import {
 	CreateServerForIntegrationTestsOptions,
 	defineIntegrationTestSuite,
 } from "@apollo/server-integration-testsuite";
-import Fastify from "fastify";
+import { fastify as Fastify } from "fastify";
 
 import fastifyApollo, { fastifyApolloDrainPlugin } from "../src/index.js";
 import { FASTIFY_LISTEN_OPTIONS, METHODS } from "./options.js";

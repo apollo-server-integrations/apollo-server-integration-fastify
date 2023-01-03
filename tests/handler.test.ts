@@ -3,7 +3,7 @@ import {
 	CreateServerForIntegrationTestsOptions,
 	defineIntegrationTestSuite,
 } from "@apollo/server-integration-testsuite";
-import Fastify from "fastify";
+import { fastify as Fastify } from "fastify";
 
 import {
 	ApolloFastifyContextFunction,
