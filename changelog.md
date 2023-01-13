@@ -1,6 +1,7 @@
 # Changelog
 
 ## v1.3.0
+
 - **PACKAGE:** unpin fastify-plugin dep [#50](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/pull/105).
 
 ## v1.1.0
