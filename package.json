@@ -32,7 +32,7 @@
 	},
 	"volta": {
 		"node": "19.3.0",
-		"npm": "9.3.0"
+		"npm": "9.3.1"
 	},
 	"scripts": {
 		"delete-build": "rimraf build",
@@ -65,7 +65,7 @@
 		"@types/rimraf": "3.0.2",
 		"@typescript-eslint/eslint-plugin": "5.48.2",
 		"cross-env": "7.0.3",
-		"cspell": "6.18.1",
+		"cspell": "6.19.2",
 		"eslint": "8.32.0",
 		"eslint-config-airbnb": "19.0.4",
 		"eslint-config-airbnb-typescript": "17.0.0",
