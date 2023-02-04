@@ -79,7 +79,7 @@ Please see the [example](https://github.com/apollo-server-integrations/apollo-se
 
 Apollo Server v4 has moved context setup outside of the `ApolloServer` constructor.
 
-Define you're own context function and pass it in to the `context` option. The function accepts two arguments - request and reply. They are of type `FastifyRequest` and `FastifyReply` respectivley. Whatever is returned from the function will be passed to the `context` argument in your resolvers.
+Define your own context function and pass it in to the `context` option. The function accepts two arguments - request and reply. They are of type `FastifyRequest` and `FastifyReply` respectively. Whatever is returned from the function will be passed to the `context` argument in your resolvers.
 
 For example:
 
