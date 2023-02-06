@@ -12,7 +12,6 @@ const config: Config.InitialOptions = {
 		"^.+\\.test.ts$": [
 			"ts-jest",
 			{
-				tsconfig: "<rootDir>/src/__tests__/tsconfig.json",
 				diagnostics: true,
 			},
 		],
