@@ -1,12 +1,6 @@
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
-import type {
-	FastifyPluginAsync,
-	FastifyTypeProvider,
-	FastifyTypeProviderDefault,
-	RawServerBase,
-	RawServerDefault,
-} from "fastify";
+import type { FastifyPluginAsync, FastifyTypeProvider, FastifyTypeProviderDefault, RawServerBase, RawServerDefault } from "fastify";
 import { PluginMetadata, fastifyPlugin } from "fastify-plugin";
 
 import { fastifyApolloHandler } from "./handler.js";
@@ -16,6 +10,14 @@ const pluginMetadata: PluginMetadata = {
 	fastify: "^4.4.0",
 	name: "@as-integrations/fastify",
 };
+
+function isApolloServerLike(maybeServer: unknown): maybeServer is ApolloServer {
+	return !!(
+		maybeServer &&
+		typeof maybeServer === "object" &&
+		"assertStarted" in maybeServer
+	); 
+}
 
 export function fastifyApollo<
 	RawServer extends RawServerBase = RawServerDefault,
@@ -51,7 +53,7 @@ export function fastifyApollo<
 	RawServer,
 	TypeProvider
 > {
-	if (apollo === undefined || apollo === null || !(apollo instanceof ApolloServer<Context>)) {
+	if (apollo === undefined || apollo === null || !isApolloServerLike(apollo)) {
 		throw new TypeError("You must pass in an instance of `ApolloServer`.");
 	}
 
