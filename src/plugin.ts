@@ -1,6 +1,12 @@
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
-import type { FastifyPluginAsync, FastifyTypeProvider, FastifyTypeProviderDefault, RawServerBase, RawServerDefault } from "fastify";
+import type {
+	FastifyPluginAsync,
+	FastifyTypeProvider,
+	FastifyTypeProviderDefault,
+	RawServerBase,
+	RawServerDefault,
+} from "fastify";
 import { PluginMetadata, fastifyPlugin } from "fastify-plugin";
 
 import { fastifyApolloHandler } from "./handler.js";
@@ -12,11 +18,7 @@ const pluginMetadata: PluginMetadata = {
 };
 
 function isApolloServerLike(maybeServer: unknown): maybeServer is ApolloServer {
-	return !!(
-		maybeServer &&
-		typeof maybeServer === "object" &&
-		"assertStarted" in maybeServer
-	); 
+	return !!(maybeServer && typeof maybeServer === "object" && "assertStarted" in maybeServer);
 }
 
 export function fastifyApollo<
