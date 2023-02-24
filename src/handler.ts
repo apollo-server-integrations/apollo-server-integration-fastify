@@ -16,6 +16,7 @@ import type {
 
 import { fastifyRequestToGraphQLRequest } from "./fastify-request-to-graphql-request.js";
 import { ApolloFastifyContextFunction, ApolloFastifyHandlerOptions } from "./types.js";
+import { isApolloServerLike } from "./utils.js";
 
 interface RouteInterface extends RouteGenericInterface {
 	Reply: string;
@@ -87,7 +88,7 @@ export function fastifyApolloHandler<
 	TypeProvider,
 	Logger
 > {
-	if (apollo === undefined || apollo === null || !(apollo instanceof ApolloServer<Context>)) {
+	if (apollo === undefined || apollo === null || !isApolloServerLike(apollo)) {
 		throw new TypeError("You must pass in an instance of `ApolloServer`.");
 	}
 

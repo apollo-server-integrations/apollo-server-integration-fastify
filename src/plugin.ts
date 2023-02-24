@@ -11,15 +11,12 @@ import { PluginMetadata, fastifyPlugin } from "fastify-plugin";
 
 import { fastifyApolloHandler } from "./handler.js";
 import { ApolloFastifyPluginOptions } from "./types.js";
+import { isApolloServerLike } from "./utils.js";
 
 const pluginMetadata: PluginMetadata = {
 	fastify: "^4.4.0",
 	name: "@as-integrations/fastify",
 };
-
-function isApolloServerLike(maybeServer: unknown): maybeServer is ApolloServer {
-	return !!(maybeServer && typeof maybeServer === "object" && "assertStarted" in maybeServer);
-}
 
 export function fastifyApollo<
 	RawServer extends RawServerBase = RawServerDefault,
