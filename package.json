@@ -51,8 +51,8 @@
 		"fastify": "^4.4.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.4.0",
-		"@apollo/server-integration-testsuite": "4.4.0",
+		"@apollo/server": "4.4.1",
+		"@apollo/server-integration-testsuite": "4.4.1",
 		"@apollo/utils.withrequired": "2.0.0",
 		"@jest/types": "29.4.3",
 		"@oly_op/cspell-dict": "1.0.115",
@@ -81,7 +81,7 @@
 		"jest-config": "29.4.3",
 		"jest-junit": "15.0.0",
 		"prettier": "2.8.4",
-		"rimraf": "4.1.3",
+		"rimraf": "4.2.0",
 		"ts-jest": "29.0.5",
 		"ts-node": "10.9.1",
 		"typescript": "4.9.5"
