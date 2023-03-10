@@ -51,8 +51,8 @@
 		"fastify": "^4.4.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.4.1",
-		"@apollo/server-integration-testsuite": "4.4.1",
+		"@apollo/server": "4.5.0",
+		"@apollo/server-integration-testsuite": "4.5.0",
 		"@apollo/utils.withrequired": "2.0.0",
 		"@jest/types": "29.5.0",
 		"@oly_op/cspell-dict": "1.0.115",
@@ -66,7 +66,7 @@
 		"@typescript-eslint/eslint-plugin": "5.54.1",
 		"cross-env": "7.0.3",
 		"cspell": "6.28.0",
-		"eslint": "8.35.0",
+		"eslint": "8.36.0",
 		"eslint-config-airbnb": "19.0.4",
 		"eslint-config-airbnb-typescript": "17.0.0",
 		"eslint-plugin-import": "2.27.5",
