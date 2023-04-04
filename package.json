@@ -51,9 +51,9 @@
 		"fastify": "^4.4.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.5.0",
-		"@apollo/server-integration-testsuite": "4.5.0",
-		"@apollo/utils.withrequired": "2.0.0",
+		"@apollo/server": "4.6.0",
+		"@apollo/server-integration-testsuite": "4.6.0",
+		"@apollo/utils.withrequired": "2.0.1",
 		"@jest/types": "29.5.0",
 		"@oly_op/cspell-dict": "1.0.115",
 		"@oly_op/eslint-config": "6.0.18",
@@ -63,7 +63,7 @@
 		"@types/jest": "29.5.0",
 		"@types/node": "18.11.17",
 		"@types/rimraf": "3.0.2",
-		"@typescript-eslint/eslint-plugin": "5.57.0",
+		"@typescript-eslint/eslint-plugin": "5.57.1",
 		"cross-env": "7.0.3",
 		"cspell": "6.31.1",
 		"eslint": "8.37.0",
