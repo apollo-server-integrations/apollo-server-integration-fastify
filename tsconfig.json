@@ -1,7 +1,7 @@
 {
 	"extends": "@oly_op/tsconfig/tsconfig",
 	"compilerOptions": {
-		"lib": ["ES2020"],
+		"lib": ["ES2021"],
 		"declaration": true
 	},
 	"ts-node": {
