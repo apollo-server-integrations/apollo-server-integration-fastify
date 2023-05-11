@@ -14,7 +14,7 @@ This is a simple package that easily allows you to connect your own Fastify serv
 
 ## **Requirements**
 
-- **[Node.js v14](https://nodejs.org/)** or later
+- **[Node.js v16](https://nodejs.org/)** or later
 - **[Fastify v4.4](https://www.fastify.io/)** or later
 - **[GraphQL.js v16](https://graphql.org/graphql-js/)** or later
 - **[Apollo Server v4](https://www.apollographql.com/docs/apollo-server/)** or later
@@ -182,7 +182,7 @@ interface ApolloFastifyPluginOptions<Context extends BaseContext = BaseContext>
 
 All functions and types optionally allow you to pass in or infer a `Server` type from Fastify.
 
-## **Node.JS v14**
+## **Node.JS v16**
 
 Please pass in `forceCloseConnections: true` to Fastify in combination with `fastifyApolloDrainPlugin` to correctly shutdown you're server on close and not hang incoming requests.
 
