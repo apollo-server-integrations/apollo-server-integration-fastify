@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import rimraf from "rimraf";
+import { sync } from "rimraf";
 
 // Tell Node what kinds of files the ".js" files in these subdirectories are.
 fs.writeFileSync(path.join("build", "esm", "package.json"), JSON.stringify({ type: "module" }));
@@ -16,4 +16,4 @@ fs.writeFileSync(path.join("build", "cjs", "package.json"), JSON.stringify({ typ
 
 // Remove CJS .d.ts files: we don"t need two copies!
 // "build/cjs/**/*.d.ts"
-rimraf.sync(path.join("build", "cjs", "**", "*.d.ts"));
+sync(path.join("build", "cjs", "**", "*.d.ts"));
