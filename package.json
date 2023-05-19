@@ -59,7 +59,7 @@
 		"@oly_op/eslint-config": "6.0.18",
 		"@oly_op/prettier-config": "1.0.21",
 		"@oly_op/tsconfig": "1.0.25",
-		"@swc/core": "1.3.58",
+		"@swc/core": "1.3.59",
 		"@types/jest": "29.5.1",
 		"@types/node": "16.18.31",
 		"@types/rimraf": "3.0.2",
