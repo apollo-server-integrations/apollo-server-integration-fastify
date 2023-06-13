@@ -5,18 +5,11 @@ import {
 } from "@apollo/server-integration-testsuite";
 import { fastify as Fastify } from "fastify";
 
-import {
-	ApolloFastifyContextFunction,
-	fastifyApolloDrainPlugin,
-	fastifyApolloHandler,
-} from "../src/index.js";
+import { ApolloFastifyContextFunction, fastifyApolloDrainPlugin, fastifyApolloHandler } from "../src/index.js";
 import { FASTIFY_LISTEN_OPTIONS, METHODS } from "./options.js";
 
 defineIntegrationTestSuite(
-	async (
-		serverOptions: ApolloServerOptions<BaseContext>,
-		testOptions?: CreateServerForIntegrationTestsOptions,
-	) => {
+	async (serverOptions: ApolloServerOptions<BaseContext>, testOptions?: CreateServerForIntegrationTestsOptions) => {
 		const fastify = Fastify();
 
 		const apollo = new ApolloServer({

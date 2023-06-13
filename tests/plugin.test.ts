@@ -9,10 +9,7 @@ import fastifyApollo, { fastifyApolloDrainPlugin } from "../src/index.js";
 import { FASTIFY_LISTEN_OPTIONS, METHODS } from "./options.js";
 
 defineIntegrationTestSuite(
-	async (
-		serverOptions: ApolloServerOptions<BaseContext>,
-		testOptions?: CreateServerForIntegrationTestsOptions,
-	) => {
+	async (serverOptions: ApolloServerOptions<BaseContext>, testOptions?: CreateServerForIntegrationTestsOptions) => {
 		const fastify = Fastify();
 
 		const apollo = new ApolloServer({

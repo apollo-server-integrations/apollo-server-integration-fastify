@@ -94,8 +94,7 @@ export function fastifyApolloHandler<
 
 	apollo.assertStarted("fastifyApolloHandler()");
 
-	const defaultContext: ApolloFastifyContextFunction<Context, RawServer> = () =>
-		Promise.resolve({} as Context);
+	const defaultContext: ApolloFastifyContextFunction<Context, RawServer> = () => Promise.resolve({} as Context);
 
 	const contextFunction = options?.context ?? defaultContext;
 

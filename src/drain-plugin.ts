@@ -25,9 +25,7 @@ export function fastifyApolloDrainPlugin<
 	RawReply extends RawReplyDefaultExpression<RawServer> = RawReplyDefaultExpression<RawServer>,
 	Logger extends FastifyBaseLogger = FastifyBaseLogger,
 	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
->(
-	fastify: FastifyInstance<RawServer, RawRequest, RawReply, Logger, TypeProvider>,
-): ApolloServerPlugin<Context> {
+>(fastify: FastifyInstance<RawServer, RawRequest, RawReply, Logger, TypeProvider>): ApolloServerPlugin<Context> {
 	return {
 		async serverWillStart() {
 			return {

@@ -23,11 +23,7 @@ export function fastifyApollo<
 	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<BaseContext>,
-): FastifyPluginAsync<
-	Omit<ApolloFastifyPluginOptions<BaseContext, RawServer>, "context">,
-	RawServer,
-	TypeProvider
->;
+): FastifyPluginAsync<Omit<ApolloFastifyPluginOptions<BaseContext, RawServer>, "context">, RawServer, TypeProvider>;
 
 export function fastifyApollo<
 	Context extends BaseContext = BaseContext,
@@ -35,11 +31,7 @@ export function fastifyApollo<
 	TypeProvider extends FastifyTypeProvider = FastifyTypeProviderDefault,
 >(
 	apollo: ApolloServer<Context>,
-): FastifyPluginAsync<
-	WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">,
-	RawServer,
-	TypeProvider
->;
+): FastifyPluginAsync<WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">, RawServer, TypeProvider>;
 
 export function fastifyApollo<
 	Context extends BaseContext = BaseContext,

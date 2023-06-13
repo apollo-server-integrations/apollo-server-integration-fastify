@@ -1,12 +1,7 @@
 import type { IncomingHttpHeaders } from "node:http";
 
 import { HTTPGraphQLRequest, HeaderMap } from "@apollo/server";
-import type {
-	FastifyRequest,
-	RawServerBase,
-	RawServerDefault,
-	RouteGenericInterface,
-} from "fastify";
+import type { FastifyRequest, RawServerBase, RawServerDefault, RouteGenericInterface } from "fastify";
 
 const httpHeadersToMap = (headers: IncomingHttpHeaders) => {
 	const map = new HeaderMap();
