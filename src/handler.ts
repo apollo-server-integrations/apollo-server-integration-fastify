@@ -1,3 +1,5 @@
+import { Readable } from "node:stream";
+
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
 import type {
@@ -114,8 +116,10 @@ export function fastifyApolloHandler<
 
 		if (body.kind === "complete") {
 			return body.string;
-		} else {
-			throw new Error("Incremental delivery not implemented yet.");
 		}
+
+		const readable = Readable.from(body.asyncIterator);
+		// @ts-ignore something wrong with the `ReplyType` but not sure what
+		return reply.send(readable);
 	};
 }

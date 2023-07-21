@@ -34,7 +34,4 @@ defineIntegrationTestSuite(
 			url,
 		};
 	},
-	{
-		noIncrementalDelivery: true,
-	},
 );
