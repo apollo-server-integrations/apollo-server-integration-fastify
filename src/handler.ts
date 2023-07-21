@@ -118,14 +118,8 @@ export function fastifyApolloHandler<
 			return body.string;
 		}
 
-		// eslint-disable-next-line
 		const readable = Readable.from(body.asyncIterator);
-		
-		// for (const [headerKey, headerValue] of headers) {
-		// 	void reply.raw.setHeader(headerKey, headerValue);
-		// }
-
-		// @ts-ignore
+		// @ts-ignore something wrong with the `ReplyType` but not sure what
 		return reply.send(readable);
 	};
 }
