@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0
+
+-- **FEATURE:** Add support for `@defer` (Incremental Delivery) [#55](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/issues/55)
+
 ## v1.3.0
 
 - **PACKAGE:** unpin fastify-plugin dep [#50](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/pull/105).
