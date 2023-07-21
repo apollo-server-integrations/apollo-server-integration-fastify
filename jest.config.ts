@@ -22,7 +22,6 @@ const config: Config.InitialOptions = {
 	},
 	// TODO: Remove this once the following issue is resolved:
 	testNamePattern: "^((?!MUST\\ require\\ a\\ request\\ body\\ on\\ POST).)*$",
-	setupFiles: ["./tests/jest.setup.ts"],
 };
 
 export default config;
