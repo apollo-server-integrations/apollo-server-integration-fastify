@@ -1,8 +1,5 @@
 import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server";
-import {
-	CreateServerForIntegrationTestsOptions,
-	defineIntegrationTestSuite,
-} from "@apollo/server-integration-testsuite";
+import { CreateServerForIntegrationTestsOptions, defineIntegrationTestSuite } from "@apollo/server-integration-testsuite";
 import { fastify as Fastify } from "fastify";
 
 import { ApolloFastifyContextFunction, fastifyApolloDrainPlugin, fastifyApolloHandler } from "../src/index.js";
@@ -33,8 +30,5 @@ defineIntegrationTestSuite(
 			server: apollo,
 			url,
 		};
-	},
-	{
-		noIncrementalDelivery: true,
 	},
 );

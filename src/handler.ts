@@ -14,6 +14,8 @@ import type {
 	RouteHandlerMethod,
 } from "fastify";
 
+import { Readable } from "node:stream";
+
 import { fastifyRequestToGraphQLRequest } from "./fastify-request-to-graphql-request.js";
 import { ApolloFastifyContextFunction, ApolloFastifyHandlerOptions } from "./types.js";
 import { isApolloServerLike } from "./utils.js";
@@ -114,8 +116,16 @@ export function fastifyApolloHandler<
 
 		if (body.kind === "complete") {
 			return body.string;
-		} else {
-			throw new Error("Incremental delivery not implemented yet.");
 		}
+
+		// eslint-disable-next-line
+		const readable = Readable.from(body.asyncIterator);
+		
+		// for (const [headerKey, headerValue] of headers) {
+		// 	void reply.raw.setHeader(headerKey, headerValue);
+		// }
+
+		// @ts-ignore
+		return reply.send(readable);
 	};
 }
