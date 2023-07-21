@@ -1,3 +1,5 @@
+import { Readable } from "node:stream";
+
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
 import type {
@@ -13,8 +15,6 @@ import type {
 	RouteGenericInterface,
 	RouteHandlerMethod,
 } from "fastify";
-
-import { Readable } from "node:stream";
 
 import { fastifyRequestToGraphQLRequest } from "./fastify-request-to-graphql-request.js";
 import { ApolloFastifyContextFunction, ApolloFastifyHandlerOptions } from "./types.js";

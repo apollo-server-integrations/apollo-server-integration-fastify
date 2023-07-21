@@ -1,5 +1,8 @@
 import { ApolloServer, ApolloServerOptions, BaseContext } from "@apollo/server";
-import { CreateServerForIntegrationTestsOptions, defineIntegrationTestSuite } from "@apollo/server-integration-testsuite";
+import {
+	CreateServerForIntegrationTestsOptions,
+	defineIntegrationTestSuite,
+} from "@apollo/server-integration-testsuite";
 import { fastify as Fastify } from "fastify";
 
 import fastifyApollo, { fastifyApolloDrainPlugin } from "../src/index.js";

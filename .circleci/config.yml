@@ -45,7 +45,7 @@ jobs:
           path: junit.xml
   Incremental Delivery:
     docker:
-    - image: cimg/base:stable
+      - image: cimg/base:stable
     environment:
       INCREMENTAL_DELIVERY_TESTS_ENABLED: t
     steps:
