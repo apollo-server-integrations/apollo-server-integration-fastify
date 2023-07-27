@@ -2,6 +2,7 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": ["config:js-lib", ":widenPeerDependencies", ":automergeMinor"],
 	"automergeType": "branch",
+	"schedule": "every weekend",
 	"dependencyDashboard": false,
 	"packageRules": [
 		// Bunch up all non-major dependencies into a single PR.  In the common case
