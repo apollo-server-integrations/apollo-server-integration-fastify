@@ -63,7 +63,7 @@
 		"@types/jest": "29.5.4",
 		"@types/node": "16.18.48",
 		"@types/rimraf": "3.0.2",
-		"@typescript-eslint/eslint-plugin": "5.62.0",
+		"@typescript-eslint/eslint-plugin": "6.6.0",
 		"cross-env": "7.0.3",
 		"cspell": "7.3.2",
 		"eslint": "8.48.0",
