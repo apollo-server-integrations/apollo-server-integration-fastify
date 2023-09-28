@@ -18,5 +18,11 @@
 			"matchPackageNames": ["@types/node"],
 			"allowedVersions": "16.x",
 		},
+		// Future patches of @swc/core broke an experimental feature in use by ts-node.
+		// The fix is landed in ts-node but no ETA on a release.
+		{
+			"matchPackageNames": ["@swc/core"],
+			"allowedVersions": "1.3.82",
+		},
 	],
 }
