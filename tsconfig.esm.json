@@ -1,7 +1,6 @@
 {
 	"extends": ".",
 	"compilerOptions": {
-		"module": "ESNext",
 		"outDir": "./build/esm"
 	},
 	"include": ["src"]
