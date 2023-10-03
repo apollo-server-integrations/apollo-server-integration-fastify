@@ -2,7 +2,8 @@
 	"extends": "@oly_op/tsconfig/tsconfig",
 	"compilerOptions": {
 		"lib": ["ES2021"],
-		"declaration": true
+		"declaration": true,
+		"module": "NodeNext"
 	},
 	"ts-node": {
 		"esm": true,
