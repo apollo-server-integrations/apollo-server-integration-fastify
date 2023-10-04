@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.1
+
+-- **FIX:** Fix CJS typings by removing redundant `types` field in `package.json#exports` [#268](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/pulls/268)
+
 ## v2.1.0
 
 -- **FEATURE:** Add support for `@defer` (Incremental Delivery) [#55](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/issues/55)
