@@ -1,6 +1,6 @@
 {
 	"name": "@as-integrations/fastify",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "An Apollo Server integration for use with Fastify",
 	"license": "MIT",
 	"type": "module",
