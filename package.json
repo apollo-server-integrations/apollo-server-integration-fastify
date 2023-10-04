@@ -25,7 +25,6 @@
 	],
 	"exports": {
 		".": {
-			"types": "./build/esm/index.d.ts",
 			"import": "./build/esm/index.js",
 			"require": "./build/cjs/index.js"
 		}
