@@ -15,7 +15,7 @@ This is a simple package that easily allows you to connect your own Fastify serv
 ## **Requirements**
 
 - **[Node.js v16](https://nodejs.org/)** or later
-- **[Fastify v4.4](https://www.fastify.io/)** or later
+- **[Fastify v5](https://www.fastify.io/)** or later
 - **[GraphQL.js v16](https://graphql.org/graphql-js/)** or later
 - **[Apollo Server v4](https://www.apollographql.com/docs/apollo-server/)** or later
 

@@ -14,7 +14,7 @@ import { ApolloFastifyPluginOptions } from "./types.js";
 import { isApolloServerLike } from "./utils.js";
 
 const pluginMetadata: PluginMetadata = {
-	fastify: "^4.4.0",
+	fastify: "^5.0.0",
 	name: "@as-integrations/fastify",
 };
 
@@ -50,7 +50,7 @@ export function fastifyApollo<
 
 	apollo.assertStarted("fastifyApollo()");
 
-	return fastifyPlugin(async (fastify, options) => {
+	return fastifyPlugin(async (fastify: any, options: any) => {
 		const { path = "/graphql", method = ["GET", "POST", "OPTIONS"], ...handlerOptions } = options;
 
 		fastify.route({
