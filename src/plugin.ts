@@ -50,12 +50,19 @@ export function fastifyApollo<
 
 	apollo.assertStarted("fastifyApollo()");
 
-	return fastifyPlugin(async (fastify, options) => {
+	/* eslint-disable @typescript-eslint/no-explicit-any */
+	return fastifyPlugin(async (fastify: any, options: any) => {
+		/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 		const { path = "/graphql", method = ["GET", "POST", "OPTIONS"], ...handlerOptions } = options;
 
+		/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+		/* eslint-disable @typescript-eslint/no-unsafe-call */
 		fastify.route({
+			/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 			method,
+			/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 			url: path,
+			/* eslint-disable @typescript-eslint/no-unsafe-argument */
 			handler: fastifyApolloHandler<Context, RawServer>(apollo, handlerOptions),
 		});
 	}, pluginMetadata);

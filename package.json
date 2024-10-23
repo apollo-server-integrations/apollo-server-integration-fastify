@@ -1,6 +1,6 @@
 {
 	"name": "@as-integrations/fastify",
-	"version": "2.1.1",
+	"version": "3.0.0",
 	"description": "An Apollo Server integration for use with Fastify",
 	"license": "MIT",
 	"type": "module",
@@ -36,7 +36,7 @@
 	"scripts": {
 		"delete-build": "rimraf build",
 		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
-		"postbuild": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm scripts/postcompile.ts",
+		"postbuild": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" node --no-warnings --experimental-specifier-resolution=node --import tsx scripts/postcompile.ts",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
@@ -47,10 +47,10 @@
 	},
 	"peerDependencies": {
 		"@apollo/server": "^4.0.0",
-		"fastify": "^4.4.0"
+		"fastify": "^5.0.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.9.5",
+		"@apollo/server": "4.11.0",
 		"@apollo/server-integration-testsuite": "4.9.5",
 		"@apollo/utils.withrequired": "3.0.0",
 		"@jest/types": "29.6.3",
@@ -61,7 +61,6 @@
 		"@swc/core": "1.3.82",
 		"@types/jest": "29.5.8",
 		"@types/node": "16.18.62",
-		"@types/rimraf": "3.0.2",
 		"@typescript-eslint/eslint-plugin": "6.11.0",
 		"cross-env": "7.0.3",
 		"cspell": "7.3.9",
@@ -74,7 +73,7 @@
 		"eslint-plugin-prefer-arrow": "1.2.3",
 		"eslint-plugin-promise": "6.1.1",
 		"eslint-plugin-unicorn": "48.0.1",
-		"fastify": "4.24.3",
+		"fastify": "5.0.0",
 		"graphql": "16.8.1",
 		"jest": "29.7.0",
 		"jest-config": "29.7.0",
@@ -83,9 +82,10 @@
 		"rimraf": "5.0.5",
 		"ts-jest": "29.1.1",
 		"ts-node": "10.9.1",
-		"typescript": "5.2.2"
+		"tsx": "4.19.1",
+		"typescript": "5.6.3"
 	},
 	"dependencies": {
-		"fastify-plugin": "^4.4.0"
+		"fastify-plugin": "5.0.1"
 	}
 }
