@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.1.0
+  node: circleci/node@7.1.0
 
 commands:
   install-volta:
@@ -32,6 +32,7 @@ commands:
 
 jobs:
   NodeJS:
+    executor: node/<<parameters.node-version>>
     parameters:
       node-version:
         type: string
