@@ -50,7 +50,7 @@
 		"fastify": "^5.3.0"
 	},
 	"devDependencies": {
-		"@apollo/server": "4.11.0",
+		"@apollo/server": "4.9.5",
 		"@apollo/server-integration-testsuite": "4.9.5",
 		"@apollo/utils.withrequired": "3.0.0",
 		"@jest/types": "29.6.3",
