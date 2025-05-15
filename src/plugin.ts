@@ -18,7 +18,7 @@ import { isApolloServerLike } from "./utils.js";
 
 const pluginMetadata: PluginMetadata = {
 	fastify: "^5.2.2",
-	name: "@xzyfer/as-integrations-fastify",
+	name: "@as-integrations/fastify",
 };
 
 export function fastifyApollo<

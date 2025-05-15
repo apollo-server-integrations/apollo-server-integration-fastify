@@ -1,5 +1,5 @@
 import { ApolloServer } from "@apollo/server";
-import fastifyApollo, { fastifyApolloDrainPlugin } from "@xzyfer/as-integrations-fastify";
+import fastifyApollo, { fastifyApolloDrainPlugin } from "@as-integrations/fastify";
 import compress from "@fastify/compress";
 import cors from "@fastify/cors";
 import helmet from "@fastify/helmet";

@@ -1,5 +1,5 @@
 {
-	"name": "@xzyfer/as-integrations-fastify",
+	"name": "@as-integrations/fastify",
 	"version": "2.1.1",
 	"description": "An Apollo Server integration for use with Fastify",
 	"license": "MIT",
@@ -7,11 +7,15 @@
 	"main": "build/cjs/index.js",
 	"module": "build/esm/index.js",
 	"types": "build/esm/index.d.ts",
-	"bugs": "https://github.com/xzyfer/apollo-server-integration-fastify/issues",
-	"homepage": "https://github.com/xzyfer/apollo-server-integration-fastify/blob/main/readme.md",
+	"bugs": "https://github.com/apollo-server-integrations/apollo-server-integration-fastify/issues",
+	"homepage": "https://github.com/apollo-server-integrations/apollo-server-integration-fastify/blob/main/readme.md",
+	"author": {
+		"name": "Oliver Plummer",
+		"email": "oliver.plummer@outlook.com"
+	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/xzyfer/apollo-server-integration-fastify.git"
+		"url": "https://github.com/apollo-server-integrations/apollo-server-integration-fastify.git"
 	},
 	"engines": {
 		"node": ">=20"
@@ -32,7 +36,7 @@
 	"scripts": {
 		"delete-build": "rimraf build",
 		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
-		"postbuild": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" node --no-warnings --experimental-specifier-resolution=node --import tsx scripts/postcompile.ts",
+		"postbuild": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm scripts/postcompile.ts",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
@@ -78,10 +82,9 @@
 		"rimraf": "5.0.5",
 		"ts-jest": "29.1.1",
 		"ts-node": "10.9.1",
-		"tsx": "4.19.1",
-		"typescript": "5.8.3"
+		"typescript": "5.2.2"
 	},
 	"dependencies": {
-		"fastify-plugin": "5.0.1"
+		"fastify-plugin": "^5.0.1"
 	}
 }

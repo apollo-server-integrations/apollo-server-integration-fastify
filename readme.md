@@ -1,8 +1,8 @@
 <a href='https://www.apollographql.com/'><img src='https://avatars.githubusercontent.com/u/17189275?s=200' style="border-radius: 6px; margin-right: 6px" height='100' alt='Apollo Server'></a>
 <a href='https://www.fastify.io/'><img src='https://avatars.githubusercontent.com/u/24939410?s=200' style="border-radius: 6px" height='100' alt='Fastify'></a>
 
-[![NPM version](https://badge.fury.io/js/@xzyfer%2Fas-integrations-fastify.svg)](https://www.npmjs.com/package/@xzyfer/as-integrations-fastify)
-[![NPM downloads](https://img.shields.io/npm/dm/@xzyfer/as-integrations-fastify.svg?style=flat)](https://www.npmjs.com/package/@xzyfer/as-integrations-fastify)
+[![NPM version](https://badge.fury.io/js/@as-integrations%2Ffastify.svg)](https://www.npmjs.com/package/@as-integrations/fastify)
+[![NPM downloads](https://img.shields.io/npm/dm/@as-integrations/fastify.svg?style=flat)](https://www.npmjs.com/package/@as-integrations/fastify)
 
 # Apollo Server Integration for Fastify
 
@@ -22,7 +22,7 @@ This is a simple package that easily allows you to connect your own Fastify serv
 ## **Installation**
 
 ```bash
-npm install @xzyfer/as-integrations-fastify @apollo/server graphql fastify
+npm install @as-integrations/fastify @apollo/server graphql fastify
 ```
 
 ## **Usage**
@@ -32,7 +32,7 @@ Setup [Fastify](https://www.fastify.io/) & [Apollo Server](https://www.apollogra
 ```typescript
 import Fastify from "fastify";
 import { ApolloServer, BaseContext } from "@apollo/server";
-import fastifyApollo, { fastifyApolloDrainPlugin } from "@xzyfer/as-integrations-fastify";
+import fastifyApollo, { fastifyApolloDrainPlugin } from "@as-integrations/fastify";
 // ...
 
 const fastify = Fastify();
@@ -58,7 +58,7 @@ This allows you to explicitly set all routing options like the URL path and acce
 Examples shown below:
 
 ```typescript
-import { fastifyApolloHandler } from "@xzyfer/as-integrations-fastify";
+import { fastifyApolloHandler } from "@as-integrations/fastify";
 
 // ... setup Fastify & Apollo
 
@@ -89,7 +89,7 @@ import { ApolloServer } from "@apollo/server";
 import fastifyApollo, {
   fastifyApolloHandler,
   ApolloFastifyContextFunction,
-} from "@xzyfer/as-integrations-fastify";
+} from "@as-integrations/fastify";
 // ...
 
 interface MyContext {

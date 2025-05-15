@@ -1,4 +1,4 @@
-import { ApolloFastifyContextFunction } from "@xzyfer/as-integrations-fastify";
+import { ApolloFastifyContextFunction } from "@as-integrations/fastify";
 
 export interface MyContext {
 	greeting: string;
