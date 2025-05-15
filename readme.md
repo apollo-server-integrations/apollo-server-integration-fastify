@@ -182,10 +182,6 @@ interface ApolloFastifyPluginOptions<Context extends BaseContext = BaseContext>
 
 All functions and types optionally allow you to pass in or infer a `Server` type from Fastify.
 
-## **Node.JS v16**
-
-Please pass in `forceCloseConnections: true` to Fastify in combination with `fastifyApolloDrainPlugin` to correctly shutdown you're server on close and not hang incoming requests.
-
 ## **Contributors**
 
 - Oliver Plummer ([olyop](https://github.com/olyop))
