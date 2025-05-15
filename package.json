@@ -36,7 +36,7 @@
 	"scripts": {
 		"delete-build": "rimraf build",
 		"build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
-		"postbuild": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm scripts/postcompile.ts",
+		"postbuild": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" node --no-warnings --experimental-specifier-resolution=node --import tsx scripts/postcompile.ts",
 		"prepublishOnly": "clear && npm run delete-build && npm run build",
 		"test": "clear && jest --verbose",
 		"test:ci": "jest --coverage --ci --maxWorkers=2 --reporters=default --reporters=jest-junit",
@@ -82,6 +82,7 @@
 		"rimraf": "5.0.5",
 		"ts-jest": "29.1.1",
 		"ts-node": "10.9.1",
+		"tsx": "4.19.4",
 		"typescript": "5.4.5"
 	},
 	"dependencies": {
