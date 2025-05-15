@@ -17,7 +17,7 @@ import { ApolloFastifyPluginOptions } from "./types.js";
 import { isApolloServerLike } from "./utils.js";
 
 const pluginMetadata: PluginMetadata = {
-	fastify: "^5.2.2",
+	fastify: "^5.3.0",
 	name: "@as-integrations/fastify",
 };
 
