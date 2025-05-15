@@ -1,9 +1,9 @@
 {
 	"import": ["@oly_op/cspell-dict/cspell-ext.json"],
-	"dictionaries": ["@as-integrations/fastify/custom-words"],
+	"dictionaries": ["@xzyfer/as-integrations-fastify/custom-words"],
 	"dictionaryDefinitions": [
 		{
-			"name": "@as-integrations/fastify/custom-words",
+			"name": "@xzyfer/as-integrations-fastify/custom-words",
 			"path": "./custom-words.txt"
 		}
 	]
