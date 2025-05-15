@@ -32,12 +32,12 @@ commands:
 
 jobs:
   NodeJS:
-    executor: node/<<parameters.node-version>>
     parameters:
       node-version:
         type: string
-    docker:
-      - image: cimg/base:stable
+    executor:
+      name: node/default
+      tag: "<<parameters.node-version>>"
     steps:
       - setup-node:
           node-version: <<parameters.node-version>>
@@ -46,29 +46,34 @@ jobs:
       - store_test_results:
           path: junit.xml
   Incremental Delivery:
-    docker:
-      - image: cimg/base:stable
+    executor:
+      name: node/default
+      tag: "20.19"
     environment:
       INCREMENTAL_DELIVERY_TESTS_ENABLED: t
     steps:
       - setup-node:
-          node-version: "20"
-      # Install a prerelease of graphql-js 17 with incremental delivery support.
-      # --legacy-peer-deps because nothing expects v17 yet.
+          node-version: "20.19"
       - run: npm i --legacy-peer-deps graphql@17.0.0-alpha.1.canary.pr.3361.04ab27334641e170ce0e05bc927b972991953882
       - run: npm run test:ci
   Lint:
-    docker:
-      - image: cimg/base:stable
+    executor:
+      name: node/default
+      tag: "20.19"
     steps:
-      - setup-node
-      - run: npm run lint
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run lint
   Prettier:
-    docker:
-      - image: cimg/base:stable
+    executor:
+      name: node/default
+      tag: "20.19"
     steps:
-      - setup-node
-      - run: npm run prettier-check
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run prettier-check
 
 workflows:
   Build:
@@ -80,7 +85,7 @@ workflows:
           matrix:
             parameters:
               node-version:
-                - "20"
-                - "22"
-                - "24"
+                - "20.19"
+                - "22.15"
+                - "24.0"
       - Incremental Delivery
