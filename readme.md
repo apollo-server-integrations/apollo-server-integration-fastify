@@ -14,8 +14,8 @@ This is a simple package that easily allows you to connect your own Fastify serv
 
 ## **Requirements**
 
-- **[Node.js v16](https://nodejs.org/)** or later
-- **[Fastify v4.4](https://www.fastify.io/)** or later
+- **[Node.js v20](https://nodejs.org/)** or later
+- **[Fastify v5.3.0](https://www.fastify.io/)** or later
 - **[GraphQL.js v16](https://graphql.org/graphql-js/)** or later
 - **[Apollo Server v4](https://www.apollographql.com/docs/apollo-server/)** or later
 
@@ -121,7 +121,7 @@ export const resolvers = {
       if (!context.authorization) {
         throw new Error("Not authorized");
       }
-      
+
       return "Hello world :)";
     },
   },
@@ -181,10 +181,6 @@ interface ApolloFastifyPluginOptions<Context extends BaseContext = BaseContext>
 ## **HTTPS/HTTP2**
 
 All functions and types optionally allow you to pass in or infer a `Server` type from Fastify.
-
-## **Node.JS v16**
-
-Please pass in `forceCloseConnections: true` to Fastify in combination with `fastifyApolloDrainPlugin` to correctly shutdown you're server on close and not hang incoming requests.
 
 ## **Contributors**
 
