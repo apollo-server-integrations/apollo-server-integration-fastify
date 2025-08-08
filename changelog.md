@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.0.0
+
+-- **BREAKING:** Requires Node >= 20
+-- **BREAKING:** Requires Typescript >= 5.4
+-- **FEATURE:** Update to support fastify v5 [#302](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/pulls/302)
+
 ## v2.1.1
 
 -- **FIX:** Fix CJS typings by removing redundant `types` field in `package.json#exports` [#268](https://github.com/apollo-server-integrations/apollo-server-integration-fastify/pulls/268)
