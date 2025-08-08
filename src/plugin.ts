@@ -1,9 +1,12 @@
 import { ApolloServer, BaseContext } from "@apollo/server";
 import type { WithRequired } from "@apollo/utils.withrequired";
 import type {
+	FastifyBaseLogger,
 	FastifyPluginAsync,
 	FastifyTypeProvider,
 	FastifyTypeProviderDefault,
+	RawReplyDefaultExpression,
+	RawRequestDefaultExpression,
 	RawServerBase,
 	RawServerDefault,
 } from "fastify";
@@ -14,7 +17,7 @@ import { ApolloFastifyPluginOptions } from "./types.js";
 import { isApolloServerLike } from "./utils.js";
 
 const pluginMetadata: PluginMetadata = {
-	fastify: "^4.4.0",
+	fastify: "^5.3.0",
 	name: "@as-integrations/fastify",
 };
 
@@ -42,7 +45,8 @@ export function fastifyApollo<
 ): FastifyPluginAsync<
 	WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">,
 	RawServer,
-	TypeProvider
+	TypeProvider,
+	FastifyBaseLogger
 > {
 	if (apollo === undefined || apollo === null || !isApolloServerLike(apollo)) {
 		throw new TypeError("You must pass in an instance of `ApolloServer`.");
@@ -50,13 +54,29 @@ export function fastifyApollo<
 
 	apollo.assertStarted("fastifyApollo()");
 
-	return fastifyPlugin(async (fastify, options) => {
+	return fastifyPlugin<
+		WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">,
+		RawServer,
+		TypeProvider,
+		FastifyBaseLogger,
+		FastifyPluginAsync<
+			WithRequired<ApolloFastifyPluginOptions<Context, RawServer>, "context">,
+			RawServer,
+			TypeProvider,
+			FastifyBaseLogger
+		>
+	>(async (fastify, options) => {
 		const { path = "/graphql", method = ["GET", "POST", "OPTIONS"], ...handlerOptions } = options;
 
 		fastify.route({
 			method,
 			url: path,
-			handler: fastifyApolloHandler<Context, RawServer>(apollo, handlerOptions),
+			handler: fastifyApolloHandler<
+				Context,
+				RawServer,
+				RawRequestDefaultExpression<RawServer>,
+				RawReplyDefaultExpression<RawServer>
+			>(apollo, handlerOptions),
 		});
 	}, pluginMetadata);
 }

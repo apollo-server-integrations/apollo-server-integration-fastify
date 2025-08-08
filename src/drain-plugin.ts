@@ -30,7 +30,7 @@ export function fastifyApolloDrainPlugin<
 		async serverWillStart() {
 			return {
 				async drainServer() {
-					// `closeAllConnections` was added in v18.2 - @types/node are v16.
+					// `closeAllConnections` was added in v18.2
 					if ("closeAllConnections" in fastify.server) {
 						const timeout = setTimeout(() => {
 							// eslint-disable-next-line
