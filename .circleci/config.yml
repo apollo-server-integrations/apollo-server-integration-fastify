@@ -52,7 +52,7 @@ jobs:
     steps:
       - setup-node:
           node-version: "20"
-      - run: npm i --legacy-peer-deps graphql@17.0.0-alpha.1.canary.pr.3361.04ab27334641e170ce0e05bc927b972991953882
+      - run: npm i --legacy-peer-deps graphql@17.0.0-alpha.9
       - run: npm run test:ci
   Lint:
     docker:
